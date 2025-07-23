@@ -4,9 +4,9 @@ import Index from "./pages";
 import "./App.css";
 
 const ErrorPage = React.lazy(() => import("./error"));
-const Page1 = React.lazy(() => import("./pages/page1"));
-const Page2 = React.lazy(() => import("./pages/page2"));
-const Page3 = React.lazy(() => import("./pages/page3"));
+const Home = React.lazy(() => import("./pages/home"));
+const TestRodri = React.lazy(() => import("./pages/TestRodri"));
+const TestRodri2 = React.lazy(() => import("./pages/TestRodri2"));
 
 const router = createBrowserRouter(
   [
@@ -15,9 +15,9 @@ const router = createBrowserRouter(
       element: <Index />,
       errorElement: <ErrorPage />,
       children: [
-        { index: true, element: <Page1 /> },
-        { path: "page2", element: <Page2 /> },
-        { path: "page3", element: <Page3 /> },
+        { index: true, element: <Home /> },
+        { path: "TestRodri", element: <TestRodri/> },
+        { path: "TestRodri2", element: <TestRodri2/> },
       ],
     },
   ],
