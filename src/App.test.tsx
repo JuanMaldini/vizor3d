@@ -8,7 +8,7 @@ export const asyncRender = (ui: React.ReactElement) => {
 
 describe("renders application", () => {
   beforeEach(async () => {
-    await import("./pages/TestRodri");
+    await import("./pages/Sample1");
     const res = await asyncRender(<App />);
   });
 

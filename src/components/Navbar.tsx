@@ -6,20 +6,20 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <h2>VIZOR 3D</h2>
+          <Link to="/"><h2>VIZOR 3D</h2></Link>
         </div>
         <ul className="nav-menu">
           <li className="nav-item">
             <Link to="/" className="nav-link">Home</Link>
           </li>
           <li className="nav-item">
-            <Link to="/TestRodri" className="nav-link">Tour Virtual</Link>
+            <Link to="/Sample1" className="nav-link">Tour Virtual</Link>
           </li>
           <li className="nav-item">
-            <Link to="/TestRodri" className="nav-link">Gallery</Link>
+            <Link to="/Sample1" className="nav-link">Gallery</Link>
           </li>
           <li className="nav-item">
-            <Link to="/TestRodri" className="nav-link">About</Link>
+            <Link to="/Sample1" className="nav-link">About</Link>
           </li>
         </ul>
       </div>

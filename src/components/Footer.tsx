@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Enlaces</h4>
             <ul className="footer-links">
-              <li><Link to="/TestRodri">Home</Link></li>
-              <li><Link to="/TestRodri">Tour Virtual</Link></li>
-              <li><Link to="/TestRodri">Galería</Link></li>
-              <li><Link to="/TestRodri">Acerca de</Link></li>
+              <li><Link to="/Sample1">Home</Link></li>
+              <li><Link to="/Sample1">Tour Virtual</Link></li>
+              <li><Link to="/Sample1">Galería</Link></li>
+              <li><Link to="/Sample1">Acerca de</Link></li>
             </ul>
           </div>
           

@@ -16,8 +16,8 @@ const Base: React.FC = () => {
                       desde la comodidad de tu hogar con nuestra tecnología de tours virtuales.
                   </p>
                   <div className="hero-buttons">
-                      <Link to="/testrodri" className="btn btn-primary">Comenzar Tour</Link>
-                      <Link to="/testrodri" className="btn btn-secondary">Ver Galería</Link>
+                      <Link to="/Sample1" className="btn btn-primary">Comenzar Tour</Link>
+                      <Link to="/Sample1" className="btn btn-secondary">Ver Galería</Link>
                   </div>
               </div>
           </section>
