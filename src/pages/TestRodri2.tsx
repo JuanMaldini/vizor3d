@@ -1,7 +1,7 @@
 import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
-import render from "../images/Escena2.jpg";
+import render from "../images/Escena Random 28-360-Dia+Luz.jpg";
 import Navbar from "../components/Navbar";
 
 import './style.css';
