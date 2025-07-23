@@ -49,7 +49,6 @@ const Page3 = () => {
                 hfov={110}
                 autoRotate={2}
                 autoLoad
-                compass
                 disableKeyboardCtrl
                 ref={panImage}
                 onMouseup = {(event: any) => {
