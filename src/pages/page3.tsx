@@ -29,11 +29,11 @@ const Page3 = () => {
 
     return (
         <div>
-            <div className="pitch-yaw">
+            {/* <div className="pitch-yaw">
                 <p className="pitch-yaw-text"> Pitch: {pitch} </p>
                 <p className="pitch-yaw-text"> Yaw: {yaw} </p>
                 <h5 className="pitch-yaw-text">© Alterra Academy</h5>
-            </div>
+            </div> */}
             <Pannellum
                 width='100%'
                 height='100vh'
