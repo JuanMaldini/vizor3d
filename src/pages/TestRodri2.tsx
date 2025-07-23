@@ -54,6 +54,7 @@ const Page3 = () => {
                 autoLoad
                 //compass
                 disableKeyboardCtrl
+                // @ts-ignore
                 ref={panImage}
                 onMouseup={(event: any) => {
                     setPitch(panImage.current.getViewer().mouseEventToCoords(event)[0]);
@@ -65,6 +66,7 @@ const Page3 = () => {
                     return (
                         <Pannellum.Hotspot
                             name={name}
+                            // @ts-ignore
                             type={type}
                             pitch={pitch}
                             yaw={yaw}
