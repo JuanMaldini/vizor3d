@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectCard from '../components/projectCard/ProjectCard';
 
 import RSample from '../images/projects/RSample/1.jpg';
-import Sampleai_01 from '../images/projects/sampleai09/Sample_AI09_01.png';
+import Sampleai_01 from '../images/projects/sampleai09/Sample_AI09_01.jpg';
 
 const Projects: React.FC = () => {
   return (
