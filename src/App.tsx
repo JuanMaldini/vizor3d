@@ -5,9 +5,14 @@ import "./App.css";
 import "./components/components.css";
 import Samples from "./pages/Samples";
 
+import RSample from "./pages/projects/rodri_01/RSample";
+
 //IMPORT ABOUT PAGE
  const About = React.lazy(() => import("./pages/About"));
 
+ //IMPORT RODRI PAGE
+ const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));
+ 
 //IMPORTING SAMPLE AI09
 const Sampleai_01 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_01"));
 const Sampleai_02 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_02"));
@@ -35,6 +40,8 @@ const router = createBrowserRouter(
         { index: true, element: <Home /> },
 
         { path: "samples", element: <Samples/> },
+
+        { path: "rsample", element: <RSample/> },
         
         { path: "sampleai_01", element: <Sampleai_01/> },
         { path: "sampleai_02", element: <Sampleai_02/> },

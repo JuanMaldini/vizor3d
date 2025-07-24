@@ -1,9 +1,8 @@
 import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
-import render from "../images/1.jpg";
+import render from "../../../images/projects/RSample/1.jpg";
 
-import './style.css';
 import Navbar from "../../../components/Navbar";
 
 const Page3 = () => {
