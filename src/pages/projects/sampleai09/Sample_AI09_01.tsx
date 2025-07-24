@@ -40,12 +40,7 @@ const Page3 = () => {
                 width='100%'
                 height='100vh'
                 image={render}
-                // title='360 Virtual Tour'
-                // previewTitle ="360 Virtual Tour"
-                // author="Ken Tandrian"
-                // previewAuthor="Ken Tandrian"
                 // @ts-ignore
-                //authorURL="https://github.com/KenTandrian"
                 pitch={10}
                 yaw={180}
                 hfov={110}

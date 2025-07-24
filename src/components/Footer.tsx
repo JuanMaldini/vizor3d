@@ -19,8 +19,8 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Links</h4>
             <ul className="footer-links">
-              <li><Link to="/Sample1" onClick={scrollToTop}>Home</Link></li>
-              <li><Link to="/Samples">Samples</Link></li>
+              <li><Link to="/" onClick={scrollToTop}>Home</Link></li>
+              <li><Link to="/Ssamples">Samples</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><CustomLink text="Contact" email="contact@vizor3d.com" /></li>
             </ul>

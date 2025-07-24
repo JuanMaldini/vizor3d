@@ -6,7 +6,7 @@ import "./components/components.css";
 import Samples from "./pages/Samples";
 
 //IMPORT ABOUT PAGE
-const About = React.lazy(() => import("./pages/About"));
+const About = React.lazy(() => import("./pages/about"));
 
 //IMPORTING SAMPLE AI09
 const Sampleai_01 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_01"));
@@ -20,7 +20,7 @@ const Sampleai_08 = React.lazy(() => import("./pages/projects/sampleai09/Sample_
 const Sampleai_09 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_09"));
 
 const ErrorPage = React.lazy(() => import("./error"));
-const Home = React.lazy(() => import("./pages/Home"));
+const Home = React.lazy(() => import("./pages/home"));
 
 //DECLARING SAMPLE AI09
 
