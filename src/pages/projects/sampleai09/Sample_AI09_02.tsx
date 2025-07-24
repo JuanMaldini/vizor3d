@@ -16,6 +16,13 @@ const Sample_AI09_02 = () => {
             pitch: -39.85,
             yaw: -78.85,
             navigate: "/Sampleai_01",
+        },
+        {
+            name: "Sampleai_03",
+            type: "custom",
+            pitch: -22.5,
+            yaw: -84.7,
+            navigate: "/Sampleai_03",
         }
     ]);
     const panImage = useRef<any>(null);
