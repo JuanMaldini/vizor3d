@@ -11,19 +11,12 @@ const Sample_AI09_02 = () => {
     const [pitch, setPitch] = useState(0);
     const [hotspots] = useState([
         {
-            name: "Sample_AI09",
+            name: "Sampleai_01",
             type: "custom",
-            pitch: -5,
-            yaw: -29,
-            navigate: "/Sampleai_02",
-        },
-        {
-            name: "hola manola ",
-            type: "info",
-            pitch: -5,
-            yaw: -29,
-            navigate: "",
-        },
+            pitch: -39.85,
+            yaw: -78.85,
+            navigate: "/Sampleai_01",
+        }
     ]);
     const panImage = useRef<any>(null);
 
@@ -31,21 +24,14 @@ const Sample_AI09_02 = () => {
         <>
         <Navbar />
         <div>
-            {/* <div className="pitch-yaw">
-        <p className="pitch-yaw-text"> Pitch: {pitch} </p>
-        <p className="pitch-yaw-text"> Yaw: {yaw} </p>
-        <h5 className="pitch-yaw-text">© Alterra Academy</h5>
-    </div> */}
+            <div className="pitch-yaw">
+                <p className="pitch-yaw-text"> Pitch: {pitch} </p>
+                <p className="pitch-yaw-text"> Yaw: {yaw} </p>
+            </div>
             <Pannellum
                 width='100%'
                 height='100vh'
                 image={render}
-                // title='360 Virtual Tour'
-                // previewTitle ="360 Virtual Tour"
-                // author="Ken Tandrian"
-                // previewAuthor="Ken Tandrian"
-                // @ts-ignore
-                //authorURL="https://github.com/KenTandrian"
                 pitch={10}
                 yaw={180}
                 hfov={110}

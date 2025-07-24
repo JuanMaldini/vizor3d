@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '../components/projectCard/ProjectCard';
 
-import rsample from '../images/projects/RSample/1.jpg';
+import RSample from '../images/projects/RSample/1.jpg';
 import Sampleai_01 from '../images/projects/sampleai09/Sample_AI09_01.png';
 
 const Projects: React.FC = () => {
@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
                 description="Explore interiors in 360°"
                 author="Rodrigo"
                 redirectPath="/RSample"
-                image={rsample}
+                image={RSample}
               />
               <ProjectCard
                 title="360 Virtual Tour"
