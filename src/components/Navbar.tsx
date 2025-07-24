@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { CustomLink } from './functions';
+import logo from '../logo.png';
 
 const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
+          <Link to="/"><img src={logo} height='32' /></Link>
           <Link to="/"><h2>VIZOR 3D</h2></Link>
         </div>
         <ul className="nav-menu">
@@ -13,13 +16,13 @@ const Navbar: React.FC = () => {
             <Link to="/" className="nav-link">Home</Link>
           </li>
           <li className="nav-item">
-            <Link to="/Sample1" className="nav-link">Tour Virtual</Link>
+            <Link to="/Samples" className="nav-link">Samples</Link>
           </li>
           <li className="nav-item">
-            <Link to="/Sample1" className="nav-link">Gallery</Link>
+            <Link to="/about" className="nav-link">About</Link>
           </li>
           <li className="nav-item">
-            <Link to="/Sample1" className="nav-link">About</Link>
+            <CustomLink text="Contact" email="contact@vizor3d.com" className="nav-link" />
           </li>
         </ul>
       </div>

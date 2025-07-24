@@ -49,10 +49,14 @@
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2, #667eea);
   color: white;
-  padding: 6rem 0;
+  padding: 9rem 0;
   text-align: center;
+  height: 60vh;
 }
 
 .hero-container {
@@ -120,7 +124,8 @@
 /* Features Section */
 .features-section {
   padding: 4rem 0;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
+  text-align: center;
 }
 
 .features-container {
@@ -130,29 +135,25 @@
 }
 
 .section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
   color: #333;
 }
 
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
 }
 
 .feature-card {
-  background: white;
-  padding: 2rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
 }
 
 .feature-card h3 {
@@ -164,6 +165,58 @@
 .feature-card p {
   color: #666;
   line-height: 1.6;
+}
+
+/* Project Card Styles */
+.project-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-card-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.project-card-description {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.project-card-author {
+  font-size: 0.875rem;
+  color: #ddd;
+}
+
+/* Project Card Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 /* Footer Styles */

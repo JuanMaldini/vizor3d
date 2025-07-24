@@ -1,31 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { CustomLink } from './functions';
 
 const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
             <h3>360 Virtual Tour</h3>
-            <p>Creando experiencias inmersivas para explorar el mundo.</p>
+            <p>Creating immersive experiences to explore the world.</p>
           </div>
           
           <div className="footer-section">
-            <h4>Enlaces</h4>
+            <h4>Links</h4>
             <ul className="footer-links">
-              <li><Link to="/Sample1">Home</Link></li>
-              <li><Link to="/Sample1">Tour Virtual</Link></li>
-              <li><Link to="/Sample1">Galería</Link></li>
-              <li><Link to="/Sample1">Acerca de</Link></li>
+              <li><Link to="/Sample1" onClick={scrollToTop}>Home</Link></li>
+              <li><Link to="/Samples">Samples</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><CustomLink text="Contact" email="contact@vizor3d.com" /></li>
             </ul>
           </div>
           
           <div className="footer-section">
-            <h4>Contacto</h4>
+            <h4>Contact</h4>
             <ul className="footer-links">
-              <li>juan.maldini@outlook.com</li>
-              <li>+54 9 3576 474180</li>
+              <li><CustomLink text="contact@vizor3d.com" email="contact@vizor3d.com" /></li>
             </ul>
           </div>
           
@@ -33,7 +37,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2025 Vizor 3d. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Vizor 3d. All rights reserved.</p>
         </div>
       </div>
     </footer>

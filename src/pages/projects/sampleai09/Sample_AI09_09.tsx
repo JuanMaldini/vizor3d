@@ -1,10 +1,9 @@
 import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
-import render from "../images/Escena Random 28-360-Dia+Luz.jpg";
-import Navbar from "../components/Navbar";
 
-import './style.css';
+import render from "../../../images/projects/sampleai09/Sample_AI09_09.png";
+import Navbar from "../../../components/Navbar";
 
 const Page3 = () => {
     let navigate = useNavigate();
@@ -12,17 +11,17 @@ const Page3 = () => {
     const [pitch, setPitch] = useState(0);
     const [hotspots] = useState([
         {
-            name: "Sample1",
+            name: "Sample_AI09",
             type: "custom",
             pitch: -5,
             yaw: -29,
-            navigate: "/Sample1",
+            navigate: "/Sampleai_09",
         },
         {
-            name: "holahola manola 2",
+            name: "hola manola ",
             type: "info",
-            pitch: 1.6,
-            yaw: 177,
+            pitch: -5,
+            yaw: -29,
             navigate: "",
         },
     ]);

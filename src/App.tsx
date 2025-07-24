@@ -2,11 +2,27 @@ import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router";
 import Index from "./pages";
 import "./App.css";
+import "./components/components.css";
+import Samples from "./pages/Samples";
+
+//IMPORT ABOUT PAGE
+const About = React.lazy(() => import("./pages/about"));
+
+//IMPORTING SAMPLE AI09
+const Sampleai_01 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_01"));
+const Sampleai_02 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_02"));
+const Sampleai_03 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_03"));
+const Sampleai_04 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_04"));
+const Sampleai_05 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_05"));
+const Sampleai_06 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_06"));
+const Sampleai_07 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_07"));
+const Sampleai_08 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_08"));
+const Sampleai_09 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_09"));
 
 const ErrorPage = React.lazy(() => import("./error"));
 const Home = React.lazy(() => import("./pages/home"));
-const Sample1 = React.lazy(() => import("./pages/Sample1"));
-const Sample2 = React.lazy(() => import("./pages/Sample2"));
+
+//DECLARING SAMPLE AI09
 
 const router = createBrowserRouter(
   [
@@ -15,9 +31,23 @@ const router = createBrowserRouter(
       element: <Index />,
       errorElement: <ErrorPage />,
       children: [
+
         { index: true, element: <Home /> },
-        { path: "Sample1", element: <Sample1/> },
-        { path: "Sample2", element: <Sample2/> },
+
+        { path: "Samples", element: <Samples/> },
+        
+        { path: "Sampleai_01", element: <Sampleai_01/> },
+        { path: "Sampleai_02", element: <Sampleai_02/> },
+        { path: "Sampleai_03", element: <Sampleai_03/> },
+        { path: "Sampleai_04", element: <Sampleai_04/> },
+        { path: "Sampleai_05", element: <Sampleai_05/> },
+        { path: "Sampleai_06", element: <Sampleai_06/> },
+        { path: "Sampleai_07", element: <Sampleai_07/> },
+        { path: "Sampleai_08", element: <Sampleai_08/> },
+        { path: "Sampleai_09", element: <Sampleai_09/> },
+        
+        { path: "About", element: <About/> },
+
       ],
     },
   ],
