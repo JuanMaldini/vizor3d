@@ -5,13 +5,12 @@ import "./App.css";
 import "./components/components.css";
 import Samples from "./pages/Samples";
 
-import RSample from "./pages/projects/rodri_01/RSample";
 
 //IMPORT ABOUT PAGE
- const About = React.lazy(() => import("./pages/About"));
+const About = React.lazy(() => import("./pages/About"));
 
- //IMPORT RODRI PAGE
- const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));
+//IMPORT RODRI PAGE
+const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));
  
 //IMPORTING SAMPLE AI09
 const Sampleai_01 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_01"));
@@ -27,7 +26,6 @@ const Sampleai_09 = React.lazy(() => import("./pages/projects/sampleai09/Sample_
 const ErrorPage = React.lazy(() => import("./error"));
 const Home = React.lazy(() => import("./pages/home"));
 
-//DECLARING SAMPLE AI09
 
 const router = createBrowserRouter(
   [

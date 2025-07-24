@@ -15,9 +15,16 @@ const Projects: React.FC = () => {
           <div className="projects-container">
             <div className="projects-grid">
               <ProjectCard
+                title="360 Saloon"
+                description="Explore interiors in 360°"
+                author="Rodrigo"
+                redirectPath="/RSample"
+                image="../../src/images/projects/RSample/1.jpg"
+              />
+              <ProjectCard
                 title="360 Virtual Tour"
                 description="Explore the world in 360°"
-                author=""
+                author="Sample"
                 redirectPath="/Sampleai_01"
                 image="../../src/images/projects/sampleai09/Sample_AI09_01.png"
               />

@@ -5,7 +5,7 @@ import render from "../../../images/projects/RSample/1.jpg";
 
 import Navbar from "../../../components/Navbar";
 
-const Page3 = () => {
+const RSample = () => {
     let navigate = useNavigate();
     const [yaw, setYaw] = useState(0);
     const [pitch, setPitch] = useState(0);
@@ -79,4 +79,4 @@ const Page3 = () => {
     )
 }
 
-export default Page3;
+export default RSample;

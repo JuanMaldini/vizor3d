@@ -5,7 +5,7 @@ import { Pannellum } from "pannellum-react";
 import render from "../../../images/projects/sampleai09/Sample_AI09_04.png";
 import Navbar from "../../../components/Navbar";
 
-const Page3 = () => {
+const Sample_AI09_04 = () => {
     let navigate = useNavigate();
     const [yaw, setYaw] = useState(0);
     const [pitch, setPitch] = useState(0);
@@ -79,4 +79,4 @@ const Page3 = () => {
     )
 }
 
-export default Page3;
+export default Sample_AI09_04;
