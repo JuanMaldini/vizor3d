@@ -30,22 +30,18 @@ const Sample_AI09_07 = () => {
     return (
         <>
         <Navbar />
+                        
+        <style>{`
+            .pnlm-about-msg {
+                display: none !important;
+            }
+        `}</style>
+        
         <div>
-            {/* <div className="pitch-yaw">
-        <p className="pitch-yaw-text"> Pitch: {pitch} </p>
-        <p className="pitch-yaw-text"> Yaw: {yaw} </p>
-        <h5 className="pitch-yaw-text">© Alterra Academy</h5>
-    </div> */}
             <Pannellum
                 width='100%'
                 height='100vh'
                 image={render}
-                // title='360 Virtual Tour'
-                // previewTitle ="360 Virtual Tour"
-                // author="Ken Tandrian"
-                // previewAuthor="Ken Tandrian"
-                // @ts-ignore
-                //authorURL="https://github.com/KenTandrian"
                 pitch={10}
                 yaw={180}
                 hfov={110}
