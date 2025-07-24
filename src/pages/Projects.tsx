@@ -1,7 +1,5 @@
 import React from 'react';
 import ProjectCard from '../components/projectCard/ProjectCard';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 const Projects: React.FC = () => {
   return (

@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 import Index from "./pages";
 import "./App.css";
 import "./components/components.css";
-import Samples from "./pages/Samples";
+import Samples from "./pages/samples";
 
 //IMPORT ABOUT PAGE
 const About = React.lazy(() => import("./pages/about"));
@@ -34,19 +34,19 @@ const router = createBrowserRouter(
 
         { index: true, element: <Home /> },
 
-        { path: "Samples", element: <Samples/> },
+        { path: "samples", element: <Samples/> },
         
-        { path: "Sampleai_01", element: <Sampleai_01/> },
-        { path: "Sampleai_02", element: <Sampleai_02/> },
-        { path: "Sampleai_03", element: <Sampleai_03/> },
-        { path: "Sampleai_04", element: <Sampleai_04/> },
-        { path: "Sampleai_05", element: <Sampleai_05/> },
-        { path: "Sampleai_06", element: <Sampleai_06/> },
-        { path: "Sampleai_07", element: <Sampleai_07/> },
-        { path: "Sampleai_08", element: <Sampleai_08/> },
-        { path: "Sampleai_09", element: <Sampleai_09/> },
+        { path: "sampleai_01", element: <Sampleai_01/> },
+        { path: "sampleai_02", element: <Sampleai_02/> },
+        { path: "sampleai_03", element: <Sampleai_03/> },
+        { path: "sampleai_04", element: <Sampleai_04/> },
+        { path: "sampleai_05", element: <Sampleai_05/> },
+        { path: "sampleai_06", element: <Sampleai_06/> },
+        { path: "sampleai_07", element: <Sampleai_07/> },
+        { path: "sampleai_08", element: <Sampleai_08/> },
+        { path: "sampleai_09", element: <Sampleai_09/> },
         
-        { path: "About", element: <About/> },
+        { path: "about", element: <About/> },
 
       ],
     },
