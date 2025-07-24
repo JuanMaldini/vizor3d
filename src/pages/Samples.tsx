@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Projects from './projects';
+import Projects from './Projects';
 
 const VirtualTour: React.FC = () => {
   return (
