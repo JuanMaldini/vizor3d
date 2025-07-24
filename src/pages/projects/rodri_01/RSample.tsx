@@ -10,20 +10,7 @@ const RSample = () => {
     const [yaw, setYaw] = useState(0);
     const [pitch, setPitch] = useState(0);
     const [hotspots] = useState([
-        {
-            name: "Sample2",
-            type: "custom",
-            pitch: -5,
-            yaw: -29,
-            navigate: "",
-        },
-        {
-            name: "hola manola ",
-            type: "info",
-            pitch: -5,
-            yaw: -29,
-            navigate: "",
-        },
+        
     ]);
     const panImage = useRef<any>(null);
 
