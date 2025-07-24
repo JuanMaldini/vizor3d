@@ -9,7 +9,7 @@ const RSample = () => {
     let navigate = useNavigate();
     const [yaw, setYaw] = useState(0);
     const [pitch, setPitch] = useState(0);
-    const [hotspots] = useState([
+    const [hotspots] = useState([{}
         
     ]);
     const panImage = useRef<any>(null);
