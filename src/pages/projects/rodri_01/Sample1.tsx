@@ -2,9 +2,9 @@ import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
 import render from "../images/1.jpg";
-import Navbar from "../components/Navbar";
 
 import './style.css';
+import Navbar from "../../../components/Navbar";
 
 const Page3 = () => {
     let navigate = useNavigate();
@@ -16,7 +16,7 @@ const Page3 = () => {
             type: "custom",
             pitch: -5,
             yaw: -29,
-            navigate: "/Sample2",
+            navigate: "",
         },
         {
             name: "hola manola ",
