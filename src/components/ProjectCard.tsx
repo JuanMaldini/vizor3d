@@ -1,7 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import '../components.css';
-
 
 interface ProjectCardProps {
   title: string;
