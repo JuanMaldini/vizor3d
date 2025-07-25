@@ -12,12 +12,13 @@ const Viewer3d = () => {
       <Navbar />
 
       <model-viewer
+
         src="/3dmodels/car.glb"
         alt="Modelo 3D"
         auto-rotate
         camera-controls
         style={{ width: '100%', height: '500px' }}
-        camera-controls touch-action="pan-y"
+        touch-action="pan-y"
         shadow-intensity="1"
       ></model-viewer>
 
