@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { CustomLink } from '../components/functions';
+import { CustomLink } from './functions';
 
 const Base: React.FC = () => {
   return (

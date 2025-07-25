@@ -11,18 +11,60 @@ const Sample_AI09_09 = () => {
     const [pitch, setPitch] = useState(0);
     const [hotspots] = useState([
         {
-            name: "Sample_AI09",
+            name: "Sampleai_01",
             type: "custom",
-            pitch: -5,
-            yaw: -29,
-            navigate: "/Sampleai_09",
+            pitch: -17.620729859395748,
+            yaw: -37.58376719775619,
+            navigate: "/Sampleai_01",
         },
         {
-            name: "hola manola ",
-            type: "info",
-            pitch: -5,
-            yaw: -29,
-            navigate: "",
+            name: "Sampleai_02",
+            type: "custom",
+            pitch: -27.636903609666927,
+            yaw: -7.5519614412622795,
+            navigate: "/Sampleai_02",
+        },
+        {
+            name: "Sampleai_03",
+            type: "custom",
+            pitch: -15.947504283700706,
+            yaw: -55.468526191535,
+            navigate: "/Sampleai_03",
+        },
+        {
+            name: "Sampleai_04",
+            type: "custom",
+            pitch: -12.533678648129888,
+            yaw: -64.2978640805966,
+            navigate: "/Sampleai_04",
+        },
+        {
+            name: "Sampleai_05",
+            type: "custom",
+            pitch: -12.986830038576985,
+            yaw: -106.68635419388208,
+            navigate: "/Sampleai_05",
+        },
+        {
+            name: "Sampleai_06",
+            type: "custom",
+            pitch: -15.515865409406528,
+            yaw: -73.06478792983197,
+            navigate: "/Sampleai_06",
+        },
+        {
+            name: "Sampleai_07",
+            type: "custom",
+            pitch: -22.445093176570886,
+            yaw: -119.69140424465037,
+            navigate: "/Sampleai_07",
+        },
+        {
+            name: "Sampleai_08",
+            type: "custom",
+            pitch:  -39.85751604757657,
+            yaw: -162.5179985376181,
+            navigate: "/Sampleai_08",
         },
     ]);
     const panImage = useRef<any>(null);
@@ -38,6 +80,10 @@ const Sample_AI09_09 = () => {
         `}</style>
         
         <div>
+            <div className="pitch-yaw">
+                <p className="pitch-yaw-text"> Pitch: {pitch} </p>
+                <p className="pitch-yaw-text"> Yaw: {yaw} </p>
+            </div>
             <Pannellum
                 width='100%'
                 height='100vh'

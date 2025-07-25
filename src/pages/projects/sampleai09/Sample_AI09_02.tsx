@@ -23,6 +23,48 @@ const Sample_AI09_02 = () => {
             pitch: -22.5,
             yaw: -84.7,
             navigate: "/Sampleai_03",
+        },
+        {
+            name: "Sampleai_04",
+            type: "custom",
+            pitch: -14.83,
+            yaw: -86.13,
+            navigate: "/Sampleai_04",
+        },
+        {
+            name: "Sampleai_05",
+            type: "custom",
+            pitch: -9.8487250459484,
+            yaw: -127.16599392678768,
+            navigate: "/Sampleai_05",
+        },
+        {
+            name: "Sampleai_06",
+            type: "custom",
+            pitch: -21.694775034377916,
+            yaw: -108.21319395489375,
+            navigate: "/Sampleai_06",
+        },
+        {
+            name: "Sampleai_07",
+            type: "custom",
+            pitch:  -17.249935247456012,
+            yaw: -148.00223758910363,
+            navigate: "/Sampleai_07",
+        },
+        {
+            name: "Sampleai_08",
+            type: "custom",
+            pitch:  -21.483661654666783,
+            yaw: 178.4830489771014,
+            navigate: "/Sampleai_08",
+        },
+        {
+            name: "Sampleai_09",
+            type: "custom",
+            pitch:  -33.211903121259084,
+            yaw: 168.61775631221477,
+            navigate: "/Sampleai_09",
         }
     ]);
     const panImage = useRef<any>(null);

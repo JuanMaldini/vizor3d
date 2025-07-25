@@ -11,19 +11,61 @@ const Sample_AI09_04 = () => {
     const [pitch, setPitch] = useState(0);
     const [hotspots] = useState([
         {
-            name: "Sample_AI09",
+            name: "Sampleai_01",
             type: "custom",
-            pitch: -5,
-            yaw: -29,
-            navigate: "/Sampleai_04",
+            pitch: -22.26,
+            yaw: 83.34,
+            navigate: "/Sampleai_01",
         },
         {
-            name: "hola manola ",
-            type: "info",
-            pitch: -5,
-            yaw: -29,
-            navigate: "",
+            name: "Sampleai_02",
+            type: "custom",
+            pitch: -14.98,
+            yaw: 84.90,
+            navigate: "/Sampleai_02",
         },
+        {
+            name: "Sampleai_03",
+            type: "custom",
+            pitch: -39,
+            yaw: 78.2,
+            navigate: "/Sampleai_03",
+        },
+        {
+            name: "Sampleai_05",
+            type: "custom",
+            pitch: -20.733420533908816,
+            yaw: -178.94586609971043,
+            navigate: "/Sampleai_05",
+        },
+        {
+            name: "Sampleai_06",
+            type: "custom",
+            pitch: -28.679708683621662,
+            yaw: 120.70057724831881,
+            navigate: "/Sampleai_06",
+        },
+        {
+            name: "Sampleai_07",
+            type: "custom",
+            pitch: -16.21390483985229,
+            yaw: 147.6725101755357,
+            navigate: "/Sampleai_07",
+        },
+        {
+            name: "Sampleai_08",
+            type: "custom",
+            pitch: -12.010246671985387,
+            yaw: 123.76136172388765,
+            navigate: "/Sampleai_08",
+        },
+        {
+            name: "Sampleai_09",
+            type: "custom",
+            pitch: -8.095310457991827,
+            yaw: 112.36683727588053,
+            navigate: "/Sampleai_09",
+        }
     ]);
     const panImage = useRef<any>(null);
 
@@ -38,11 +80,10 @@ const Sample_AI09_04 = () => {
         `}</style>
         
         <div>
-            {/* <div className="pitch-yaw">
-        <p className="pitch-yaw-text"> Pitch: {pitch} </p>
-        <p className="pitch-yaw-text"> Yaw: {yaw} </p>
-        <h5 className="pitch-yaw-text">© Alterra Academy</h5>
-    </div> */}
+            <div className="pitch-yaw">
+                <p className="pitch-yaw-text"> Pitch: {pitch} </p>
+                <p className="pitch-yaw-text"> Yaw: {yaw} </p>
+            </div>
             <Pannellum
                 width='100%'
                 height='100vh'
