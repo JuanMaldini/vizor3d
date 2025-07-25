@@ -54,9 +54,9 @@
   align-items: center;
   background: linear-gradient(135deg, #667eea, #764ba2, #667eea);
   color: white;
-  padding: 9rem 0;
+  padding: 4rem 0;
   text-align: center;
-  height: 60vh;
+  height: 50vh;
 }
 
 .hero-container {

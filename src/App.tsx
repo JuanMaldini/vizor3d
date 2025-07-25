@@ -3,11 +3,11 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 import Index from "./pages";
 import "./App.css";
 import "./components/components.css";
-import Samples from "./pages/samples";
+import Samples from "./pages/Samples";
 
 
 //IMPORT ABOUT PAGE
-const About = React.lazy(() => import("./pages/about"));
+const About = React.lazy(() => import("./pages/About"));
 
 //IMPORT RODRI PAGE
 const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));

@@ -12,7 +12,7 @@ const Base: React.FC = () => {
           <section className="initial-section">
               <div className="initial-container">
                   <h1 className="initial-title">Welcome to Vizor 3D</h1>
-                  <p className="initial-description">Discover your best virtual tool to become real your real estate projects.</p>
+                  <p className="initial-description">Discover your best virtual tool to walk around your real estate project.</p>
               </div>
           </section>
 
