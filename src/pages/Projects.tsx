@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import ProjectCard from '../components/projectCard/ProjectCard';
+import ProjectCard from '../components/ProjectCard';
 
 import RSample from '../images/projects/RSample/1.jpg';
 import Sampleai_01 from '../images/projects/sampleai09/Sample_AI09_01.png';
