@@ -80,26 +80,20 @@ const Sample_AI09_04 = () => {
         `}</style>
         
         <div>
-            <div className="pitch-yaw">
+            {/* <div className="pitch-yaw">
                 <p className="pitch-yaw-text"> Pitch: {pitch} </p>
                 <p className="pitch-yaw-text"> Yaw: {yaw} </p>
-            </div>
+            </div> */}
             <Pannellum
                 width='100%'
                 height='100vh'
                 image={render}
-                // title='360 Virtual Tour'
-                // previewTitle ="360 Virtual Tour"
-                // author="Ken Tandrian"
-                // previewAuthor="Ken Tandrian"
-                // @ts-ignore
-                //authorURL="https://github.com/KenTandrian"
                 pitch={10}
                 yaw={180}
                 hfov={110}
                 autoRotate={-2}
                 autoLoad
-                //compass
+                compass
                 disableKeyboardCtrl
                 // @ts-ignore
                 ref={panImage}

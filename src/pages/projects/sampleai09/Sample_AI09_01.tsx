@@ -59,6 +59,13 @@ const Sample_AI09_01 = () => {
             yaw: 157.45360506549025,
             navigate: "/Sampleai_08",
         },
+        {
+            name: "Sampleai_09",
+            type: "custom",
+            pitch: -17.201298350399053,
+            yaw: 131.86112603426764,
+            navigate: "/Sampleai_09",
+        }
     ]);
     const panImage = useRef<any>(null);
 
@@ -73,10 +80,10 @@ const Sample_AI09_01 = () => {
         `}</style>
         
         <div>
-            <div className="pitch-yaw">
+            {/* <div className="pitch-yaw">
                 <p className="pitch-yaw-text"> Pitch: {pitch} </p>
                 <p className="pitch-yaw-text"> Yaw: {yaw} </p>
-            </div>
+            </div> */}
             <Pannellum
                 width='100%'
                 height='100vh'

@@ -94,7 +94,7 @@ const Sample_AI09_05 = () => {
                 hfov={110}
                 autoRotate={-2}
                 autoLoad
-                //compass
+                compass
                 disableKeyboardCtrl
                 // @ts-ignore
                 ref={panImage}

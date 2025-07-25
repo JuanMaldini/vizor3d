@@ -80,10 +80,10 @@ const Sample_AI09_09 = () => {
         `}</style>
         
         <div>
-            <div className="pitch-yaw">
+            {/* <div className="pitch-yaw">
                 <p className="pitch-yaw-text"> Pitch: {pitch} </p>
                 <p className="pitch-yaw-text"> Yaw: {yaw} </p>
-            </div>
+            </div> */}
             <Pannellum
                 width='100%'
                 height='100vh'
@@ -93,7 +93,7 @@ const Sample_AI09_09 = () => {
                 hfov={110}
                 autoRotate={-2}
                 autoLoad
-                //compass
+                compass
                 disableKeyboardCtrl
                 // @ts-ignore
                 ref={panImage}
