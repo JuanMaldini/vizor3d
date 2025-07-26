@@ -1,7 +1,8 @@
 import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
-import render from "../../../images/projects/RSample/1.jpg";
+
+import { selectResponsiveImage } from "../../../components/functions";
 
 import Navbar from "../../../components/Navbar";
 
@@ -21,6 +22,11 @@ const RSample = () => {
     ]);
     const panImage = useRef<any>(null);
 
+    // Define aquí las rutas de tus imágenes
+    const lowRes = require("../../../images/projects/RSample/1.jpg");
+    const highRes = require("../../../images/projects/sampleai09/Sample_AI09_01.jpg");
+    const imageToUse = selectResponsiveImage(lowRes, highRes, 900);
+
     return (
         <>
         <Navbar />
@@ -32,11 +38,10 @@ const RSample = () => {
         `}</style>
         
         <div>
-
             <Pannellum
                 width='100%'
                 height='100vh'
-                image={render}
+                image={imageToUse}
                 pitch={10}
                 yaw={180}
                 hfov={110}

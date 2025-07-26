@@ -8,3 +8,11 @@ export const CustomLink: React.FC<{ text: string; email: string; className?: str
 
   return <a href={mailtoLink} className={className}>{text}</a>;
 };
+
+// Devuelve la URL de imagen adecuada según el ancho de pantalla
+export function selectResponsiveImage(lowRes: string, highRes: string, breakpoint: number = 900): string {
+  if (typeof window !== 'undefined') {
+    return window.innerWidth > breakpoint ? highRes : lowRes;
+  }
+  return lowRes;
+}

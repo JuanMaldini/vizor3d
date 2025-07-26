@@ -4,13 +4,12 @@ import Index from "./pages";
 import "./App.css";
 import "./components/components.css";
 import Samples from "./pages/Projects";
-import '@google/model-viewer';
 
 //IMPORT ABOUT PAGE
-const About = React.lazy(() => import("./pages/About"));
+const About = React.lazy(() => import("./pages/about"));
 
 //IMPORT RODRI PAGE
-const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));
+const RSample = React.lazy(() => import("./pages/projects/rodri_01/rsample"));
  
 //IMPORTING SAMPLE AI09
 const Sampleai_01 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_01"));
@@ -27,7 +26,7 @@ const ErrorPage = React.lazy(() => import("./error"));
 const Home = React.lazy(() => import("./pages/home"));
 
 //IMPORT 3D VIEWER PAGE
-// const Viewer3d = React.lazy(() => import("./pages/Viewer3d"));
+const Viewer3d = React.lazy(() => import("./pages/Viewer3d"));
 
 
 const router = createBrowserRouter(
@@ -54,7 +53,7 @@ const router = createBrowserRouter(
         { path: "sampleai_08", element: <Sampleai_08/> },
         { path: "sampleai_09", element: <Sampleai_09/> },
         
-        // { path: "Viewer3d", element: <Viewer3d/> },
+        { path: "viewer3d", element: <Viewer3d/> },
 
         { path: "about", element: <About/> },
 

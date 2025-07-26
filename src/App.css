@@ -1,3 +1,9 @@
+
+
+.pitch-yaw{
+  display: none !important;
+}
+
 .App {
   text-align: center;
 }

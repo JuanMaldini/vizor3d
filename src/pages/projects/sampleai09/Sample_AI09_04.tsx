@@ -2,7 +2,7 @@ import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
 
-import render from "../../../images/projects/sampleai09/Sample_AI09_04.png";
+import render from "../../../images/projects/sampleai09/Sample_AI09_04.jpg";
 import Navbar from "../../../components/Navbar";
 
 const Sample_AI09_04 = () => {
@@ -80,10 +80,10 @@ const Sample_AI09_04 = () => {
         `}</style>
         
         <div>
-            {/* <div className="pitch-yaw">
+            <div className="pitch-yaw">
                 <p className="pitch-yaw-text"> Pitch: {pitch} </p>
                 <p className="pitch-yaw-text"> Yaw: {yaw} </p>
-            </div> */}
+            </div>
             <Pannellum
                 width='100%'
                 height='100vh'
