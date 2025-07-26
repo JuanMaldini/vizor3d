@@ -26,7 +26,7 @@ const ErrorPage = React.lazy(() => import("./error"));
 const Home = React.lazy(() => import("./pages/home"));
 
 //IMPORT 3D VIEWER PAGE
-const Viewer3d = React.lazy(() => import("./pages/Viewer3d"));
+const Viewer3d = React.lazy(() => import("./pages/viewer3d"));
 
 
 const router = createBrowserRouter(
