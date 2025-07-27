@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Index from "./pages/index";
 import "./App.css";
 import "./components/components.css";
-import Samples from "./pages/Projects";
+import Projects from "./pages/Projects";
 
 const Home = React.lazy(() => import("./pages/home"));
 const About = React.lazy(() => import("./pages/About"));
@@ -27,7 +27,7 @@ const router = createBrowserRouter(
       errorElement: <ErrorPage />,
       children: [
         { index: true, element: <Home /> },
-        { path: "samples", element: <Samples/> },
+        { path: "projects", element: <Projects/> },
         { path: "rsample", element: <RSample/> },
         { path: "sampleai_01", element: <Sampleai_01/> },
         { path: "sampleai_02", element: <Sampleai_02/> },
