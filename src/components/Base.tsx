@@ -24,7 +24,7 @@ const Base: React.FC = () => {
                       from the comfort of your home with our virtual tour technology.
                   </p>
                     <div className="initial-buttons">
-                      <Link to="/Samples" className="btn btn-primary">Explore Projects</Link>
+                      <Link to="/projects" className="btn btn-primary">Explore Projects</Link>
                       <CustomLink text="Contact" email="contact@vizor3d.com" className="btn btn-secondary" />
                   </div>
               </div>
