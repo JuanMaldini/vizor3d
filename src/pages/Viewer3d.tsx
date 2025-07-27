@@ -15,10 +15,9 @@ function Viewer3d() {
           touch-action="pan-y"
           cameraControls
           disable-pan
-          skybox-height="6"
-          scale=".9 .9 .9"
+          skybox-height="6" 
           camera-orbit="auto auto 50m"
-          min-camera-orbit="auto 10deg 10m"
+          min-camera-orbit="auto 20deg 10m"
           max-camera-orbit="auto 90deg 30m" 
           field-of-view="70deg"
           shadow-intensity="2"
