@@ -6,12 +6,10 @@ import "./components/components.css";
 import Samples from "./pages/Projects";
 
 //IMPORT ABOUT PAGE
+const Home = React.lazy(() => import("./pages/Home"));
 const About = React.lazy(() => import("./pages/About"));
-
-//IMPORT RODRI PAGE
 const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));
- 
-//IMPORTING SAMPLE AI09
+const Viewer3d = React.lazy(() => import("./pages/Viewer3d"));
 const Sampleai_01 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_01"));
 const Sampleai_02 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_02"));
 const Sampleai_03 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_03"));
@@ -21,14 +19,7 @@ const Sampleai_06 = React.lazy(() => import("./pages/projects/sampleai09/Sample_
 const Sampleai_07 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_07"));
 const Sampleai_08 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_08"));
 const Sampleai_09 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_09"));
-
 const ErrorPage = React.lazy(() => import("./error"));
-const Home = React.lazy(() => import("./pages/Home"));
-
-//IMPORT 3D VIEWER PAGE
-const Viewer3d = React.lazy(() => import("./pages/Viewer3d"));
-
-
 const router = createBrowserRouter(
   [
     {
