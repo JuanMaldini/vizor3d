@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProjectCard from '../components/ProjectCard';
@@ -16,6 +17,8 @@ const Projects: React.FC = () => {
             <div className="hero-container">
               <h1 className="hero-title">Our Projects</h1>
               <p className="hero-description">Explore our amazing virtual tours and immersive experiences.</p>
+              <Link to="/Viewer3d" className="btn btn-primary">Model Viewer</Link>
+              
             </div>
           </section>
 

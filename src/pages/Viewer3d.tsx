@@ -12,12 +12,18 @@ function Viewer3d() {
         <ModelViewer
           src="/3dmodels/car.glb"
           alt="A 3D model of a car"
-          autoRotate
+          touch-action="pan-y"
           cameraControls
-          ar
-          shadow-intensity="1"
-          environmentImage="neutral"
-          backgroundColor="#ffffff"
+          disable-pan
+          skybox-height="6"
+          scale=".9 .9 .9"
+          camera-orbit="auto auto 50m"
+          min-camera-orbit="auto 10deg 10m"
+          max-camera-orbit="auto 90deg 30m" 
+          field-of-view="70deg"
+          shadow-intensity="2"
+          environmentImage="../../public/enviroments/straight_afternoon_2k.hdr"
+          skybox-image="../../public/enviroments/straight_afternoon_2k.hdr"
           style={{ width: '100%', height: '600px', margin: '0 auto' }}
         />
       </main>
