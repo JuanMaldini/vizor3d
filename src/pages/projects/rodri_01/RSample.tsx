@@ -17,14 +17,13 @@ const RSample = () => {
             yaw: 0,
             navigate: "",
         }
-        
     ]);
     const panImage = useRef<any>(null);
 
     return (
         <>
         <Navbar />
-
+        
         <style>{`
             .pnlm-about-msg {
                 display: none !important;
@@ -32,16 +31,21 @@ const RSample = () => {
         `}</style>
         
         <div>
+            <div className="pitch-yaw">
+                <p className="pitch-yaw-text"> Pitch: {pitch} </p>
+                <p className="pitch-yaw-text"> Yaw: {yaw} </p>
+            </div>
             <Pannellum
                 width='100%'
                 height='100vh'
                 image={render}
+                // @ts-ignore
                 pitch={10}
                 yaw={180}
                 hfov={110}
                 autoRotate={-2}
                 autoLoad
-                //compass
+                compass
                 disableKeyboardCtrl
                 // @ts-ignore
                 ref={panImage}
