@@ -9,7 +9,7 @@ export default defineConfig({
     dedupe: ['three', 'lit', 'lit-html', 'lit-element', '@lit/reactive-element'],
   },
   build: {
-    outDir: "build",
+    outDir: "dist",
     sourcemap: process.env.SOURCE_MAP === "true",
   },
   plugins: [
