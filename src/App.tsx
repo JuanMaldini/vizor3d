@@ -5,7 +5,6 @@ import "./App.css";
 import "./components/components.css";
 import Samples from "./pages/Projects";
 
-//IMPORT ABOUT PAGE
 const Home = React.lazy(() => import("./pages/home"));
 const About = React.lazy(() => import("./pages/About"));
 const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));
@@ -27,13 +26,9 @@ const router = createBrowserRouter(
       element: <Index />,
       errorElement: <ErrorPage />,
       children: [
-
         { index: true, element: <Home /> },
-
         { path: "samples", element: <Samples/> },
-
         { path: "rsample", element: <RSample/> },
-        
         { path: "sampleai_01", element: <Sampleai_01/> },
         { path: "sampleai_02", element: <Sampleai_02/> },
         { path: "sampleai_03", element: <Sampleai_03/> },
@@ -43,9 +38,7 @@ const router = createBrowserRouter(
         { path: "sampleai_07", element: <Sampleai_07/> },
         { path: "sampleai_08", element: <Sampleai_08/> },
         { path: "sampleai_09", element: <Sampleai_09/> },
-        
         { path: "viewer3d", element: <Viewer3d/> },
-
         { path: "about", element: <About/> },
 
       ],
