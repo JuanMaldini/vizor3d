@@ -15,6 +15,7 @@ function Viewer3d() {
           autoRotate
           cameraControls
           ar
+          shadow-intensity="1"
           environmentImage="neutral"
           backgroundColor="#ffffff"
           style={{ width: '100%', height: '600px', margin: '0 auto' }}
