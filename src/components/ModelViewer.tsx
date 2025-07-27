@@ -1,6 +1,5 @@
 import React from 'react';
 import '@google/model-viewer';
-import type { ModelViewer as ModelViewerProps } from '../types/model-viewer';
 import type { ModelViewerElement } from '@google/model-viewer';
 
 /**

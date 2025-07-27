@@ -23,4 +23,3 @@ yarn-debug.log*
 yarn-error.log*
 
 # Ignorar el lockfile para evitar conflictos entre SO
-package-lock.json
