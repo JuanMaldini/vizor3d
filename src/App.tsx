@@ -1,12 +1,12 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router";
-import Index from "./pages/Index";
+import Index from "./pages/index";
 import "./App.css";
 import "./components/components.css";
 import Samples from "./pages/Projects";
 
 //IMPORT ABOUT PAGE
-const Home = React.lazy(() => import("./pages/Home"));
+const Home = React.lazy(() => import("./pages/home"));
 const About = React.lazy(() => import("./pages/About"));
 const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));
 const Viewer3d = React.lazy(() => import("./pages/Viewer3d"));
