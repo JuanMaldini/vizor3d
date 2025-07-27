@@ -29,14 +29,14 @@ const Projects: React.FC = () => {
                   title="360 Saloon"
                   description="Explore interiors in 360°"
                   author="Rodrigo"
-                  redirectPath="/RSample"
+                  redirectPath="/rsample"
                   image={RSample}
                 />
                 <ProjectCard
                   title="360 Virtual Tour"
                   description="Explore the world in 360°"
                   author="Sample"
-                  redirectPath="/Sampleai_01"
+                  redirectPath="/sampleai_01"
                   image={Sampleai_01}
                 />
               </div>
