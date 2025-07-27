@@ -21,8 +21,8 @@ function Viewer3d() {
           max-camera-orbit="auto 90deg 30m" 
           field-of-view="70deg"
           shadow-intensity="2"
-          environmentImage="../../public/enviroments/straight_afternoon_2k.hdr"
-          skybox-image="../../public/enviroments/straight_afternoon_2k.hdr"
+          environmentImage="/enviroments/straight_afternoon_2k.hdr"
+          skybox-image="/enviroments/straight_afternoon_2k.hdr"
           style={{ width: '100%', height: '600px', margin: '0 auto' }}
         />
       </main>
