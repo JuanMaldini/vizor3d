@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
   build: {
-    outDir: "build",
+    outDir: "dist",
     sourcemap: process.env.SOURCE_MAP === "true",
   },
   plugins: [
