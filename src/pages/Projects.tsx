@@ -7,7 +7,6 @@ import ProjectCard from '../components/ProjectCard';
 import RSample from '../images/projects/rsample/1.jpg';
 import Sampleai_01 from '../images/projects/sampleai09/Sample_AI09_01.jpg';
 
-
 const Projects: React.FC = () => {
   return (
     <>
@@ -18,7 +17,6 @@ const Projects: React.FC = () => {
               <h1 className="hero-title">Our Projects</h1>
               <p className="hero-description">Explore our amazing virtual tours and immersive experiences.</p>
               <Link to="/viewer3d" className="btn btn-primary">Model Viewer</Link>
-              
             </div>
           </section>
 
@@ -29,6 +27,7 @@ const Projects: React.FC = () => {
                   title="360 Saloon"
                   description="Explore interiors in 360°"
                   author="Rodrigo"
+                  // seeMoreLink="https://www.google.com"
                   redirectPath="/rsample"
                   image={RSample}
                 />

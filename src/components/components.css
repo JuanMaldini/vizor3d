@@ -1,3 +1,26 @@
+/* Author link in ProjectCard when clickable */
+.project-card-author-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.project-card-author-link:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+/* See more link in ProjectCard styled like footer links */
+.project-card-see-more {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+  margin-top: 8px;
+}
+.project-card-see-more:hover {
+  color: #007bff;
+  text-decoration: none;
+}
 /* Navbar Styles */
 .navbar {
   background-color: #1a1a1a;
