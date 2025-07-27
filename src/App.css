@@ -1,8 +1,11 @@
-
-
 .pitch-yaw{
   display: none !important;
 }
+
+.pnlm-about-msg {
+    display: none !important;
+}
+
 
 .App {
   text-align: center;

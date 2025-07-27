@@ -24,12 +24,6 @@ const RSample = () => {
         <>
         <Navbar />
         
-        <style>{`
-            .pnlm-about-msg {
-                display: none !important;
-            }
-        `}</style>
-        
         <div>
             <div className="pitch-yaw">
                 <p className="pitch-yaw-text"> Pitch: {pitch} </p>

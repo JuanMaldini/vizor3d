@@ -16,6 +16,8 @@ const Sample_AI09_02 = () => {
             pitch: -39.85,
             yaw: -78.85,
             navigate: "/Sampleai_01",
+            targetPitch: -39.85,
+            targetYaw: -78.85,
         },
         {
             name: "Sampleai_03",
@@ -23,6 +25,8 @@ const Sample_AI09_02 = () => {
             pitch: -22.5,
             yaw: -84.7,
             navigate: "/Sampleai_03",
+            targetPitch: -22.5,
+            targetYaw: -84.7,
         },
         {
             name: "Sampleai_04",
@@ -72,12 +76,6 @@ const Sample_AI09_02 = () => {
     return (
         <>
         <Navbar />
-        
-        <style>{`
-            .pnlm-about-msg {
-                display: none !important;
-            }
-        `}</style>
         
         <div>
             <div className="pitch-yaw">

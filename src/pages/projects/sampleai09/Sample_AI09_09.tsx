@@ -72,12 +72,6 @@ const Sample_AI09_09 = () => {
     return (
         <>
         <Navbar />
-                        
-        <style>{`
-            .pnlm-about-msg {
-                display: none !important;
-            }
-        `}</style>
         
         <div>
             <div className="pitch-yaw">
