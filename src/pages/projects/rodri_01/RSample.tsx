@@ -2,7 +2,7 @@ import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
 
-import render from "../../../images/projects/rsample/1.jpg";
+import render from "../../../images/projects/RSample/1.jpg";
 import Navbar from "../../../components/Navbar";
 
 const RSample = () => {
