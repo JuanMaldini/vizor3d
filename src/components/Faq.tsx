@@ -4,7 +4,7 @@ import '../styles/Faq.css';
 const faqData = [
   {
     question: 'What visualization tools does Vizor3D include?',
-    answer: 'Vizor3D includes augmented reality (AR), 360° virtual tours, a 3D model viewer, and modeling/rendering services. Each tool adapts to different types of projects and needs.'
+    answer: 'Vizor3D includes a 3D model viewer, augmented reality (AR), 360° virtual tours and modeling/rendering services. Each tool adapts to different types of projects and needs.'
   },
   {
     question: 'How can I use the virtual tour for my project?',
@@ -15,28 +15,8 @@ const faqData = [
     answer: 'Vizor3D allows you to view 3D models in .glb and .gltf formats directly in the browser. You just need to send us the file in one of those formats.'
   },
   {
-    question: 'Can I upload my own models?',
-    answer: 'Currently, we only showcase selected models, but we’ll soon enable uploading custom models. In the meantime, you can send us your model and we’ll publish it for you.'
-  },
-  {
     question: 'Which devices are compatible with Vizor3D?',
     answer: 'Vizor3D works on modern computers, tablets, and smartphones with updated browsers. It’s also compatible with iOS, Android, Chrome, and Safari.'
-  },
-  {
-    question: 'Do you offer 3D modeling and rendering services?',
-    answer: 'Yes. We can take care of the modeling, design, and rendering of your spaces.'
-  },
-  {
-    question: 'Do virtual tours work offline?',
-    answer: 'Not yet. Both virtual tours and 3D viewers require an internet connection, as the files are loaded from the cloud.'
-  },
-  {
-    question: 'What information do you need to create a virtual tour from scratch?',
-    answer: 'We need floor plans, space specifications, and any other relevant technical details. The more information we receive, the better the tour experience will be.'
-  },
-  {
-    question: 'What if I don’t have technical knowledge to implement the viewer or virtual tour?',
-    answer: 'No worries. We provide everything ready to use and assist you during the integration process if needed.'
   }
 ];
 
