@@ -9,7 +9,7 @@ function ModelViewer_Car() {
       alt="A 3D model of a car"
       touch-action="pan-y"
       cameraControls
-      disable-pan
+      // disable-pan
       ar
       ar-modes="webxr scene-viewer quick-look"
       skybox-height="6" 
@@ -18,7 +18,7 @@ function ModelViewer_Car() {
       max-camera-orbit="auto 160deg 50m" 
       // environmentImage="/enviroment/straight_afternoon_2k.hdr"
       skybox-image="/enviroment/straight_afternoon_2k.hdr"
-      field-of-view="70deg"
+      field-of-view="50deg"
       shadow-intensity="2"
       style={{ width: '100%', height: '600px', margin: '0 auto' }}
     />
