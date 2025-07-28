@@ -18,9 +18,9 @@ const Navbar: React.FC = () => {
           <li className="nav-item">
             <Link to="/projects" className="nav-link">Projects</Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to="/about" className="nav-link">About</Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <CustomLink text="Contact" email="contact@vizor3d.com" className="nav-link" />
           </li>

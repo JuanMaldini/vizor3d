@@ -21,8 +21,7 @@ const RSample = () => {
     const panImage = useRef<any>(null);
 
     return (
-        <>
-        <Navbar />
+
         
         <div>
             <div className="pitch-yaw">
@@ -39,7 +38,7 @@ const RSample = () => {
                 hfov={110}
                 autoRotate={-2}
                 autoLoad
-                compass
+                // compass
                 disableKeyboardCtrl
                 // @ts-ignore
                 ref={panImage}
@@ -63,7 +62,7 @@ const RSample = () => {
                     );
                 })}
             </Pannellum>
-        </div></>
+        </div>
     )
 }
 

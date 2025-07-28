@@ -70,9 +70,6 @@ const Sample_AI09_09 = () => {
     const panImage = useRef<any>(null);
 
     return (
-        <>
-        <Navbar />
-        
         <div>
             <div className="pitch-yaw">
                 <p className="pitch-yaw-text"> Pitch: {pitch} </p>
@@ -84,10 +81,10 @@ const Sample_AI09_09 = () => {
                 image={render}
                 pitch={10}
                 yaw={180}
-                hfov={110}
+                hfov={80}
                 autoRotate={-2}
                 autoLoad
-                compass
+                // compass
                 disableKeyboardCtrl
                 // @ts-ignore
                 ref={panImage}
@@ -111,7 +108,7 @@ const Sample_AI09_09 = () => {
                     );
                 })}
             </Pannellum>
-        </div></>
+        </div>
     )
 }
 

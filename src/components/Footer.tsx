@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>360 Virtual Tour</h3>
+            <h3>360 Virtual Experiences</h3>
             <p>Creating immersive experiences to explore the world.</p>
           </div>
           
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             <ul className="footer-links">
               <li><Link to="/" onClick={scrollToTop}>Home</Link></li>
               <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/about">About</Link></li>
+              {/* <li><Link to="/about">About</Link></li> */}
               <li><CustomLink text="Contact" email="contact@vizor3d.com" /></li>
             </ul>
           </div>
