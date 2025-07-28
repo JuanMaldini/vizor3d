@@ -81,7 +81,7 @@ const Sample_AI09_08 = () => {
                 image={render}
                 pitch={10}
                 yaw={180}
-                hfov={70}
+                hfov={90}
                 autoRotate={-2}
                 autoLoad
                 // compass

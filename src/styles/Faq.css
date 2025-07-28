@@ -3,8 +3,8 @@
   border-radius: 1rem;
   box-shadow: 0 0px 32px rgba(0,0,0,0.2);
   max-width: 700px;
-  margin: 2rem auto 1.5rem auto;
-  padding: 1.2rem 1rem;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
 .faq-title {
@@ -18,7 +18,7 @@
 .faq-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0px;
 }
 
 .faq-item {

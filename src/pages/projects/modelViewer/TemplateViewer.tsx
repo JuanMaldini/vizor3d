@@ -2,8 +2,6 @@ import ModelViewer from '../../../components/ModelViewer';
 
 function TemplateViewer() {
   return (
-    <div>
-      <main>
         <ModelViewer
           src={''} // string: '/models/model.glb'
           alt={''} // string: 'A 3D model'
@@ -57,8 +55,6 @@ function TemplateViewer() {
           style={undefined} // React.CSSProperties: { width: '100%' }
           ref={undefined} // React.Ref<ModelViewerElement>
         />
-      </main>
-    </div>
   );
 }
 

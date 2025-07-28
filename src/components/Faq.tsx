@@ -49,7 +49,8 @@ const Faq: React.FC = () => {
 
   return (
     <div className="faq-container">
-      <h2 className="faq-title">Preguntas Frecuentes</h2>
+      <h2 className="faq-title">Faq's
+</h2>
       <ul className="faq-list">
         {faqData.map((item, idx) => (
           <li key={idx} className={`faq-item${openIndex === idx ? ' open' : ''}`}>
