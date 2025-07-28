@@ -55,43 +55,58 @@ const Projects: React.FC = () => {
           <p className="projects2-section-desc">View and interact with 3D models in real-time.</p>
           <div className="projects2-cards-row">
             <div className="models-viewer-container">
-              <div
+
+              <article
                 className="model-viewer-card project-card-link"
                 onClick={() => window.location.href = '/modelviewercar'}
-                style={{ cursor: 'pointer', position: 'relative' }}
+                style={{ cursor: 'pointer', position: 'relative', flex: '1 1 45%', maxWidth: '45%' }}
               >
-                <div>
-                  <ModelViewer
-                    src="/3dmodels/car.glb"
-                    cameraControls
-                    touch-action="pan-y"
-                    ar-="webxr scene-viewer quick-look"
-                    skybox-height="6" 
-                    environmentImage="/enviroment/straight_afternoon_2k.hdr"
-                    field-of-view="110deg"
-                    shadow-intensity="2"
-                  />
-                </div>
-              </div>
+                <ModelViewer
+                  src="/3dmodels/car.glb"
+                  cameraControls
+                  touch-action="pan-y"
+                  ar-="webxr scene-viewer quick-look"
+                  skybox-height="6" 
+                  environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                  field-of-view="110deg"
+                  shadow-intensity="2"
+                />
+              </article>
 
-              <div
+              <article
                 className="model-viewer-card project-card-link"
                 onClick={() => window.location.href = '/modelviewerlamp'}
-                style={{ cursor: 'pointer', position: 'relative' }}
+                style={{ cursor: 'pointer', position: 'relative', flex: '1 1 45%', maxWidth: '45%' }}
               >
-                <div>
-                  <ModelViewer
-                    src="/3dmodels/arabian_lamp.glb"
-                    cameraControls
-                    touch-action="pan-y"
-                    ar-="webxr scene-viewer quick-look"
-                    skybox-height="6" 
-                    environmentImage="/enviroment/straight_afternoon_2k.hdr"
-                    field-of-view="110deg"
-                    shadow-intensity="2"
-                  />
-                </div>
-              </div>
+                <ModelViewer
+                  src="/3dmodels/arabian_lamp.glb"
+                  cameraControls
+                  touch-action="pan-y"
+                  ar-="webxr scene-viewer quick-look"
+                  skybox-height="6" 
+                  environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                  field-of-view="110deg"
+                  shadow-intensity="2"
+                />
+              </article>
+
+              {/* <article
+                className="model-viewer-card project-card-link"
+                onClick={() => window.location.href = '/modelviewerbalance'}
+                style={{ cursor: 'pointer', position: 'relative', flex: '1 1 45%', maxWidth: '45%' }}
+              >
+                <ModelViewer
+                  src="/3dmodels/used_new_balance_574_classic.glb"
+                  cameraControls
+                  touch-action="pan-y"
+                  ar-="webxr scene-viewer quick-look"
+                  skybox-height="6" 
+                  environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                  field-of-view="110deg"
+                  shadow-intensity="1"
+                />
+              </article> */}
+
             </div>
           </div>
         </section>

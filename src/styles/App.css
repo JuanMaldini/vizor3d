@@ -19,18 +19,42 @@
 
 .models-viewer-container{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  gap: 4rem;
-  /* width: 100%; */
+  gap: 2rem;
+  width: 100%;
+}
+
+.model-viewer-card {
+  flex: 1 1 45%;
+  max-width: 45%;
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  display: block;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 900px) {
+  .model-viewer-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 .project-card-link {
-  background: white;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
+  border-width: 4px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: var(--gray-100);
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   width: 100%;
   max-width: 420px;
@@ -39,13 +63,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  outline: none;
+  /* position: relative; */
 }
 .project-card-link:hover, .project-card-link:focus {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: scale(1.025);
 }
+
 .project-card-link > div {
   width: 100%;
   height: 100%;
@@ -204,7 +227,7 @@ code {
 }
 
 .virtual-tour-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.025);
 }
 
 
