@@ -11,7 +11,9 @@ function ModelViewer_Car() {
       cameraControls
       // disable-pan
       ar
+      ar-scale="fixed"
       ar-modes="webxr scene-viewer quick-look"
+      xr-environment
       skybox-height="6" 
       camera-orbit="auto auto 50m"
       min-camera-orbit="auto 20deg 11m"
