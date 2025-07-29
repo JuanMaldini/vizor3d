@@ -3,12 +3,11 @@ import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
 
 import render from "../../../images/projects/RSample/1.jpg";
-import Navbar from "../../../components/Navbar";
 
 const RSample = () => {
     let navigate = useNavigate();
-    const [yaw, setYaw] = useState(0);
-    const [pitch, setPitch] = useState(0);
+    const [yaw, setYaw] = useState();
+    const [pitch, setPitch] = useState();
     const [hotspots] = useState([
         {
             name: "",
@@ -21,8 +20,6 @@ const RSample = () => {
     const panImage = useRef<any>(null);
 
     return (
-
-        
         <div>
             <div className="pitch-yaw">
                 <p className="pitch-yaw-text"> Pitch: {pitch} </p>
@@ -30,13 +27,13 @@ const RSample = () => {
             </div>
             <Pannellum
                 width='100%'
-                height='100vh'
+                height='84vh'
                 image={render}
                 // @ts-ignore
-                pitch={10}
-                yaw={180}
-                hfov={110}
-                autoRotate={-2}
+                pitch={-1.1195383276232724}
+                yaw={43.568985506613785}
+                hfov={100}
+                // autoRotate={-2}
                 autoLoad
                 // compass
                 disableKeyboardCtrl

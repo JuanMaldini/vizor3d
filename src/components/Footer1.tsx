@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="footer">
+    <div className="footer">
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
@@ -32,15 +32,10 @@ const Footer: React.FC = () => {
               <li><CustomLink text="contact@vizor3d.com" email="contact@vizor3d.com" /></li>
             </ul>
           </div>
-          
 
         </div>
-        
-        <div className="footer-bottom">
-          <p>&copy; 2025 Vizor 3d. All rights reserved.</p>
-        </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

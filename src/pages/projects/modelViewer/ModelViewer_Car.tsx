@@ -1,4 +1,4 @@
-import Footer from '../../../components/Footer';
+import Footer from '../../../components/Footer1';
 import ModelViewer from '../../../components/ModelViewer';
 import Navbar from '../../../components/Navbar';
 
@@ -10,10 +10,10 @@ function ModelViewer_Car() {
       touch-action="pan-y"
       cameraControls
       // disable-pan
-      ar
-      ar-scale="fixed"
-      ar-modes="webxr scene-viewer quick-look"
-      xr-environment
+      // ar
+      // ar-scale="fixed"
+      // ar-modes="webxr scene-viewer quick-look"
+      // xr-environment
       skybox-height="6" 
       camera-orbit="auto auto 50m"
       min-camera-orbit="auto 20deg 11m"

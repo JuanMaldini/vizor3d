@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CustomLink } from '../components/functions';
 import Faq from '../components/Faq';
+import Footer1 from '../components/Footer1';
 
 const Home: React.FC = () => {
   return (
@@ -48,6 +49,7 @@ const Home: React.FC = () => {
               </div>
           </section>
       <Faq />
+      <Footer1/>
       </main>
   );
 };
