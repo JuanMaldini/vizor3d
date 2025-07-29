@@ -1,14 +1,12 @@
 import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
-
 import render from "../../../images/projects/sampleai09/Sample_AI09_08.jpg";
-import Navbar from "../../../components/Navbar";
 
 const Sample_AI09_08 = () => {
     let navigate = useNavigate();
-    const [yaw, setYaw] = useState(0);
-    const [pitch, setPitch] = useState(0);
+    const [yaw, setYaw] = useState();
+    const [pitch, setPitch] = useState();
     const [hotspots] = useState([
         {
             name: "Sampleai_01",
@@ -77,12 +75,12 @@ const Sample_AI09_08 = () => {
             </div>
             <Pannellum
                 width='100%'
-                height='100vh'
+                height='84vh'
                 image={render}
-                pitch={10}
-                yaw={180}
+                pitch={0}
+                yaw={0}
                 hfov={90}
-                autoRotate={-2}
+                // autoRotate={-2}
                 autoLoad
                 // compass
                 disableKeyboardCtrl

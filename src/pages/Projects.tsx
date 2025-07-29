@@ -6,6 +6,9 @@ import Sampleai_01 from '../images/projects/sampleai09/Sample_AI09_01.jpg';
 import ModelViewer from '../components/ModelViewer';
 import '../styles/App.css';
 import Faq from '../components/Faq';
+import Footer1 from '../components/Footer1';
+
+// import imglamp from '../../public/Icons/img-lamp.png';
 
 const Projects: React.FC = () => {
   return (
@@ -90,27 +93,11 @@ const Projects: React.FC = () => {
                 />
               </article>
 
-              {/* <article
-                className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/modelviewerbalance'}
-                style={{ cursor: 'pointer', position: 'relative', flex: '1 1 45%', maxWidth: '45%' }}
-              >
-                <ModelViewer
-                  src="/3dmodels/used_new_balance_574_classic.glb"
-                  cameraControls
-                  touch-action="pan-y"
-                  ar-="webxr scene-viewer quick-look"
-                  skybox-height="6" 
-                  environmentImage="/enviroment/straight_afternoon_2k.hdr"
-                  field-of-view="110deg"
-                  shadow-intensity="1"
-                />
-              </article> */}
-
             </div>
           </div>
         </section>
       <Faq />
+      <Footer1 />
       </main>
   );
 };

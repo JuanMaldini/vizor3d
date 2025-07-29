@@ -1,9 +1,7 @@
 import { startTransition, useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router";
 import { Pannellum } from "pannellum-react";
-
 import render from "../../../images/projects/sampleai09/Sample_AI09_01.jpg";
-import Navbar from "../../../components/Navbar";
 
 const Sample_AI09_01 = () => {
     let navigate = useNavigate();
@@ -77,13 +75,13 @@ const Sample_AI09_01 = () => {
             </div>
             <Pannellum
                 width='100%'
-                height='100vh'
+                height='84vh'
                 image={render}
                 // @ts-ignore
-                pitch={10}
-                yaw={180}
+                pitch={0}
+                yaw={0}
                 hfov={90}
-                autoRotate={-2}
+                // autoRotate={-2}
                 autoLoad
                 // compass
                 disableKeyboardCtrl
@@ -103,6 +101,8 @@ const Sample_AI09_01 = () => {
                             type={type}
                             pitch={pitch}
                             yaw={yaw}
+                            targetPitch="same"
+                            targetYaw="same"
                             handleClick={() => type === 'custom' && startTransition(() => navigate(hotspot.navigate) as void)}
                             text={name}
                             key={idx} />
