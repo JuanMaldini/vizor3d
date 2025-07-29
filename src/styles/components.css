@@ -169,7 +169,7 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #333;
+  color: var(--secondary);
 }
 
 .features-grid {
@@ -241,7 +241,7 @@
 .project-card-description {
   margin: 0 0 0.5rem 0;
   font-size: 1.05rem;
-  color: #e0e0e0;
+  color: var(--secondary);
 }
 
 .project-card-author {

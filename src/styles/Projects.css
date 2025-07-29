@@ -1,7 +1,7 @@
 .projects2-main {
   min-height: 100vh;
   background: var(--background);
-  color: #fff;
+  color: var(--secondary);
 }
 
 .projects2-hero {
@@ -42,8 +42,7 @@
 }
 
 .projects2-btn {
-  background: var(--accent, #007bff);
-  color: #fff;
+  background: var(--accent);
   border: none;
   border-radius: 2rem;
   padding: 0.75rem 2.5rem;
@@ -54,7 +53,7 @@
   transition: background 0.2s, transform 0.2s;
 }
 .projects2-btn:hover {
-  background: #0056b3;
+  background: var(--accent);
   transform: translateY(-2px) scale(1.04);
 }
 
