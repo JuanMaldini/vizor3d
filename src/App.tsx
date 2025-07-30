@@ -7,11 +7,13 @@ import "./styles/components.css";
 const Home = React.lazy(() => import("./pages/home"));
 const About = React.lazy(() => import("./pages/About"));
 const Projects = React.lazy(() => import("./pages/Projects"));
-const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));
+
 
 const ModelViewer_Car = React.lazy(() => import("./pages/projects/modelViewer/ModelViewer_Car"));
 const ModelViewer_Lamp = React.lazy(() => import("./pages/projects/modelViewer/ModelViewer_Lamp"));
 const ModelViewer_Balance = React.lazy(() => import("./pages/projects/modelViewer/ModelViewer_Balance"));
+
+const RSample = React.lazy(() => import("./pages/projects/rodri_01/RSample"));
 
 const Sampleai_01 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_01"));
 const Sampleai_02 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_02"));
@@ -22,10 +24,13 @@ const Sampleai_06 = React.lazy(() => import("./pages/projects/sampleai09/Sample_
 const Sampleai_07 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_07"));
 const Sampleai_08 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_08"));
 const Sampleai_09 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_09"));
+
+const TargetLocation = React.lazy(() => import("./pages/projects/ImageAR"));
+
 const ErrorPage = React.lazy(() => import("./error"));
 const router = createBrowserRouter(
   [
-    {
+    { 
       path: "/",
       element: <Index />,
       errorElement: <ErrorPage />,
@@ -45,6 +50,8 @@ const router = createBrowserRouter(
         { path: "sampleai_07", element: <Sampleai_07/> },
         { path: "sampleai_08", element: <Sampleai_08/> },
         { path: "sampleai_09", element: <Sampleai_09/> },
+        
+        { path: "targetlocation", element: <TargetLocation/> },
 
         { path: "modelviewercar", element: <ModelViewer_Car/> },
         { path: "modelviewerlamp", element: <ModelViewer_Lamp/> },

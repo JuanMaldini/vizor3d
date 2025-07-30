@@ -78,8 +78,8 @@ const Sample_AI09_01 = () => {
                 height='84vh'
                 image={render}
                 // @ts-ignore
-                pitch={0}
-                yaw={0}
+                pitch={-32.33833884932688}
+                yaw={132.19221152571745}
                 hfov={90}
                 // autoRotate={-2}
                 autoLoad
@@ -103,7 +103,7 @@ const Sample_AI09_01 = () => {
                             yaw={yaw}
                             targetPitch="same"
                             targetYaw="same"
-                            handleClick={() => type === 'custom' && startTransition(() => navigate(hotspot.navigate) as void)}
+                            handleClick={() => type === 'custom' && startTransition(() => navigate(hotspot.navigate, { state: { pitch: hotspot.pitch, yaw: hotspot.yaw } }) as void)}
                             text={name}
                             key={idx} />
                     );
