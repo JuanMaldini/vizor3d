@@ -18,6 +18,9 @@ export default defineConfig({
       srcDir: "src",
       strategies: "injectManifest",
       manifest: false,
+      injectManifest: {
+        maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MB (aumentado desde 2 MB predeterminado)
+      },
     }),
     react(),
   ],
