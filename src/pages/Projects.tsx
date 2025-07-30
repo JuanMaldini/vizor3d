@@ -7,12 +7,12 @@ import ModelViewer from '../components/ModelViewer';
 import '../styles/App.css';
 import Faq from '../components/Faq';
 import Footer1 from '../components/Footer1';
+import { Pannellum } from 'pannellum-react';
 
-// import imglamp from '../../public/Icons/img-lamp.png';
 
 const Projects: React.FC = () => {
   return (
-      <main className="projects2-main">
+    <main className="projects2-main">
 
         <section className="projects2-hero">
           <h1 className="projects2-title">Our Projects</h1>
@@ -35,6 +35,7 @@ const Projects: React.FC = () => {
           <h3 className="projects2-section-title">Virtual Tour</h3>
           <p className="projects2-section-desc">Explore your 3D spaces by 360° images </p>
           <div className="projects2-cards-row">
+
                 <ProjectCard
                   title="360 Saloon"
                   description="Explore interiors in 360°"
@@ -42,6 +43,8 @@ const Projects: React.FC = () => {
                   // seeMoreLink="https://www.google.com"
                   redirectPath="/rsample"
                   image={RSample}
+                  p={-26.164483557549705}
+                  y={45.90340252545282}
                 />
                 <ProjectCard
                   title="360 Virtual Tour"
@@ -49,6 +52,8 @@ const Projects: React.FC = () => {
                   author="Sample"
                   redirectPath="/sampleai_01"
                   image={Sampleai_01}
+                  p={-32.33833884932688}
+                  y={132.19221152571745}
                 />
           </div>
         </section>
@@ -62,40 +67,97 @@ const Projects: React.FC = () => {
               <article
                 className="model-viewer-card project-card-link"
                 onClick={() => window.location.href = '/modelviewercar'}
-                style={{ cursor: 'pointer', position: 'relative', flex: '1 1 45%', maxWidth: '45%' }}
+                style={{ 
+                  cursor: 'pointer', 
+                  position: 'relative', 
+                  flex: '1 1 45%', 
+                  maxWidth: '45%',
+                  minHeight: '300px',
+                  height: '100%' 
+                }}
               >
                 <ModelViewer
                   src="/3dmodels/car.glb"
                   cameraControls
                   touch-action="pan-y"
-                  ar-="webxr scene-viewer quick-look"
                   skybox-height="6" 
                   environmentImage="/enviroment/straight_afternoon_2k.hdr"
-                  field-of-view="110deg"
+                  min-camera-orbit="auto auto 32m"
+                  max-camera-orbit="auto auto 40m"
                   shadow-intensity="2"
+                  disable-zoom
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    minHeight: '300px'
+                  }}
                 />
               </article>
 
               <article
                 className="model-viewer-card project-card-link"
                 onClick={() => window.location.href = '/modelviewerlamp'}
-                style={{ cursor: 'pointer', position: 'relative', flex: '1 1 45%', maxWidth: '45%' }}
+                style={{ 
+                  cursor: 'pointer', 
+                  position: 'relative', 
+                  flex: '1 1 45%', 
+                  maxWidth: '45%',
+                  minHeight: '300px',
+                  height: '100%'
+                }}
+                disable-zoom
               >
                 <ModelViewer
                   src="/3dmodels/arabian_lamp.glb"
                   cameraControls
                   touch-action="pan-y"
-                  ar-="webxr scene-viewer quick-look"
                   skybox-height="6" 
                   environmentImage="/enviroment/straight_afternoon_2k.hdr"
-                  field-of-view="110deg"
+                  min-camera-orbit="auto auto 20m"
+                  max-camera-orbit="auto auto 30m"
                   shadow-intensity="2"
+                  disable-zoom
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    minHeight: '300px'
+                  }}
                 />
               </article>
 
             </div>
           </div>
         </section>
+
+        {/* <section id="section2" className="projects2-section">
+          <h3 className="projects2-section-title">Augmented Reality</h3>
+          <p className="projects2-section-desc">Place your models over the real world.</p>
+          <div className="projects2-cards-row">
+            <div className="models-viewer-container">
+
+              <article
+                className="model-viewer-card project-card-link"
+                onClick={() => window.location.href = '/targetlocation'}
+                style={{ 
+                  cursor: 'pointer', 
+                  position: 'relative', 
+                  flex: '1 1 45%', 
+                  maxWidth: '45%',
+                  minHeight: '300px',
+                  height: '100%',
+                  overflow: 'hidden',
+                  borderRadius: '8px'
+                }}
+              >
+                <button className="btn btn-secondary" onClick={() => window.location.href = '/modelviewercar'}>
+                  View Car Model
+                </button>
+              </article>
+
+            </div>
+          </div>
+        </section> */}
+
       <Faq />
       <Footer1 />
       </main>
