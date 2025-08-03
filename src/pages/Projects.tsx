@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
                   title="360 Virtual Tour"
                   description="Explore the world in 360°"
                   author="Sample"
-                  redirectPath="/Sample_AI09_01"
+                  redirectPath="/Sampleai_01"
                   image={Sampleai_01}
                   p={-32.33833884932688}
                   y={132.19221152571745}
