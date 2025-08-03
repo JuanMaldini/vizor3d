@@ -1,6 +1,4 @@
-import Footer from '../../../components/Footer1';
 import ModelViewer from '../../../components/ModelViewer';
-import Navbar from '../../../components/Navbar';
 
 function ModelViewer_Lamp() {
   return (
