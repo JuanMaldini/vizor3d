@@ -11,7 +11,7 @@ const Projects = React.lazy(() => import("./pages/Projects"));
 const ModelViewer_Car = React.lazy(() => import("./pages/projects/modelViewer/ModelViewer_Car"));
 const ModelViewer_Lamp = React.lazy(() => import("./pages/projects/modelViewer/ModelViewer_Lamp"));
 
-const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/noiseless/Noiseless_Sample01"));
+const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/Noiseless/Noiseless_Sample01"));
 
 const Sampleai_01 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_01"));
 const Sampleai_02 = React.lazy(() => import("./pages/projects/sampleai09/Sample_AI09_02"));
