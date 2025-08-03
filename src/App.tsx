@@ -1,29 +1,29 @@
 import React, { Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Index from "./pages/index";
-import "./styles/App.css";
-import "./styles/components.css";
+import Index from "@/pages/index";
+import "@/styles/App.css";
+import "@/styles/components.css";
 
-const Home = React.lazy(() => import("./pages/home"));
-const About = React.lazy(() => import("./pages/About"));
-const Projects = React.lazy(() => import("./pages/Projects"));
+const Home = React.lazy(() => import("@/pages/home"));
+const About = React.lazy(() => import("@/pages/About"));
+const Projects = React.lazy(() => import("@/pages/Projects"));
 
-const ModelViewer_Car = React.lazy(() => import("./pages/projects/ModelViewer/ModelViewer_Car"));
-const ModelViewer_Lamp = React.lazy(() => import("./pages/projects/ModelViewer/ModelViewer_Lamp"));
+const ModelViewer_Car = React.lazy(() => import("@/pages/projects/ModelViewer/ModelViewer_Car"));
+const ModelViewer_Lamp = React.lazy(() => import("@/pages/projects/ModelViewer/ModelViewer_Lamp"));
 
-const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/Noiseless/Noiseless_Sample01"));
+const Noiseless_Sample01 = React.lazy(() => import("@/pages/projects/Noiseless/Noiseless_Sample01"));
 
-const Sampleai_01 = React.lazy(() => import("./pages/projects/Sampleai09/Sample_AI09_01"));
-const Sampleai_02 = React.lazy(() => import("./pages/projects/Sampleai09/Sample_AI09_02"));
-const Sampleai_03 = React.lazy(() => import("./pages/projects/Sampleai09/Sample_AI09_03"));
-const Sampleai_04 = React.lazy(() => import("./pages/projects/Sampleai09/Sample_AI09_04"));
-const Sampleai_05 = React.lazy(() => import("./pages/projects/Sampleai09/Sample_AI09_05"));
-const Sampleai_06 = React.lazy(() => import("./pages/projects/Sampleai09/Sample_AI09_06"));
-const Sampleai_07 = React.lazy(() => import("./pages/projects/Sampleai09/Sample_AI09_07"));
-const Sampleai_08 = React.lazy(() => import("./pages/projects/Sampleai09/Sample_AI09_08"));
-const Sampleai_09 = React.lazy(() => import("./pages/projects/Sampleai09/Sample_AI09_09"));
+const Sampleai_01 = React.lazy(() => import("@/pages/projects/Sampleai09/Sample_AI09_01"));
+const Sampleai_02 = React.lazy(() => import("@/pages/projects/Sampleai09/Sample_AI09_02"));
+const Sampleai_03 = React.lazy(() => import("@/pages/projects/Sampleai09/Sample_AI09_03"));
+const Sampleai_04 = React.lazy(() => import("@/pages/projects/Sampleai09/Sample_AI09_04"));
+const Sampleai_05 = React.lazy(() => import("@/pages/projects/Sampleai09/Sample_AI09_05"));
+const Sampleai_06 = React.lazy(() => import("@/pages/projects/Sampleai09/Sample_AI09_06"));
+const Sampleai_07 = React.lazy(() => import("@/pages/projects/Sampleai09/Sample_AI09_07"));
+const Sampleai_08 = React.lazy(() => import("@/pages/projects/Sampleai09/Sample_AI09_08"));
+const Sampleai_09 = React.lazy(() => import("@/pages/projects/Sampleai09/Sample_AI09_09"));
 
-const ErrorPage = React.lazy(() => import("./error"));
+const ErrorPage = React.lazy(() => import("@/error"));
 const router = createBrowserRouter(
   [
     { 
