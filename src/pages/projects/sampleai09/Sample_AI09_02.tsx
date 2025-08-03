@@ -1,7 +1,7 @@
 import { startTransition, useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router";
 import { Pannellum } from "pannellum-react";
-import render from "../../../../public/images/projects/sampleai09/Sample_AI09_02.jpg";
+import render from "/images/projects/sampleai09/Sample_AI09_02.jpg";
 
 const Sample_AI09_02 = () => {
     let navigate = useNavigate();

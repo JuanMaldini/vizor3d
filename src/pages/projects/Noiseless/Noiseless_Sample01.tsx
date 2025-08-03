@@ -2,7 +2,7 @@ import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
 
-import render from "../../../../public/images/projects/Noiseless/1.jpg";
+import render from "/images/projects/Noiseless/1.jpg";
 
 const Noiseless_Sample01 = () => {
     let navigate = useNavigate();
