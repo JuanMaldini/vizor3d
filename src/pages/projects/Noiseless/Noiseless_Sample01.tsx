@@ -1,11 +1,10 @@
 import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
-import PanelLateral from "../../../components/PanelLateral";
 
-import render from "../../../images/projects/RSample/1.jpg";
+import render from "../../../../public/images/projects/Noiseless/1.jpg";
 
-const RSample = () => {
+const Noiseless_Sample01 = () => {
     let navigate = useNavigate();
     const [yaw, setYaw] = useState();
     const [pitch, setPitch] = useState();
@@ -64,4 +63,4 @@ const RSample = () => {
     )
 }
 
-export default RSample;
+export default Noiseless_Sample01;

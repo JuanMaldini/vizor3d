@@ -1,13 +1,14 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import '../styles/Projects.css';
-import RSample from '../images/projects/RSample/1.jpg';
-import Sampleai_01 from '../images/projects/sampleai09/Sample_AI09_01.jpg';
-import ModelViewer from '../components/ModelViewer';
 import '../styles/App.css';
+
+import Noiseless_Sample01 from '../../public/images/projects/Noiseless/1.jpg';
+import Sampleai_01 from '../../public/images/projects/sampleai09/Sample_AI09_01.jpg';
+import ModelViewer from '../components/ModelViewer';
+
 import Faq from '../components/Faq';
 import Footer1 from '../components/Footer1';
-import { Pannellum } from 'pannellum-react';
 
 
 const Projects: React.FC = () => {
@@ -39,10 +40,10 @@ const Projects: React.FC = () => {
                 <ProjectCard
                   title="360 Saloon"
                   description="Explore interiors in 360°"
-                  author="Rodrigo"
-                  // seeMoreLink="https://www.google.com"
-                  redirectPath="/rsample"
-                  image={RSample}
+                  author="Noiselss Studio"
+                  seeMoreLink="https://www.noiseless-studio.com/"
+                  redirectPath="/Noiseless_Sample01"
+                  image={Noiseless_Sample01}
                   p={-26.164483557549705}
                   y={45.90340252545282}
                 />
@@ -50,7 +51,7 @@ const Projects: React.FC = () => {
                   title="360 Virtual Tour"
                   description="Explore the world in 360°"
                   author="Sample"
-                  redirectPath="/sampleai_01"
+                  redirectPath="/Sampleai_01"
                   image={Sampleai_01}
                   p={-32.33833884932688}
                   y={132.19221152571745}
@@ -66,7 +67,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/modelviewercar'}
+                onClick={() => window.location.href = '/ModelViewer_Car'}
                 style={{ 
                   cursor: 'pointer', 
                   position: 'relative', 
@@ -96,7 +97,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/modelviewerlamp'}
+                onClick={() => window.location.href = '/ModelViewer_Lamp'}
                 style={{ 
                   cursor: 'pointer', 
                   position: 'relative', 
