@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
                   description="Explore interiors in 360°"
                   author="Noiselss Studio"
                   seeMoreLink="https://www.noiseless-studio.com/"
-                  redirectPath="/noiseless_sample01"
+                  redirectPath="/Noiseless_Sample01"
                   image={Noiseless_Sample01}
                   p={-26.164483557549705}
                   y={45.90340252545282}
@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
                   title="360 Virtual Tour"
                   description="Explore the world in 360°"
                   author="Sample"
-                  redirectPath="/sampleai_01"
+                  redirectPath="/Sample_AI09_01"
                   image={Sampleai_01}
                   p={-32.33833884932688}
                   y={132.19221152571745}
@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/modelviewer_car'}
+                onClick={() => window.location.href = '/ModelViewer_Car'}
                 style={{ 
                   cursor: 'pointer', 
                   position: 'relative', 
@@ -97,7 +97,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/modelviewer_lamp'}
+                onClick={() => window.location.href = '/ModelViewer_Lamp'}
                 style={{ 
                   cursor: 'pointer', 
                   position: 'relative', 

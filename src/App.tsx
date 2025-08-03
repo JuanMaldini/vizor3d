@@ -36,20 +36,20 @@ const router = createBrowserRouter(
         { path: "about", element: <About/> },
         { path: "projects", element: <Projects/> },
 
-        { path: "noiseless_sample01", element: <Noiseless_Sample01/> },
+        { path: "Noiseless_Sample01", element: <Noiseless_Sample01/> },
 
-        { path: "sampleai_01", element: <Sampleai_01/> },
-        { path: "sampleai_02", element: <Sampleai_02/> },
-        { path: "sampleai_03", element: <Sampleai_03/> },
-        { path: "sampleai_04", element: <Sampleai_04/> },
-        { path: "sampleai_05", element: <Sampleai_05/> },
-        { path: "sampleai_06", element: <Sampleai_06/> },
-        { path: "sampleai_07", element: <Sampleai_07/> },
-        { path: "sampleai_08", element: <Sampleai_08/> },
-        { path: "sampleai_09", element: <Sampleai_09/> },
-        
-        { path: "modelviewer_car", element: <ModelViewer_Car/> },
-        { path: "modelviewer_lamp", element: <ModelViewer_Lamp/> },
+        { path: "Sample_AI09_01", element: <Sampleai_01/> },
+        { path: "Sample_AI09_02", element: <Sampleai_02/> },
+        { path: "Sample_AI09_03", element: <Sampleai_03/> },
+        { path: "Sample_AI09_04", element: <Sampleai_04/> },
+        { path: "Sample_AI09_05", element: <Sampleai_05/> },
+        { path: "Sample_AI09_06", element: <Sampleai_06/> },
+        { path: "Sample_AI09_07", element: <Sampleai_07/> },
+        { path: "Sample_AI09_08", element: <Sampleai_08/> },
+        { path: "Sample_AI09_09", element: <Sampleai_09/> },
+
+        { path: "ModelViewer_Car", element: <ModelViewer_Car/> },
+        { path: "ModelViewer_Lamp", element: <ModelViewer_Lamp/> },
 
       ],
     },
