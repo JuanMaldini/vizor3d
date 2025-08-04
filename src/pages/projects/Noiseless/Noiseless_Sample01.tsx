@@ -2,9 +2,11 @@ import { startTransition, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Pannellum } from "pannellum-react";
 
-import render from "../../../images/projects/Noiseless/1.jpg";
-
 const Noiseless_Sample01 = () => {
+
+    const render = 'https://res.cloudinary.com/dlpynom5r/image/upload/v1754327886/1_xdx0gk.jpg';
+
+
     let navigate = useNavigate();
     const [yaw, setYaw] = useState();
     const [pitch, setPitch] = useState();

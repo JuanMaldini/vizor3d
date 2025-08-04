@@ -1,9 +1,9 @@
 import { startTransition, useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router";
 import { Pannellum } from "pannellum-react";
-import render from "../../../images/projects/Sampleai09/Sample_AI09_02.jpg";
 
 const Sample_AI09_02 = () => {
+    const render = "https://res.cloudinary.com/dlpynom5r/image/upload/v1754327885/Sample_AI09_02_ffpl4l.jpg";
     let navigate = useNavigate();
     const [pitch, setPitch] = useState();
     const [yaw, setYaw] = useState();
