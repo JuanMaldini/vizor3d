@@ -3,14 +3,12 @@ import ProjectCard from '../components/ProjectCard';
 import '../styles/Projects.css';
 import '../styles/App.css';
 
+import Noiseless_Sample01 from '../images/projects/Noiseless/1.jpg';
+import Sampleai_01 from '../images/projects/Sampleai09/Sample_AI09_01.jpg';
 import ModelViewer from '../components/ModelViewer';
 
 import Faq from '../components/Faq';
 import Footer1 from '../components/Footer1';
-
-// URL externa para Cloudinary
-const Noiseless_Sample01 = 'https://res.cloudinary.com/dlpynom5r/image/upload/v1754327886/1_xdx0gk.jpg';
-const Sampleai_01 = 'https://res.cloudinary.com/dlpynom5r/image/upload/v1754327885/Sample_AI09_01_wvredu.jpg';
 
 
 const Projects: React.FC = () => {
