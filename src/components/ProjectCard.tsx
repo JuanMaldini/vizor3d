@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import ReactPannellum from 'react-pannellum';
+import { ReactPannellum } from 'react-pannellum';
 
 interface ProjectCardProps {
   title: string;
@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, author, r
   const handleClick = () => {
     navigate(redirectPath);
   };
-
+ 
   // Configuración moderna para react-pannellum
   const config = {
     pitch: p,
@@ -29,7 +29,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, author, r
     mouseZoom: false,
     showFullscreenCtrl: false,
     showControls: false,
-    disable: false,
   };
 
   return (
