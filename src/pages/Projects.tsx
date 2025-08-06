@@ -11,7 +11,6 @@ import ModelViewer from '../components/ModelViewer';
 import Faq from '../components/Faq';
 import Footer1 from '../components/Footer1';
 
-
 const Projects: React.FC = () => {
   return (
     <main className="projects2-main">
@@ -69,14 +68,6 @@ const Projects: React.FC = () => {
               <article
                 className="model-viewer-card project-card-link"
                 onClick={() => window.location.href = '/ModelViewer_Car'}
-                style={{ 
-                  cursor: 'pointer', 
-                  position: 'relative', 
-                  flex: '1 1 45%', 
-                  maxWidth: '45%',
-                  minHeight: '300px',
-                  height: '100%' 
-                }}
               >
                 <ModelViewer
                   src="/3dmodels/car.glb"
@@ -88,11 +79,6 @@ const Projects: React.FC = () => {
                   max-camera-orbit="auto auto 40m"
                   shadow-intensity="2"
                   disable-zoom="true"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    minHeight: '300px'
-                  }}
                 />
               </article>
 
@@ -119,47 +105,12 @@ const Projects: React.FC = () => {
                   max-camera-orbit="auto auto 30m"
                   shadow-intensity="2"
                   disable-zoom="true"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    minHeight: '300px'
-                  }}
                 />
               </article>
 
             </div>
           </div>
         </section>
-
-        {/* <section id="section2" className="projects2-section">
-          <h3 className="projects2-section-title">Augmented Reality</h3>
-          <p className="projects2-section-desc">Place your models over the real world.</p>
-          <div className="projects2-cards-row">
-            <div className="models-viewer-container">
-
-              <article
-                className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/targetlocation'}
-                style={{ 
-                  cursor: 'pointer', 
-                  position: 'relative', 
-                  flex: '1 1 45%', 
-                  maxWidth: '45%',
-                  minHeight: '300px',
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: '8px'
-                }}
-              >
-                <button className="btn btn-secondary" onClick={() => window.location.href = '/modelviewercar'}>
-                  View Car Model
-                </button>
-              </article>
-
-            </div>
-          </div>
-        </section> */}
-
       <Faq />
       <Footer1 />
       </main>
