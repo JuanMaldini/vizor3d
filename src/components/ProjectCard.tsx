@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import { ReactPannellum } from 'react-pannellum';
+import ReactPannellum from 'react-pannellum';
 
 interface ProjectCardProps {
   title: string;
