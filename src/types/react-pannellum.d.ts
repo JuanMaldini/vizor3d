@@ -1,3 +1,4 @@
 declare module 'react-pannellum' {
-  export const ReactPannellum: any;
+  const ReactPannellum: React.ComponentType<any>;
+  export default ReactPannellum;
 }
