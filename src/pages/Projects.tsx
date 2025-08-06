@@ -7,7 +7,7 @@ import Noiseless_Sample01 from '../../public/images/projects/Noiseless/1.jpg';
 import Sampleai from '../../public/images/projects/Sampleai09/Sample_AI09_01.jpg';
 
 import ModelViewer from '../components/ModelViewer';
-
+ 
 import Faq from '../components/Faq';
 import Footer1 from '../components/Footer1';
 
