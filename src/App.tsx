@@ -5,7 +5,6 @@ import "./styles/App.css";
 import "./styles/components.css";
 
 const Home = React.lazy(() => import("./pages/home"));
-const About = React.lazy(() => import("./pages/About"));
 const Projects = React.lazy(() => import("./pages/Projects"));
 
 const ModelViewer_Car = React.lazy(() => import("./pages/projects/modelViewer/ModelViewer_Car"));
@@ -33,7 +32,6 @@ const router = createBrowserRouter(
       children: [
         { index: true, element: <Home /> },
 
-        { path: "about", element: <About/> },
         { path: "projects", element: <Projects/> },
 
         { path: "Noiseless_Sample01", element: <Noiseless_Sample01/> },
