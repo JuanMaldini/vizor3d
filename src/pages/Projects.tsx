@@ -3,8 +3,9 @@ import ProjectCard from '../components/ProjectCard';
 import '../styles/Projects.css';
 import '../styles/App.css';
 
-import Noiseless_Sample01 from '../images/projects/Noiseless/1.jpg';
-import Sampleai_01 from '../images/projects/Sampleai09/Sample_AI09_01.jpg';
+import Noiseless_Sample01 from '../../public/images/projects/Noiseless/1.jpg';
+import Sampleai from '../../public/images/projects/Sampleai09/Sample_AI09_01.jpg';
+
 import ModelViewer from '../components/ModelViewer';
 
 import Faq from '../components/Faq';
@@ -51,8 +52,8 @@ const Projects: React.FC = () => {
                   title="360 Virtual Tour"
                   description="Explore the world in 360°"
                   author="Sample"
-                  redirectPath="/Sampleai_01"
-                  image={Sampleai_01}
+                  redirectPath="/Sampleai"
+                  image={Sampleai}
                   p={-32.33833884932688}
                   y={132.19221152571745}
                 />
@@ -86,7 +87,7 @@ const Projects: React.FC = () => {
                   min-camera-orbit="auto auto 32m"
                   max-camera-orbit="auto auto 40m"
                   shadow-intensity="2"
-                  disable-zoom
+                  disable-zoom="true"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -106,7 +107,7 @@ const Projects: React.FC = () => {
                   minHeight: '300px',
                   height: '100%'
                 }}
-                disable-zoom
+                disable-zoom="true"
               >
                 <ModelViewer
                   src="/3dmodels/arabian_lamp.glb"
@@ -117,7 +118,7 @@ const Projects: React.FC = () => {
                   min-camera-orbit="auto auto 20m"
                   max-camera-orbit="auto auto 30m"
                   shadow-intensity="2"
-                  disable-zoom
+                  disable-zoom="true"
                   style={{
                     width: '100%',
                     height: '100%',

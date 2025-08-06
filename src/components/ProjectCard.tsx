@@ -1,6 +1,6 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Pannellum } from 'pannellum-react';
+import React from 'react';
+import ReactPannellum from 'react-pannellum';
 
 interface ProjectCardProps {
   title: string;
@@ -15,38 +15,31 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, author, redirectPath, image, seeMoreLink, p, y }) => {
   const navigate = useNavigate();
-
   const handleClick = () => {
     navigate(redirectPath);
   };
 
-
+  // Configuración moderna para react-pannellum
+  const config = {
+    pitch: p,
+    yaw: y,
+    hfov: 100,
+    autoLoad: true,
+    autoRotate: -2,
+    mouseZoom: false,
+    showFullscreenCtrl: false,
+    showControls: false,
+    disable: false,
+  };
 
   return (
-    <div
-      className="project-card"
-      onClick={handleClick}
-    >
-                  <Pannellum
-            
-                // className="project-card"
-                image={image}
-                // @ts-ignore
-                pitch={p}
-                yaw={y}
-                hfov={100}
-                // autoRotate={-2}
-                autoLoad
-                autoRotate={-2}
-                mouseZoom={false}
-                showFullscreenCtrl={false}
-                showControls={false}
-                // compass
-                // disableKeyboardCtrl
-                // @ts-ignore
-                // ref={panImage}
-
-            ></Pannellum>
+    <div className="project-card" onClick={handleClick}>
+      <ReactPannellum
+        id={title.replace(/\s+/g, '-')}
+        sceneId="scene"
+        imageSource={image}
+        config={config}
+      />
       <div className="project-card-overlay">
         <h3 className="project-card-title">{title}</h3>
         <p className="project-card-description">{description}</p>
@@ -77,3 +70,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, author, r
 };
 
 export default ProjectCard;
+

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+import "../../../types/types";
 
-const Panorama = () => {
+const Noiseless_Sample01 = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.innerHTML = `pannellum.viewer('panorama', {   
@@ -17,7 +18,7 @@ const Panorama = () => {
                 "pitch": -1.1195383276232724,
                 "yaw": 43.568985506613785,
                 "type": "equirectangular",
-                "panorama": "/images/projects/Noiseless/1.jpg",
+                "panorama": "./public/images/projects/Noiseless/1.jpg",
             }
         }
     });`;
@@ -30,4 +31,4 @@ const Panorama = () => {
   return <div id="panorama" style={{ width: "100vw", height: "100vh" }} />;
 };
 
-export default Panorama;
+export default Noiseless_Sample01;
