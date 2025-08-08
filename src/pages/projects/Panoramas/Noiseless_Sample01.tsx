@@ -28,7 +28,7 @@ const Noiseless_Sample01 = () => {
     };
   }, []);
 
-  return <div id="panorama" style={{ width: "100vw", height: "100vh" }} />;
+  return <div id="panorama" style={{ height: "100vh" }} />;
 };
 
 export default Noiseless_Sample01;

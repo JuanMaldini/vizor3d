@@ -7,12 +7,12 @@ import "./styles/components.css";
 const Home = React.lazy(() => import("./pages/home"));
 const Projects = React.lazy(() => import("./pages/Projects"));
 
-const ModelViewer_Car = React.lazy(() => import("./pages/projects/modelViewer/ModelViewer_Car"));
-const ModelViewer_Lamp = React.lazy(() => import("./pages/projects/modelViewer/ModelViewer_Lamp"));
+const ModelViewer_Car = React.lazy(() => import("./pages/projects/ModelViewer/ModelViewer_Car"));
+const ModelViewer_Lamp = React.lazy(() => import("./pages/projects/ModelViewer/ModelViewer_Lamp"));
 
-const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/Noiseless/Noiseless_Sample01"));
+const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/Panoramas/Noiseless_Sample01"));
 
-const Sampleai = React.lazy(() => import("./pages/projects/sampleai09/Sampleai"));
+const Sampleai = React.lazy(() => import("./pages/projects/Panoramas/Sampleai"));
 
 
 const ErrorPage = React.lazy(() => import("./error"));
