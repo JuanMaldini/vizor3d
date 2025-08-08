@@ -14,7 +14,6 @@ const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/Panoramas/N
 
 const Sampleai = React.lazy(() => import("./pages/projects/Panoramas/Sampleai"));
 
-
 const ErrorPage = React.lazy(() => import("./error"));
 const router = createBrowserRouter(
   [
