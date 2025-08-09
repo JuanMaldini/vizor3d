@@ -15,6 +15,7 @@ const Projects: React.FC = () => {
   return (
     <main className="projects2-main">
 
+
         <section className="projects2-hero">
           <h1 className="projects2-title">Our Projects</h1>
           <p className="projects2-desc">Discover our 3D interactive web experiences. Each project is crafted with passion and technical excellence.</p>
