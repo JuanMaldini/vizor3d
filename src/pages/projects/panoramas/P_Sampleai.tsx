@@ -682,8 +682,17 @@ const Panorama = () => {
   }, []);
 
         return (
-            <PanelLateral>
-                <div id="panorama" className='panoHeight'/>
+            <PanelLateral
+                mainText="Simple panel with project info: architects and the house, 3D artist collaboration, areas to explore, and focused aspects of the architecture."
+                projectLines={[
+                    "Project",
+                    "Architect Example Studio",
+                    "Location Buenos Aires, AR",
+                    "Year 2025",
+                    "Type Single-family house",
+                ]}
+                >
+                <div id="panorama"/>
             </PanelLateral>
         );
 };
