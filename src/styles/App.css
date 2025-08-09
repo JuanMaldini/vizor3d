@@ -20,6 +20,12 @@
   background-size: contain;
 }
 
+.panoHeight{
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
 .models-viewer-container{
   display: flex;
   flex-wrap: wrap;
@@ -269,8 +275,6 @@ code {
 .virtual-tour-card:hover {
   transform: scale(1.025);
 }
-
-
 
 .virtual-tour-card-title {
   font-size: 1.5rem;

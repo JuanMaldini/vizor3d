@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "../../../types/types";
+import PanelLateral from "../../../components/PanelLateral/PanelLateral";
 
 const Noiseless_Sample01 = () => {
   useEffect(() => {
@@ -28,7 +29,11 @@ const Noiseless_Sample01 = () => {
     };
   }, []);
 
-  return <div id="panorama" style={{ height: "100vh" }} />;
-};
+        return (
+            <PanelLateral>
+                <div id="panorama" className='panoHeight'/>
+            </PanelLateral>
+        );
+      };
 
 export default Noiseless_Sample01;

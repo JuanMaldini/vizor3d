@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import PanelLateral from "../../../components/PanelLateral/PanelLateral";
 
 const Panorama = () => {
   useEffect(() => {
@@ -680,7 +681,11 @@ const Panorama = () => {
     };
   }, []);
 
-  return <div id="panorama" style={{ width: "100vw", height: "100vh" }} />;
+        return (
+            <PanelLateral>
+                <div id="panorama" className='panoHeight'/>
+            </PanelLateral>
+        );
 };
 
 export default Panorama;

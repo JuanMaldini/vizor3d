@@ -8,7 +8,6 @@
 .project-card-author-link:hover {
   color: var(--accent);
 }
-/* See more link in ProjectCard styled like footer links */
 .project-card-see-more {
   color: #ccc;
   text-decoration: none;
@@ -44,8 +43,6 @@
   margin: 0;
   font-size: 1.5rem;
   text-decoration: none;
-  border-bottom: none !important;
-  box-shadow: none !important;
 }
 
 .nav-menu {
@@ -67,12 +64,10 @@
   color: var(--accent);
 }
 
-/* Main Content Styles */
 .main-content {
   min-height: calc(100vh - 200px);
 }
 
-/* Hero Section */
 .hero-section {
   display: flex;
   justify-content: center;
@@ -253,7 +248,6 @@
   padding: 1.5rem 0;
 }
 
-/* Footer Styles */
 .footer {
   background-color: #1a1a1a;
   color: white;
