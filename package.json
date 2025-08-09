@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@google/model-viewer": "^4.1.0",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-pannellum": "^0.2.16",
@@ -42,8 +44,7 @@
     "vitest": "^1.6.0",
     "workbox-precaching": "^7.1.0",
     "workbox-routing": "^7.1.0"
-  }
-  ,
+  },
   "resolutions": {
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0"
