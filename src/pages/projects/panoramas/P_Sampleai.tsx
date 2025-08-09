@@ -683,6 +683,7 @@ const Panorama = () => {
 
         return (
             <PanelLateral
+                panelDefaultOpen={true}
                 mainText="Simple panel with project info: architects and the house, 3D artist collaboration, areas to explore, and focused aspects of the architecture."
                 projectLines={[
                     "Project",
@@ -690,6 +691,24 @@ const Panorama = () => {
                     "Location Buenos Aires, AR",
                     "Year 2025",
                     "Type Single-family house",
+                ]}
+                sections={[
+                    {
+                        title: 'section 1',
+                        lines: [
+                            "information A",
+                            "information B",
+                            "information C",
+                        ],
+                    },
+                    {
+                        title: 'section 2',
+                        lines: [
+                            "information D",
+                            "information E",
+                            "information F",
+                        ],
+                    },
                 ]}
                 >
                 <div id="panorama"/>
