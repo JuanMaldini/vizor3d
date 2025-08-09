@@ -3,8 +3,8 @@ import ProjectCard from '../components/ProjectCard';
 import '../styles/Projects.css';
 import '../styles/App.css';
 
-import Noiseless_Sample01 from '../../public/images/projects/Noiseless/1.jpg';
-import Sampleai from '../../public/images/projects/Sampleai09/Sample_AI09_01.jpg';
+import Noiseless_Sample01 from '/images/projects/Noiseless/1.jpg';
+import Sampleai from '/images/projects/Sampleai09/Sample_AI09_01.jpg';
 
 import ModelViewer from '../components/ModelViewer';
  
