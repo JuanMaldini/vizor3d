@@ -31,7 +31,6 @@ const Noiseless_Sample01 = () => {
 
     return (
         <PanelLateral
-            panelDefaultOpen={true}
             mainText="Simple panel with project info: architects and the house, 3D artist collaboration, areas to explore, and focused aspects of the architecture."
             projectLines={[
                 "Project",
