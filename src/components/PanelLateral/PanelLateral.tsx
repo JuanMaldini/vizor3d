@@ -1,11 +1,15 @@
-import React, { PropsWithChildren, useMemo, useState } from "react";
+import React, { PropsWithChildren, useState } from "react";
 import Sidebar from "react-sidebar";
 import './PanelLateral.css';
 
-type CollapsibleSection = {
-  title: string;
-  lines: string[];
-  defaultOpen?: boolean;
+type LineItem = string | { text: string; onClick?: () => void };
+type CollapsibleSection = { title: string; lines: LineItem[]; defaultOpen?: boolean };
+
+// Simple, scalable selector inputs
+type SelectorGroup = {
+  label: string;
+  items?: string[]; // simple list
+  categories?: { name: string; items: string[] }[]; // nested list
 };
 
 type PanelLateralProps = PropsWithChildren<{
@@ -14,7 +18,9 @@ type PanelLateralProps = PropsWithChildren<{
   mainText?: string;
   projectLines?: string[];
   sections?: CollapsibleSection[];
-  panelDefaultOpen?: boolean; // define panel open/closed on mount
+  panelDefaultOpen?: boolean;
+  selectors?: SelectorGroup[];
+  onSelect?: (payload: { group: string; category?: string; item: string }) => void;
 }>;
 
 const PanelLateral: React.FC<PanelLateralProps> = ({
@@ -25,37 +31,28 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
   projectLines = [],
   sections = [],
   panelDefaultOpen = false,
+  selectors = [],
+  onSelect,
 }) => {
   const [open, setOpen] = useState(panelDefaultOpen);
-  const Section: React.FC<PropsWithChildren<{ title: string; defaultOpen?: boolean }>>
-    = ({ title, defaultOpen = true, children }) => {
-      const [isOpen, setIsOpen] = useState<boolean>(defaultOpen);
-      const sectionId = useMemo(
-        () => `pl-sec-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
-        [title]
-      );
-      return (
-        <section className={`pl-section ${isOpen ? 'open' : 'closed'}`}>
-          <button
-            type="button"
-            className="pl-section-header"
-            aria-expanded={isOpen}
-            aria-controls={`${sectionId}-body`}
-            onClick={() => setIsOpen((v) => !v)}
-          >
-            <span className="pl-section-title">{title}</span>
-            <span className="pl-section-icon" aria-hidden="true">
-              {isOpen ? '−' : '+'}
-            </span>
-          </button>
-          <div id={`${sectionId}-body`} className="pl-section-body" hidden={!isOpen}>
-            {children}
-          </div>
-        </section>
-      );
-    };
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [selOpenIndex, setSelOpenIndex] = useState<number | null>(null);
+  // Track which category is open per selector group (only one open per group for simplicity)
+  const [catOpenByGroup, setCatOpenByGroup] = useState<Record<number, number | null>>({});
+  const handleSelect = onSelect ?? ((p: { group: string; category?: string; item: string }) => {
+  });
 
-  // simplified defaults: only render when props provided
+  const Section: React.FC<PropsWithChildren<{ id: string; title: string; isOpen: boolean; onToggle: () => void }>> = ({ id, title, isOpen, onToggle, children }) => (
+    <section className={`pl-section ${isOpen ? 'open' : 'closed'}`}>
+      <button type="button" className="pl-section-header" aria-expanded={isOpen} aria-controls={`${id}-body`} onClick={onToggle}>
+        <span className="pl-section-title">{title}</span>
+        <span className="pl-section-icon" aria-hidden="true">{isOpen ? '−' : '+'}</span>
+      </button>
+      {isOpen && (
+        <div id={`${id}-body`} className="pl-section-body">{children}</div>
+      )}
+    </section>
+  );
 
   return (
     <Sidebar
@@ -73,15 +70,104 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
             </div>
           )}
 
-          {sections.map((sec, idx) => (
-            <Section key={idx} title={sec.title} defaultOpen={sec.defaultOpen}>
-              {sec.lines.map((line, i) => (
-                <div key={i}>{line}</div>
-              ))}
-            </Section>
-          ))}
+          {sections.map((sec, idx) => {
+            const id = `pl-sec-${sec.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${idx}`;
+            const isOpen = openIndex === idx;
+            const onToggle = () => setOpenIndex(isOpen ? null : idx);
+            return (
+              <Section key={id} id={id} title={sec.title} isOpen={isOpen} onToggle={onToggle}>
+                {sec.lines.map((line, i) => {
+                  const item = typeof line === 'string' ? { text: line } : line;
+                  const hasAction = typeof item.onClick === 'function';
+                  return hasAction ? (
+                    <button key={i} type="button" className="pl-item pl-item--action" onClick={item.onClick}>
+                      {item.text}
+                    </button>
+                  ) : (
+                    <div key={i} className="pl-item">{item.text}</div>
+                  );
+                })}
+              </Section>
+            );
+          })}
 
-          <div>
+          {/* Selector groups (collapsable, internal click handling) */}
+          {selectors && selectors.length > 0 && (
+            <div className="pl-selector-groups">
+              {selectors.map((g, idx) => {
+                const id = `pl-sel-${g.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${idx}`;
+                const isOpen = selOpenIndex === idx;
+                const onToggle = () => setSelOpenIndex(isOpen ? null : idx);
+                return (
+                  <section key={id} className={`pl-section ${isOpen ? 'open' : 'closed'}`}>
+                    <button
+                      type="button"
+                      className="pl-section-header"
+                      aria-expanded={isOpen}
+                      aria-controls={`${id}-body`}
+                      onClick={onToggle}
+                    >
+                      <span className="pl-section-title">{g.label}</span>
+                      <span className="pl-section-icon" aria-hidden="true">{isOpen ? '−' : '+'}</span>
+                    </button>
+                    {isOpen && (
+                      <div id={`${id}-body`} className="pl-section-body">
+                        {g.categories && g.categories.length > 0 ? (
+                          g.categories.map((cat, cIdx) => {
+                            const catId = `${id}-cat-${cIdx}`;
+                            const isCatOpen = (catOpenByGroup[idx] ?? null) === cIdx;
+                            const onToggleCat = () =>
+                              setCatOpenByGroup(prev => ({ ...prev, [idx]: isCatOpen ? null : cIdx }));
+                            return (
+                              <div key={catId} style={{ marginBottom: 8 }}>
+                                <button
+                                  type="button"
+                                  className="pl-section-header"
+                                  aria-expanded={isCatOpen}
+                                  aria-controls={`${catId}-body`}
+                                  onClick={onToggleCat}
+                                >
+                                  <span className="pl-section-title">{cat.name}</span>
+                                  <span className="pl-section-icon" aria-hidden="true">{isCatOpen ? '−' : '+'}</span>
+                                </button>
+                                {isCatOpen && (
+                                  <div id={`${catId}-body`} className="pl-section-body">
+                                    {cat.items.map((it, i) => (
+                                      <button
+                                        key={`${catId}-it-${i}`}
+                                        type="button"
+                                        className="pl-item pl-item--action"
+                                        onClick={() => handleSelect({ group: g.label, category: cat.name, item: it })}
+                                      >
+                                        {it}
+                                      </button>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })
+                        ) : (
+                          (g.items ?? []).map((it, i) => (
+                            <button
+                              key={`${id}-it-${i}`}
+                              type="button"
+                              className="pl-item pl-item--action"
+                              onClick={() => handleSelect({ group: g.label, item: it })}
+                            >
+                              {it}
+                            </button>
+                          ))
+                        )}
+                      </div>
+                    )}
+                  </section>
+                );
+              })}
+            </div>
+          )}
+
+          <div className="pl-project-lines">
             {projectLines && projectLines.length > 0 && (
               <div>
                 {projectLines.map((line, idx) => (
@@ -89,8 +175,8 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
                 ))}
               </div>
             )}
-
           </div>
+
         </div>
       }
       open={open}

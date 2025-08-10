@@ -29,39 +29,47 @@ const Noiseless_Sample01 = () => {
     };
   }, []);
 
-        return (
-            <PanelLateral
-                panelDefaultOpen={false}
-                mainText="Simple panel with project info: architects and the house, 3D artist collaboration, areas to explore, and focused aspects of the architecture."
-                projectLines={[
-                    "Project",
-                    "Architect Example Studio",
-                    "Location Buenos Aires, AR",
-                    "Year 2025",
-                    "Type Single-family house",
-                ]}
-                sections={[
-                    {
-                        title: 'section 1',
-                        lines: [
-                            "information A",
-                            "information B",
-                            "information C",
-                        ],
-                    },
-                    {
-                        title: 'section 2',
-                        lines: [
-                            "information D",
-                            "information E",
-                            "information F",
-                        ],
-                    },
-                ]}
-                >
-                <div id="panorama" className='panoHeight'/>
-            </PanelLateral>
-        );
-      };
+    return (
+        <PanelLateral
+            panelDefaultOpen={true}
+            mainText="Simple panel with project info: architects and the house, 3D artist collaboration, areas to explore, and focused aspects of the architecture."
+            projectLines={[
+                "Project",
+                "Architect Example Studio",
+                "Location Buenos Aires, AR",
+                "Year 2025",
+                "Type Single-family house",
+            ]}
+            sections={[
+                {
+                    title: 'Section 1',
+                    lines: [
+                        'information A',
+                        'information B',
+                        'information C',
+                    ],
+                },
+            ]}
+            selectors={[
+                {
+                    label: 'Materials',
+                    categories: [
+                        { name: 'Floor', items: ['Concrete Polished', 'Herringbone', 'Woodfloor'] },
+                        { name: 'Walls', items: ['Wall Color 1', 'Wall Color 2', 'Wall Color 3'] },
+                        { name: 'Skin', items: ['Skin 1', 'Skin 2', 'Skin 3'] },
+                    ],
+                },
+                { label: 'Daytime', items: ['Night', 'Day'] },
+                { label: 'Location', items: ['Hallway', 'Living', 'Kitchen', 'Room'] },
+            ]}
+            onSelect={({ group, category, item }) => {
+                // simple example handler
+                console.log('Selected:', { group, category, item });
+            }}
+        >
+            <div id="panorama" />
+        </PanelLateral>
+    );
+};
 
 export default Noiseless_Sample01;
