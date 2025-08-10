@@ -2,6 +2,10 @@
   "name": "vizor3d",
   "homepage": "https://www.vizor3d.com/",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
