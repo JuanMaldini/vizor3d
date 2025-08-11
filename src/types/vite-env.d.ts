@@ -1,6 +1,4 @@
 /// <reference types="vite/client" />
-
-// Declaración de tipo para el custom element 'model-viewer'
 declare global {
   namespace JSX {
     interface IntrinsicElements {

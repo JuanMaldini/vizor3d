@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useState } from "react";
 import Sidebar from "react-sidebar";
-import './PanelLateral.css';
+import './Sidebar.css';
 
 type LineItem = string | { text: string; onClick?: () => void };
 type CollapsibleSection = { title: string; lines: LineItem[]; defaultOpen?: boolean };
@@ -37,7 +37,6 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
   const [open, setOpen] = useState(panelDefaultOpen);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [selOpenIndex, setSelOpenIndex] = useState<number | null>(null);
-  // Track which category is open per selector group (only one open per group for simplicity)
   const [catOpenByGroup, setCatOpenByGroup] = useState<Record<number, number | null>>({});
   const handleSelect = onSelect ?? ((p: { group: string; category?: string; item: string }) => {
   });

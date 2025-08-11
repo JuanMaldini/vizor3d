@@ -6,11 +6,20 @@ import reportWebVitals from './types/reportWebVitals';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+const root = ReactDOM.createRoot(document.getElementById('root')!);
+const AppTree = (
+  <>
     <App />
     <Analytics />
     <SpeedInsights />
-  </React.StrictMode>,
+  </>
 );
+
+// Disable StrictMode in development to avoid double mount/unmount
+// that breaks some third-party libs (e.g., react-pannellum viewers).
+if (import.meta.env.DEV) {
+  root.render(AppTree);
+} else {
+  root.render(<React.StrictMode>{AppTree}</React.StrictMode>);
+}
 reportWebVitals();

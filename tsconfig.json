@@ -1,4 +1,9 @@
 {
+    "files": [],
+    "references": [
+      { "path": "./tsconfig.app.json" },
+      { "path": "./tsconfig.node.json" }
+    ],
     "compilerOptions": {
       "target": "es5",
       "lib": ["dom", "dom.iterable", "esnext"],
@@ -17,5 +22,5 @@
       "jsx": "react-jsx",
       "typeRoots": ["src/types", "node_modules/@types"]
     },
-    "include": ["src", "src/types"]
+    "include": ["src", "src/types"],
 }
