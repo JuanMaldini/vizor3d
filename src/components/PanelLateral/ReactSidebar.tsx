@@ -1,11 +1,12 @@
-import React, { PropsWithChildren, useState } from "react";
-import Sidebar from "react-sidebar";
-import './Sidebar.css';
+import React, { useState } from "react";
+import type { PropsWithChildren } from "react";
+import ReactSidebarLib from "react-sidebar";
+const ReactSidebar = ReactSidebarLib as unknown as React.ComponentType<any>;
+import './ReactSidebar.css';
 
 type LineItem = string | { text: string; onClick?: () => void };
 type CollapsibleSection = { title: string; lines: LineItem[]; defaultOpen?: boolean };
 
-// Simple, scalable selector inputs
 type SelectorGroup = {
   label: string;
   items?: string[]; // simple list
@@ -38,7 +39,8 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [selOpenIndex, setSelOpenIndex] = useState<number | null>(null);
   const [catOpenByGroup, setCatOpenByGroup] = useState<Record<number, number | null>>({});
-  const handleSelect = onSelect ?? ((p: { group: string; category?: string; item: string }) => {
+  const handleSelect = onSelect ?? ((_: { group: string; category?: string; item: string }) => {
+    // no-op default
   });
 
   const Section: React.FC<PropsWithChildren<{ id: string; title: string; isOpen: boolean; onToggle: () => void }>> = ({ id, title, isOpen, onToggle, children }) => (
@@ -54,7 +56,7 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
   );
 
   return (
-    <Sidebar
+  <ReactSidebar
       sidebarClassName="pl-sidebar-shell"
       sidebar={
         <div
@@ -72,7 +74,16 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
           {sections.map((sec, idx) => {
             const id = `pl-sec-${sec.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${idx}`;
             const isOpen = openIndex === idx;
-            const onToggle = () => setOpenIndex(isOpen ? null : idx);
+            const onToggle = () => {
+              if (isOpen) {
+                // Close current section
+                setOpenIndex(null);
+              } else {
+                // Open this section and close any open selector group
+                setOpenIndex(idx);
+                if (selOpenIndex !== null) setSelOpenIndex(null);
+              }
+            };
             return (
               <Section key={id} id={id} title={sec.title} isOpen={isOpen} onToggle={onToggle}>
                 {sec.lines.map((line, i) => {
@@ -96,7 +107,15 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
               {selectors.map((g, idx) => {
                 const id = `pl-sel-${g.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${idx}`;
                 const isOpen = selOpenIndex === idx;
-                const onToggle = () => setSelOpenIndex(isOpen ? null : idx);
+                const onToggle = () => {
+                  if (isOpen) {
+                    setSelOpenIndex(null);
+                  } else {
+                    // Open this selector group and close any open section
+                    setSelOpenIndex(idx);
+                    if (openIndex !== null) setOpenIndex(null);
+                  }
+                };
                 return (
                   <section key={id} className={`pl-section ${isOpen ? 'open' : 'closed'}`}>
                     <button
@@ -116,7 +135,11 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
                             const catId = `${id}-cat-${cIdx}`;
                             const isCatOpen = (catOpenByGroup[idx] ?? null) === cIdx;
                             const onToggleCat = () =>
-                              setCatOpenByGroup(prev => ({ ...prev, [idx]: isCatOpen ? null : cIdx }));
+                              setCatOpenByGroup(prev => ({
+                                ...prev,
+                                // If already open, close it; otherwise open this and implicitly close siblings by overwriting index
+                                [idx]: isCatOpen ? null : cIdx
+                              }));
                             return (
                               <div key={catId} style={{ marginBottom: 8 }}>
                                 <button
@@ -188,7 +211,7 @@ const PanelLateral: React.FC<PanelLateralProps> = ({
         </div>
       )}
       {children}
-    </Sidebar>
+  </ReactSidebar>
   );
 };
 
