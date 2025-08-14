@@ -24,7 +24,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
     showZoomCtrl: false,
     hfov: 110,
     sceneFadeDuration: 1000,
-    autoRotate: -2,
   },
   first: {
     imageSource: '/images/projects/Sampleai09/Sample_AI09_01.jpg',

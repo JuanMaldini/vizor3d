@@ -35,7 +35,6 @@ export const panellumConfig_Noiseless_Sample01: PannellumSetup = {
       autoLoad: true,
       showZoomCtrl: false,
       hfov: 90,
-      autoRotate: -2
     },
   },
 }
