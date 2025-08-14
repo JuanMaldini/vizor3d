@@ -14,32 +14,32 @@ export default function P_Sampleai() {
                     "Year 2025",
                     "Type Single-family house",
                 ]}
-            sections={[
-                {
-                    title: 'Section 1',
-                    lines: [
-                        'information A',
-                        'information B',
-                        'information C',
-                        ],
-                    },
-                ]}
-            selectors={[
-                {
-                    label: 'Materials',
-                    categories: [
-                        { name: 'Floor', items: ['Concrete Polished', 'Herringbone', 'Woodfloor'] },
-                        { name: 'Walls', items: ['Wall Color 1', 'Wall Color 2', 'Wall Color 3'] },
-                        { name: 'Skin', items: ['Skin 1', 'Skin 2', 'Skin 3'] },
-                        ],
-                    },
-                    { label: 'Daytime', items: ['Night', 'Day'] },
-                    { label: 'Location', items: ['Hallway', 'Living', 'Kitchen', 'Room'] },
-                ]}
-            onSelect={({ group, category, item }) => {
-                // simple example handler
-                console.log('Selected:', { group, category, item });
-                }}
+                sections={[
+                    {
+                        title: 'Section 1',
+                        lines: [
+                            'information A',
+                            'information B',
+                            'information C',
+                            ],
+                        },
+                    ]}
+                selectors={[
+                    {
+                        label: 'Materials',
+                        categories: [
+                            { name: 'Floor', items: ['Concrete Polished', 'Herringbone', 'Woodfloor'] },
+                            { name: 'Walls', items: ['Wall Color 1', 'Wall Color 2', 'Wall Color 3'] },
+                            { name: 'Skin', items: ['Skin 1', 'Skin 2', 'Skin 3'] },
+                            ],
+                        },
+                        { label: 'Daytime', items: ['Night', 'Day'] },
+                        { label: 'Location', items: ['Hallway', 'Living', 'Kitchen', 'Room'] },
+                    ]}
+                onSelect={({ group, category, item }) => {
+                    // simple example handler
+                    console.log('Selected:', { group, category, item });
+                    }}
         >
             <div id="panorama" />
         </ReactSidebar>

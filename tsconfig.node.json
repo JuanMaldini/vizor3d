@@ -11,7 +11,7 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-  "composite": true,
+  // Removed composite to avoid declaration build requirements in Vercel type-check step
 
     /* Linting */
     "strict": true,
