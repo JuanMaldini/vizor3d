@@ -1,6 +1,5 @@
 {
-  "license": "UNLICENSED",
-  "packageManager": "yarn@1.22.19",
+  "homepage": "https://www.vizor3d.com",
   "scripts": {
     "dev": "vite",
     "start": "vite",
