@@ -1,0 +1,8 @@
+/* Oculta la caja de carga interna de Pannellum (barra y texto) */
+.pnlm-load-box, #pnlm-load-box, .pnlm-load-line, .pnlm-loading {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+/* Evita salto de layout si el contenedor se reserva espacio */
+.pnlm-container .pnlm-load-box { width:0 !important; height:0 !important; }
