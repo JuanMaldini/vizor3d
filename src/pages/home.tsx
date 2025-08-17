@@ -8,7 +8,6 @@ import { panellumConfig_Noiseless_Sample01 } from '../types/PanoramasConfig/pane
 const Home: React.FC = () => {
   return (
     <main className="main-content">
-
         <section className="hero-section">
             <ProjectCard
                 title="Explore the World in 360°"
