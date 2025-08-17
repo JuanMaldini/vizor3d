@@ -50,7 +50,7 @@ const Projects: React.FC = () => {
             <ProjectCard
               title="360 Virtual Tour"
               description="Explore the world in 360°"
-              author="Sample"
+              author=""
               redirectPath="/Sampleai"
               setup={panellumConfig_SampleAI}
             />

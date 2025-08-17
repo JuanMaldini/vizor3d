@@ -4,6 +4,7 @@ import Footer1 from '../components/Footer1';
 import { panellumConfig_SampleAI } from '../types/PanoramasConfig/panellumConfig_SampleAI';
 import ProjectCard from '../components/ProjectCard';
 import { panellumConfig_Noiseless_Sample01 } from '../types/PanoramasConfig/panellumConfig_Noiseless_Sample01';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const Home: React.FC = () => {
                 blackIntensity={0.3}
                 blurIntensity={1}
             />
-            <button className="btn btn-primary" style={{ position: 'absolute', zIndex: 500, translate: '0px 200px' }} onClick={() => window.location.href = "/projects"}>Projects</button>
+            <Link className="btn btn-primary" style={{ position: 'absolute', zIndex: 500, translate: '0px 200px' }} to="/projects">Projects</Link>
         </section>
         <section className="features-section">
             <div className="features-container">
