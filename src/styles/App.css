@@ -101,9 +101,7 @@ model-viewer {
 }
 
 .project-card-link {
-  /* padding: 1.5rem; */
   border-width: 4px;
-  border-radius: 8px;
   border-color: var(--gray-100);
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -294,40 +292,6 @@ code {
   flex-direction: row;
   gap: 16px;
   align-items: center;
-}
-
-/* Initial Section Styles */
-.initial-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff7e5f);
-  color: white;
-  padding: 9rem 0;
-  text-align: center;
-  height: 60vh;
-}
-
-.initial-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.initial-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.initial-description {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
 }
 
 .initial-buttons {

@@ -70,24 +70,20 @@
 
 .hero-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(135deg, #667eea, #764ba2, #667eea);
   color: white;
   padding: 4rem 0;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  height: 50vh;
-}
-.cwhite{
-  color:white;
+  height: 75vh;
 }
 
 .hero-container {
   color:var(--gray-100);
   background-color: var(--se);
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin: 0px;
+  padding: 0px;
 }
 
 .hero-title {
@@ -206,10 +202,6 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   transition: scale 0.15s;
   margin: 0 auto;
-}
-
-.project-card:hover {
-  transform: scale(1.01);
 }
 
 .project-card-overlay {
