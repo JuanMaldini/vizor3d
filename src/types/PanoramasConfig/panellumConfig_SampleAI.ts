@@ -32,9 +32,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       type: 'equirectangular',
       pitch: -3,
       yaw: 117,
-      autoLoad: true,
-      showZoomCtrl: false,
-      hfov: 110,
       hotSpots: [
         { sceneId: 'Sampleai_02', type: 'scene', pitch: -39.3, yaw: 76, targetYaw: 'same', targetPitch: 'same' },
         { sceneId: 'Sampleai_03', type: 'scene', pitch: -39.5, yaw: -79.3, targetYaw: 'same', targetPitch: 'same' },
@@ -53,9 +50,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       config: {
         title: '',
         type: 'equirectangular',
-        yaw: 5,
-        autoLoad: true,
-        showZoomCtrl: false,
         hotSpots: [
           { sceneId: 'Sampleai_01', type: 'scene', pitch: -39.85, yaw: -78.85, targetYaw: 'same', targetPitch: 'same' },
           { sceneId: 'Sampleai_03', type: 'scene', pitch: -22.5, yaw: -84.7, targetYaw: 'same', targetPitch: 'same' },
@@ -73,9 +67,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       config: {
         title: '',
         type: 'equirectangular',
-        yaw: 5,
-        autoLoad: true,
-        showZoomCtrl: false,
         hotSpots: [
           { sceneId: 'Sampleai_01', type: 'scene', pitch: -39.85, yaw: 78.85, targetYaw: 'same', targetPitch: 'same' },
           { sceneId: 'Sampleai_02', type: 'scene', pitch: -20.5, yaw: 82.8, targetYaw: 'same', targetPitch: 'same' },
@@ -93,9 +84,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       config: {
         title: '',
         type: 'equirectangular',
-        yaw: 5,
-        autoLoad: true,
-        showZoomCtrl: false,
         hotSpots: [
           { sceneId: 'Sampleai_01', type: 'scene', pitch: -22.26, yaw: 83.34, targetYaw: 'same', targetPitch: 'same' },
           { sceneId: 'Sampleai_02', type: 'scene', pitch: -14.98, yaw: 84.90, targetYaw: 'same', targetPitch: 'same' },
@@ -113,9 +101,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       config: {
         title: '',
         type: 'equirectangular',
-        yaw: 5,
-        autoLoad: true,
-        showZoomCtrl: false,
         hotSpots: [
           { sceneId: 'Sampleai_01', type: 'scene', pitch: -17.36874125533316, yaw: 40.28816438988322, targetYaw: 'same', targetPitch: 'same' },
           { sceneId: 'Sampleai_02', type: 'scene', pitch: -13.18578139862265, yaw: 52.53304877938946, targetYaw: 'same', targetPitch: 'same' },
@@ -133,9 +118,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       config: {
         title: '',
         type: 'equirectangular',
-        yaw: 5,
-        autoLoad: true,
-        showZoomCtrl: false,
         hotSpots: [
           { sceneId: 'Sampleai_01', type: 'scene', pitch: -31.163373949401862, yaw: 40.10544356810522, targetYaw: 'same', targetPitch: 'same' },
           { sceneId: 'Sampleai_02', type: 'scene', pitch: -20.28979049413677, yaw: 59.77693379377578, targetYaw: 'same', targetPitch: 'same' },
@@ -153,9 +135,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       config: {
         title: '',
         type: 'equirectangular',
-        yaw: 5,
-        autoLoad: true,
-        showZoomCtrl: false,
         hotSpots: [
           { sceneId: 'Sampleai_01', type: 'scene', pitch: -18.447826580454247, yaw: 10.78535391084768, targetYaw: 'same', targetPitch: 'same' },
           { sceneId: 'Sampleai_02', type: 'scene', pitch: -15.318869462125221, yaw: 30.45076194981643, targetYaw: 'same', targetPitch: 'same' },
@@ -173,9 +152,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       config: {
         title: '',
         type: 'equirectangular',
-        yaw: 5,
-        autoLoad: true,
-        showZoomCtrl: false,
         hotSpots: [
           { sceneId: 'Sampleai_01', type: 'scene', pitch: -12.740081481550195, yaw: -19.95949433094716, targetYaw: 'same', targetPitch: 'same' },
           { sceneId: 'Sampleai_02', type: 'scene', pitch: -18.855971290316656, yaw: 2.0767381860122773, targetYaw: 'same', targetPitch: 'same' },
@@ -193,9 +169,6 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       config: {
         title: '',
         type: 'equirectangular',
-        yaw: 5,
-        autoLoad: true,
-        showZoomCtrl: false,
         hotSpots: [
           { sceneId: 'Sampleai_01', type: 'scene', pitch: -17.620729859395748, yaw: -37.58376719775619, targetYaw: 'same', targetPitch: 'same' },
           { sceneId: 'Sampleai_02', type: 'scene', pitch: -27.636903609666927, yaw: -7.5519614412622795, targetYaw: 'same', targetPitch: 'same' },

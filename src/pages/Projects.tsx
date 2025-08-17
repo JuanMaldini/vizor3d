@@ -3,8 +3,9 @@ import ProjectCard from '../components/ProjectCard';
 import '../styles/Projects.css';
 import '../styles/App.css';
 
-import Noiseless_Sample01 from '/images/projects/Noiseless/1.jpg';
-import Sampleai from '/images/projects/Sampleai09/Sample_AI09_01.jpg';
+// Configs de panoramas reutilizados para las cards (solo usan la primera imagen)
+import { panellumConfig_Noiseless_Sample01 } from '../types/PanoramasConfig/panellumConfig_Noiseless_Sample01';
+import { panellumConfig_SampleAI } from '../types/PanoramasConfig/panellumConfig_SampleAI';
 
 import ModelViewer from '../components/ModelViewer';
  
@@ -38,26 +39,21 @@ const Projects: React.FC = () => {
           <h3 className="projects2-section-title">Virtual Tour</h3>
           <p className="projects2-section-desc">Explore your 3D spaces by 360° images </p>
           <div className="projects2-cards-row">
-
-                <ProjectCard
-                  title="360 Saloon"
-                  description="Explore interiors in 360°"
-                  author="Noiselss Studio"
-                  seeMoreLink="https://www.noiseless-studio.com/"
-                  redirectPath="/Noiseless_Sample01"
-                  image={Noiseless_Sample01}
-                  p={-26.164483557549705}
-                  y={45.90340252545282}
-                />
-                <ProjectCard
-                  title="360 Virtual Tour"
-                  description="Explore the world in 360°"
-                  author="Sample"
-                  redirectPath="/Sampleai"
-                  image={Sampleai}
-                  p={-32.33833884932688}
-                  y={132.19221152571745}
-                />
+            <ProjectCard
+              title="360 Saloon"
+              description="Explore interiors in 360°"
+              author="Noiselss Studio"
+              seeMoreLink="https://www.noiseless-studio.com/"
+              redirectPath="/Noiseless_Sample01"
+              setup={panellumConfig_Noiseless_Sample01}
+            />
+            <ProjectCard
+              title="360 Virtual Tour"
+              description="Explore the world in 360°"
+              author="Sample"
+              redirectPath="/Sampleai"
+              setup={panellumConfig_SampleAI}
+            />
           </div>
         </section>
         
