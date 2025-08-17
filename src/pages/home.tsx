@@ -19,7 +19,7 @@ const Home: React.FC = () => {
                 blackIntensity={0.2}
                 blurIntensity={1}
             />
-            <button className="btn btn-primary" style={{ position: 'absolute', zIndex: 500, translate: '0px 200px' }} onClick={() => window.location.href = "/Projects"}>Projects</button>
+            <button className="btn btn-primary" style={{ position: 'absolute', zIndex: 500, translate: '0px 200px' }} onClick={() => window.location.href = "/projects"}>Projects</button>
         </section>
         <section className="features-section">
             <div className="features-container">
