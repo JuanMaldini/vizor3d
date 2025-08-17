@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import '../styles/Faq.css';
 
 const faqData = [
@@ -22,27 +22,42 @@ const faqData = [
 
 const Faq: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggle = (idx: number) => {
-    setOpenIndex(openIndex === idx ? null : idx);
-  };
+  const toggle = useCallback((idx: number) => {
+    setOpenIndex(prev => (prev === idx ? null : idx));
+  }, []);
+  const items = useMemo(() => faqData, []);
 
   return (
     <div className="faq-container">
       <h2 className="faq-title">Faq's
 </h2>
       <ul className="faq-list">
-        {faqData.map((item, idx) => (
-          <li key={idx} className={`faq-item${openIndex === idx ? ' open' : ''}`}>
-            <button className="faq-question" onClick={() => toggle(idx)}>
-              {item.question}
-              <span className="faq-arrow">{openIndex === idx ? '▲' : '▼'}</span>
-            </button>
-            <div className="faq-answer" style={{ maxHeight: openIndex === idx ? '200px' : '0' }}>
-              <p>{item.answer}</p>
-            </div>
-          </li>
-        ))}
+        {items.map((item, idx) => {
+          const open = openIndex === idx;
+          const answerId = `faq-answer-${idx}`;
+          return (
+            <li key={idx} className={`faq-item${open ? ' open' : ''}`}>
+              <button
+                className="faq-question"
+                onClick={() => toggle(idx)}
+                aria-expanded={open}
+                aria-controls={answerId}
+              >
+                {item.question}
+                <span className="faq-arrow" aria-hidden>{open ? '▲' : '▼'}</span>
+              </button>
+              <div
+                id={answerId}
+                className="faq-answer"
+                style={{ maxHeight: open ? '200px' : '0' }}
+                role="region"
+                aria-hidden={!open}
+              >
+                <p>{item.answer}</p>
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

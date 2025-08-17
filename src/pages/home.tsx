@@ -1,53 +1,45 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { CustomLink } from '../components/functions';
 import Faq from '../components/Faq';
 import Footer1 from '../components/Footer1';
+import { panellumConfig_SampleAI } from '../types/PanoramasConfig/panellumConfig_SampleAI';
+import ProjectCard from '../components/ProjectCard';
+import { panellumConfig_Noiseless_Sample01 } from '../types/PanoramasConfig/panellumConfig_Noiseless_Sample01';
 
 const Home: React.FC = () => {
   return (
     <main className="main-content">
 
-          <section className="initial-section">
-              <div className="initial-container">
-                  <h1 className="initial-title">Welcome to Vizor 3D</h1>
-                  <p className="initial-description">Discover your best virtual tool to immerse yourself in your projects.</p>
-              </div>
-          </section>
-
-          <section className="hero-section">
-              <div className="hero-container">
-                  <h1 className="hero-title">Explore the World in 360°</h1>
-                  <p className="hero-description">
-                      Immerse yourself in unique experiences. Discover incredible places
-                      from the comfort of your home with our virtual tour technology.
-                  </p>
-                    <div className="initial-buttons">
-                      <Link to="/projects" className="btn btn-primary">Explore Projects</Link>
-                      <CustomLink text="Contact" email="contact@vizor3d.com" className="btn btn-secondary" />
-                  </div>
-              </div>
-          </section>
-
-          <section className="features-section">
-              <div className="features-container">
-                  <h2 className="section-title">Features</h2>
-                  <div className="features-grid">
-                      <div className="feature-card">
-                          <h3>Complete 360°</h3>
-                          <p>Experience full panoramic views with smooth navigation.</p>
-                      </div>
-                      <div className="feature-card">
-                          <h3>High Quality</h3>
-                          <p>High-resolution images for an immersive visual experience.</p>
-                      </div>
-                      <div className="feature-card">
-                          <h3>Interactive</h3>
-                          <p>Interactive elements that enrich your exploration experience.</p>
-                      </div>
-                  </div>
-              </div>
-          </section>
+        <section className="hero-section">
+            <ProjectCard
+                title="Explore the World in 360°"
+                description="Immerse yourself in unique experiences. Discover incredible places from the comfort of your home with our virtual tour technology."
+                author=""
+                setup={panellumConfig_Noiseless_Sample01}
+                fullSection
+                blackIntensity={0.2}
+                blurIntensity={1}
+            />
+            <button className="btn btn-primary" style={{ position: 'absolute', zIndex: 500, translate: '0px 200px' }} onClick={() => window.location.href = "/Projects"}>Projects</button>
+        </section>
+        <section className="features-section">
+            <div className="features-container">
+                <h2 className="section-title">Features</h2>
+                <div className="features-grid">
+                    <div className="feature-card">
+                        <h3>Complete 360°</h3>
+                        <p>Experience full panoramic views with smooth navigation.</p>
+                    </div>
+                    <div className="feature-card">
+                        <h3>High Quality</h3>
+                        <p>High-resolution images for an immersive visual experience.</p>
+                    </div>
+                    <div className="feature-card">
+                        <h3>Interactive</h3>
+                        <p>Interactive elements that enrich your exploration experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
       <Faq />
       <Footer1/>
       </main>

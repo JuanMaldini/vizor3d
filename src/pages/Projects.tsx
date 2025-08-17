@@ -3,8 +3,9 @@ import ProjectCard from '../components/ProjectCard';
 import '../styles/Projects.css';
 import '../styles/App.css';
 
-import Noiseless_Sample01 from '/images/projects/Noiseless/1.jpg';
-import Sampleai from '/images/projects/Sampleai09/Sample_AI09_01.jpg';
+// Configs de panoramas reutilizados para las cards (solo usan la primera imagen)
+import { panellumConfig_Noiseless_Sample01 } from '../types/PanoramasConfig/panellumConfig_Noiseless_Sample01';
+import { panellumConfig_SampleAI } from '../types/PanoramasConfig/panellumConfig_SampleAI';
 
 import ModelViewer from '../components/ModelViewer';
  
@@ -38,26 +39,21 @@ const Projects: React.FC = () => {
           <h3 className="projects2-section-title">Virtual Tour</h3>
           <p className="projects2-section-desc">Explore your 3D spaces by 360° images </p>
           <div className="projects2-cards-row">
-
-                <ProjectCard
-                  title="360 Saloon"
-                  description="Explore interiors in 360°"
-                  author="Noiselss Studio"
-                  seeMoreLink="https://www.noiseless-studio.com/"
-                  redirectPath="/Noiseless_Sample01"
-                  image={Noiseless_Sample01}
-                  p={-26.164483557549705}
-                  y={45.90340252545282}
-                />
-                <ProjectCard
-                  title="360 Virtual Tour"
-                  description="Explore the world in 360°"
-                  author="Sample"
-                  redirectPath="/Sampleai"
-                  image={Sampleai}
-                  p={-32.33833884932688}
-                  y={132.19221152571745}
-                />
+            <ProjectCard
+              title="360 Saloon"
+              description="Explore interiors in 360°"
+              author="Noiselss Studio"
+              seeMoreLink="https://www.noiseless-studio.com/"
+              redirectPath="/Noiseless_Sample01"
+              setup={panellumConfig_Noiseless_Sample01}
+            />
+            <ProjectCard
+              title="360 Virtual Tour"
+              description="Explore the world in 360°"
+              author="Sample"
+              redirectPath="/Sampleai"
+              setup={panellumConfig_SampleAI}
+            />
           </div>
         </section>
         
@@ -66,23 +62,6 @@ const Projects: React.FC = () => {
           <p className="projects2-section-desc">View and interact with 3D models in real-time.</p>
           <div className="projects2-cards-row">
             <div className="models-viewer-container">
-
-              {/* <article
-                className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/ModelViewer_SanpCab_PhoneBooths_Single'}
-              >
-                <ModelViewer
-                  src="/3dmodels/Pods_01.glb"
-                  cameraControls
-                  touch-action="pan-y"
-                  skybox-height="6" 
-                  environmentImage="/enviroment/straight_afternoon_2k.hdr"
-                  min-camera-orbit="auto auto 32m"
-                  max-camera-orbit="auto auto 40m"
-                  shadow-intensity="2"
-                  disable-zoom="true"
-                />
-              </article> */}
 
               <article
                 className="model-viewer-card project-card-link"
@@ -121,8 +100,8 @@ const Projects: React.FC = () => {
             </div>
           </div>
         </section>
-{/* 
-        <section id="section3" className="projects2-section">
+
+        {/* <section id="section3" className="projects2-section">
           <h3 className="projects2-section-title">Augmented Reality</h3>
           <p className="projects2-section-desc">Place your 3D models in the real world.</p>
           <div className="projects2-cards-row">
