@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CustomLink } from './functions';
-import logo from '../../public/Icons/Logo.svg';
+import logo from '/public/Icons/Logo.svg';
 
 const Navbar: React.FC = React.memo(() => {
   return (
