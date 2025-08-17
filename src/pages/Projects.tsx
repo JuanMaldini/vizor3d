@@ -28,9 +28,9 @@ const Projects: React.FC = () => {
             <button className="btn btn-secondary" onClick={() => document.getElementById('section2')?.scrollIntoView({ behavior: 'smooth' })}>
               Model Viewer
             </button>
-            {/* <button className="btn btn-secondary" onClick={() => document.getElementById('section3')?.scrollIntoView({ behavior: 'smooth' })}>
+            <button className="btn btn-secondary" onClick={() => document.getElementById('section3')?.scrollIntoView({ behavior: 'smooth' })}>
               Augmented Reality
-            </button> */}
+            </button>
           </div>
         </section>
 
@@ -66,23 +66,6 @@ const Projects: React.FC = () => {
           <p className="projects2-section-desc">View and interact with 3D models in real-time.</p>
           <div className="projects2-cards-row">
             <div className="models-viewer-container">
-
-              {/* <article
-                className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/ModelViewer_SanpCab_PhoneBooths_Single'}
-              >
-                <ModelViewer
-                  src="/3dmodels/Pods_01.glb"
-                  cameraControls
-                  touch-action="pan-y"
-                  skybox-height="6" 
-                  environmentImage="/enviroment/straight_afternoon_2k.hdr"
-                  min-camera-orbit="auto auto 32m"
-                  max-camera-orbit="auto auto 40m"
-                  shadow-intensity="2"
-                  disable-zoom="true"
-                />
-              </article> */}
 
               <article
                 className="model-viewer-card project-card-link"
@@ -121,7 +104,7 @@ const Projects: React.FC = () => {
             </div>
           </div>
         </section>
-{/* 
+
         <section id="section3" className="projects2-section">
           <h3 className="projects2-section-title">Augmented Reality</h3>
           <p className="projects2-section-desc">Place your 3D models in the real world.</p>
@@ -144,7 +127,7 @@ const Projects: React.FC = () => {
 
             </div>
           </div>
-        </section> */}
+        </section>
 
       <Faq />
       <Footer1 />
