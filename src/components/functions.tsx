@@ -1,11 +1,6 @@
-export const CustomLink: React.FC<{ text: string; email: string; className?: string }> = ({ text, email, className }) => {
-  const subject = "Contact";
-  const body = `Hello,
-
-`;
-
-  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
+interface CustomLinkProps { text: string; email: string; className?: string; subject?: string; body?: string; }
+export const CustomLink: React.FC<CustomLinkProps> = ({ text, email, className, subject = 'Contact', body = 'Hello,' }) => {
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + '\n')}`;
   return <a href={mailtoLink} className={className}>{text}</a>;
 };
 

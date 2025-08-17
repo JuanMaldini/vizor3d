@@ -10,19 +10,16 @@ const Home: React.FC = () => {
     <main className="main-content">
 
         <section className="hero-section">
-            <div className="hero-container">
-                <h1 className="hero-title">Explore the World in 360°</h1>
-                <p className="hero-description">
-                Immerse yourself in unique experiences. Discover incredible places
-                from the comfort of your home with our virtual tour technology.
-                </p>
-                <ProjectCard
-                    title=""
-                    description=""
-                    author=""
-                    setup={panellumConfig_Noiseless_Sample01}
-                />
-            </div>
+            <ProjectCard
+                title="Explore the World in 360°"
+                description="Immerse yourself in unique experiences. Discover incredible places from the comfort of your home with our virtual tour technology."
+                author=""
+                setup={panellumConfig_Noiseless_Sample01}
+                fullSection
+                blackIntensity={0.2}
+                blurIntensity={1}
+            />
+            <button className="btn btn-primary" style={{ position: 'absolute', zIndex: 500, translate: '0px 200px' }} onClick={() => window.location.href = "/Projects"}>Projects</button>
         </section>
         <section className="features-section">
             <div className="features-container">

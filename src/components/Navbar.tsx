@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { CustomLink } from './functions';
 import logo from '../../public/Icons/logo.png';
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC = React.memo(() => {
   return (
-    <nav className="navbar ">
+    <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="nav-container">
         <div className="nav-logo">
           <Link to="/"><img src={logo} alt='Logo' height='32' /></Link>
@@ -28,6 +28,6 @@ const Navbar: React.FC = () => {
       </div>
     </nav>
   );
-};
+});
 
 export default Navbar;

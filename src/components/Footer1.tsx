@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CustomLink } from './functions';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = React.memo(() => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -37,6 +37,6 @@ const Footer: React.FC = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Footer;

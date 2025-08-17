@@ -29,9 +29,9 @@ const Projects: React.FC = () => {
             <button className="btn btn-secondary" onClick={() => document.getElementById('section2')?.scrollIntoView({ behavior: 'smooth' })}>
               Model Viewer
             </button>
-            <button className="btn btn-secondary" onClick={() => document.getElementById('section3')?.scrollIntoView({ behavior: 'smooth' })}>
+            {/* <button className="btn btn-secondary" onClick={() => document.getElementById('section3')?.scrollIntoView({ behavior: 'smooth' })}>
               Augmented Reality
-            </button>
+            </button> */}
           </div>
         </section>
 
@@ -101,7 +101,7 @@ const Projects: React.FC = () => {
           </div>
         </section>
 
-        <section id="section3" className="projects2-section">
+        {/* <section id="section3" className="projects2-section">
           <h3 className="projects2-section-title">Augmented Reality</h3>
           <p className="projects2-section-desc">Place your 3D models in the real world.</p>
           <div className="projects2-cards-row">
@@ -123,7 +123,7 @@ const Projects: React.FC = () => {
 
             </div>
           </div>
-        </section>
+        </section> */}
 
       <Faq />
       <Footer1 />
