@@ -24,7 +24,6 @@ export const panellumConfig_Noiseless_Sample01: PannellumSetup = {
     showZoomCtrl: false,
     hfov: 100,
     sceneFadeDuration: 1000,
-    autoRotate: -2,
   },
   first: {
     imageSource: '/images/projects/Noiseless/1.jpg',

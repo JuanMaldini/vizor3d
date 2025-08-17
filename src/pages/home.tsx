@@ -15,7 +15,7 @@ const Home: React.FC = () => {
                 author=""
                 setup={panellumConfig_Noiseless_Sample01}
                 fullSection
-                blackIntensity={0.2}
+                blackIntensity={0.3}
                 blurIntensity={1}
             />
             <button className="btn btn-primary" style={{ position: 'absolute', zIndex: 500, translate: '0px 200px' }} onClick={() => window.location.href = "/projects"}>Projects</button>
