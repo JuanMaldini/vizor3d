@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CustomLink } from './functions';
-import logo from '../../public/Icons/logo.png';
+import logo from '/Icons/logo.png';
 
 const Navbar: React.FC = React.memo(() => {
   return (
@@ -18,9 +18,6 @@ const Navbar: React.FC = React.memo(() => {
           <li className="nav-item">
             <Link to="/projects" className="nav-link">Projects</Link>
           </li>
-          {/* <li className="nav-item">
-            <Link to="/about" className="nav-link">About</Link>
-          </li> */}
           <li className="nav-item">
             <CustomLink text="Contact" email="contact@vizor3d.com" className="nav-link" />
           </li>
