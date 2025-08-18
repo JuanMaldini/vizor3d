@@ -11,6 +11,7 @@ import ModelViewer from '../components/ModelViewer';
  
 import Faq from '../components/Faq';
 import Footer1 from '../components/Footer1';
+import { Link } from 'react-router-dom';
 
 const Projects: React.FC = () => {
   return (
@@ -23,15 +24,16 @@ const Projects: React.FC = () => {
         <section className="projects2-nav-section">
           <h2 className="projects2-nav-title">Explore by Category</h2>
           <div className="projects2-nav-buttons">
-            <button className="btn btn-secondary" onClick={() => document.getElementById('section1')?.scrollIntoView({ behavior: 'smooth' })}>
+            <a className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} onClick={() => document.getElementById('section1')?.scrollIntoView({ behavior: 'smooth' })}>
               Virtual Tour
-            </button>
-            <button className="btn btn-secondary" onClick={() => document.getElementById('section2')?.scrollIntoView({ behavior: 'smooth' })}>
+            </a>
+            <a className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} onClick={() => document.getElementById('section2')?.scrollIntoView({ behavior: 'smooth' })}>
               Model Viewer
-            </button>
-            {/* <button className="btn btn-secondary" onClick={() => document.getElementById('section3')?.scrollIntoView({ behavior: 'smooth' })}>
+            </a>
+            {/* <Link className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} to="/SimpleAR">
               Augmented Reality
-            </button> */}
+            </Link> */}
+            
           </div>
         </section>
 
