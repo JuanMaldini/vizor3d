@@ -335,13 +335,10 @@ code {
 /* Features Section Styles */
 .features-section {
   background: var(--secondary);
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  max-width: 1100px;
-  margin: 4rem auto 3rem auto;
   padding: 4rem 3rem 3rem 3rem;
   position: relative;
   display: flex;
+  margin: 1rem 0rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;

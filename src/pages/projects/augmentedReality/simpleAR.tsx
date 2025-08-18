@@ -11,9 +11,9 @@ function simpleAR({}: Props) {
     dataUrl: "/build/Build/build.data",
     frameworkUrl: "/build/Build/build.framework.js",
     codeUrl: "/build/Build/build.wasm",
-    // companyName: "VIZOR3D",
-    // productName: "ARSample",
-    // productVersion: "1.0.0",
+    companyName: "VIZOR3D",
+    productName: "ARSample",
+    productVersion: "1.0.0",
   });
 
   return (
