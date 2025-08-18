@@ -2,10 +2,10 @@ import React from 'react'
 import logo from '../../../../public/Icons/Logo.svg';
 type Props = {}
 
-function simpleAR_location({}: Props) {
+function AR_Template_Location({}: Props) {
   return (
     <div>
-      <a className="btn btn-secondary" onClick={() => window.location.href = '/SimpleAR'}>Back</a>
+      <a className="btn btn-secondary" onClick={() => window.location.href = '/AR_Template'}>Back</a>
       <a
         className="btn btn-secondary"
         download href='/ar/targetLocation.pdf'
@@ -16,4 +16,4 @@ function simpleAR_location({}: Props) {
     </div>
   )
 }
-export default simpleAR_location
+export default AR_Template_Location

@@ -5,7 +5,7 @@ import '../../../styles/Projects.css'
 
 type Props = {}
 
-function simpleAR({}: Props) {
+function AR_Template({}: Props) {
   const { unityProvider, isLoaded, loadingProgression } = useUnityContext({
     loaderUrl: "/build/Build/build.loader.js",
     dataUrl: "/build/Build/build.data",
@@ -21,7 +21,7 @@ function simpleAR({}: Props) {
         <section className="projects2-hero">
           <h1 className="projects2-title">Image base tracking</h1>
           <p className="projects2-desc">Use your mobile device, point your camera at the image provided.</p>
-          <a className="btn btn-secondary" onClick={() => window.location.href = '/SimpleAR_location'}>Place here</a>
+          <a className="btn btn-secondary" onClick={() => window.location.href = '/AR_Template_Location'}>Place here</a>
         </section>
       {!isLoaded && (
         <p style={{ textAlign: 'center', margin: '12px 0' }}>
@@ -36,4 +36,4 @@ function simpleAR({}: Props) {
   )
 }
 
-export default simpleAR
+export default AR_Template

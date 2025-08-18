@@ -10,14 +10,13 @@ const Projects = React.lazy(() => import("./pages/Projects"));
 
 const ModelViewer_Car = React.lazy(() => import("./pages/projects/modelViewer/MV_Car"));
 const ModelViewer_Lamp = React.lazy(() => import("./pages/projects/modelViewer/MV_Lamp"));
-const ModelViewer_SanpCab_PhoneBooths_Single = React.lazy(() => import("./pages/projects/modelViewer/MV_SanpCab_PhoneBooths_Single"));
 
 const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/panoramas/P_Noiseless_Sample01"));
 
 const Sampleai = React.lazy(() => import("./pages/projects/panoramas/P_Sampleai"));
 
-const SimpleAR = React.lazy(() => import("./pages/projects/augmentedReality/SimpleAR"));
-const SimpleAR_location = React.lazy(() => import("./pages/projects/augmentedReality/SimpleAR_location"));
+const AR_Template = React.lazy(() => import("./pages/projects/augmentedReality/AR_Template"));
+const AR_Template_Location = React.lazy(() => import("./pages/projects/augmentedReality/AR_Template_Location"));
 
 const ErrorPage = React.lazy(() => import("./error"));
 const router = createBrowserRouter(
@@ -36,10 +35,9 @@ const router = createBrowserRouter(
 
         { path: "ModelViewer_Car", element: <ModelViewer_Car/> },
         { path: "ModelViewer_Lamp", element: <ModelViewer_Lamp/> },
-        { path: "ModelViewer_SanpCab_PhoneBooths_Single", element: <ModelViewer_SanpCab_PhoneBooths_Single/> },
 
-        { path: "SimpleAR", element: <SimpleAR/> },
-        { path: "SimpleAR_location", element: <SimpleAR_location/> },
+        { path: "AR_Template", element: <AR_Template/> },
+        { path: "AR_Template_Location", element: <AR_Template_Location/> },
       ],
     },
   ],
