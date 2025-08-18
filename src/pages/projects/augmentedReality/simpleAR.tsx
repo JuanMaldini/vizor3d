@@ -21,7 +21,7 @@ function simpleAR({}: Props) {
         <section className="projects2-hero">
           <h1 className="projects2-title">Image base tracking</h1>
           <p className="projects2-desc">Use your mobile device, point your camera at the image provided.</p>
-          <a className="btn btn-secondary" onClick={() => window.location.href = '/Location'}>Place here</a>
+          <a className="btn btn-secondary" onClick={() => window.location.href = '/SimpleAR_location'}>Place here</a>
         </section>
       {!isLoaded && (
         <p style={{ textAlign: 'center', margin: '12px 0' }}>

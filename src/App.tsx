@@ -16,8 +16,8 @@ const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/panoramas/P
 
 const Sampleai = React.lazy(() => import("./pages/projects/panoramas/P_Sampleai"));
 
-const SimpleAR = React.lazy(() => import("./pages/projects/augmentedReality/simpleAR"));
-const Location = React.lazy(() => import("./pages/projects/augmentedReality/simpleAR_location"));
+const SimpleAR = React.lazy(() => import("./pages/projects/augmentedReality/SimpleAR"));
+const SimpleAR_location = React.lazy(() => import("./pages/projects/augmentedReality/SimpleAR_location"));
 
 const ErrorPage = React.lazy(() => import("./error"));
 const router = createBrowserRouter(
@@ -39,7 +39,7 @@ const router = createBrowserRouter(
         { path: "ModelViewer_SanpCab_PhoneBooths_Single", element: <ModelViewer_SanpCab_PhoneBooths_Single/> },
 
         { path: "SimpleAR", element: <SimpleAR/> },
-        { path: "Location", element: <Location/> },
+        { path: "SimpleAR_location", element: <SimpleAR_location/> },
       ],
     },
   ],
