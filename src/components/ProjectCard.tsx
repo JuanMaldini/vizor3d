@@ -74,7 +74,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       onClick={hasRedirect ? handleClick : undefined}
       style={hasRedirect ? { cursor: 'pointer' } : undefined}
       aria-label={hasRedirect ? `Open ${title}` : undefined}
-      role={hasRedirect ? 'button' : 'group'}
+      role={hasRedirect ? 'a' : 'group'}
       tabIndex={hasRedirect ? 0 : -1}
       onKeyDown={hasRedirect ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(); } } : undefined}
     >
