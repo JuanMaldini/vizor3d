@@ -9,7 +9,7 @@ function AR_Template({}: Props) {
   const { unityProvider, isLoaded, loadingProgression } = useUnityContext({
     loaderUrl: "/build/Build/build.loader.js",
     dataUrl: "/build/Build/build.data",
-    frameworkUrl: "/build/Build/build.framework.js",
+    frameworkUrl: "/Build/Build/build.framework.js",
     codeUrl: "/build/Build/build.wasm",
     companyName: "VIZOR3D",
     productName: "ARSample",
@@ -22,6 +22,7 @@ function AR_Template({}: Props) {
           <h1 className="projects2-title">Image base tracking</h1>
           <p className="projects2-desc">Use your mobile device, point your camera at the image provided.</p>
           <a className="btn btn-secondary" onClick={() => window.location.href = '/AR_Template_Location'}>Place here</a>
+          <p>"Currently under development"</p>
         </section>
       {!isLoaded && (
         <p style={{ textAlign: 'center', margin: '12px 0' }}>

@@ -34,7 +34,10 @@
 
 .projects2-nav-buttons {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
