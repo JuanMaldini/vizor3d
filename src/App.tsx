@@ -33,8 +33,8 @@ const router = createBrowserRouter(
         { path: "Noiseless_Sample01", element: <Noiseless_Sample01/> },
         { path: "Sampleai", element: <Sampleai/> },
 
-        { path: "ModelViewer_Car", element: <ModelViewer_Car/> },
-        { path: "ModelViewer_Lamp", element: <ModelViewer_Lamp/> },
+        { path: "ModelViewer_Sample_Car", element: <ModelViewer_Car/> },
+        { path: "ModelViewer_Sample_Lamp", element: <ModelViewer_Lamp/> },
 
         { path: "AR_Template", element: <AR_Template/> },
         { path: "AR_Template_Location", element: <AR_Template_Location/> },

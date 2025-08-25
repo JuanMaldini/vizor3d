@@ -30,9 +30,9 @@ const Projects: React.FC = () => {
             <a className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} onClick={() => document.getElementById('section2')?.scrollIntoView({ behavior: 'smooth' })}>
               Model Viewer
             </a>
-            <Link className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} to="/AR_Template">
+            {/* <Link className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} to="/AR_Template">
               Augmented Reality
-            </Link>
+            </Link> */}
             
           </div>
         </section>
@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/ModelViewer_Car'}
+                onClick={() => window.location.href = '/ModelViewer_Sample_Car'}
               >
                 <ModelViewer
                   src="/3dmodels/car.glb"
@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/ModelViewer_Lamp'}
+                onClick={() => window.location.href = '/ModelViewer_Sample_Lamp'}
               >
                 <ModelViewer
                   src="/3dmodels/arabian_lamp.glb"
@@ -103,29 +103,6 @@ const Projects: React.FC = () => {
           </div>
         </section>
 
-        {/* <section id="section3" className="projects2-section">
-          <h3 className="projects2-section-title">Augmented Reality</h3>
-          <p className="projects2-section-desc">Place your 3D models in the real world.</p>
-          <div className="projects2-cards-row">
-            <div className="models-viewer-container">
-
-              <article
-                className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/SimpleAR'}
-                style={{ 
-                  cursor: 'pointer', 
-                  position: 'relative', 
-                  flex: '1 1 45%', 
-                  maxWidth: '45%',
-                  minHeight: '300px',
-                  height: '100%'
-                }}
-              >
-              </article>
-
-            </div>
-          </div>
-        </section> */}
 
       <Faq />
       <Footer1 />
