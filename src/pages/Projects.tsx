@@ -8,7 +8,7 @@ import { panellumConfig_Noiseless_Sample01 } from '../types/PanoramasConfig/pane
 import { panellumConfig_SampleAI } from '../types/PanoramasConfig/panellumConfig_SampleAI';
 
 import ModelViewer from '../components/ModelViewer';
- 
+
 import Faq from '../components/Faq';
 import Footer1 from '../components/Footer1';
 import { Link } from 'react-router-dom';
