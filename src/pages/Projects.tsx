@@ -67,6 +67,40 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
+                onClick={() => window.location.href = '/ModelViewer_Sample_Chair01'}
+              >
+                <ModelViewer
+                  src="/3dmodels/chair.glb"
+                  cameraControls
+                  touch-action="pan-y"
+                  skybox-height="6" 
+                  environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                  min-camera-orbit="auto auto 15m"
+                  max-camera-orbit="auto auto 20m"
+                  shadow-intensity="2"
+                  disable-zoom="true"
+                />
+              </article>
+
+              <article
+                className="model-viewer-card project-card-link"
+                onClick={() => window.location.href = '/ModelViewer_Sample_Deco01'}
+              >
+                <ModelViewer
+                  src="/3dmodels/plant_interior_decoration.glb"
+                  cameraControls
+                  touch-action="pan-y"
+                  skybox-height="6" 
+                  environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                  min-camera-orbit="auto auto 1.5m"
+                  max-camera-orbit="auto auto 1.5m"
+                  shadow-intensity="2"
+                  disable-zoom="true"
+                />
+              </article>
+
+              <article
+                className="model-viewer-card project-card-link"
                 onClick={() => window.location.href = '/ModelViewer_Sample_Car'}
               >
                 <ModelViewer

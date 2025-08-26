@@ -10,6 +10,8 @@ const Projects = React.lazy(() => import("./pages/Projects"));
 
 const ModelViewer_Car = React.lazy(() => import("./pages/projects/modelViewer/MV_Car"));
 const ModelViewer_Lamp = React.lazy(() => import("./pages/projects/modelViewer/MV_Lamp"));
+const ModelViewer_Chair01 = React.lazy(() => import("./pages/projects/modelViewer/MV_Chair01"));
+const ModelViewer_Deco01 = React.lazy(() => import("./pages/projects/modelViewer/MV_Deco01"));
 
 const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/panoramas/P_Noiseless_Sample01"));
 
@@ -35,6 +37,8 @@ const router = createBrowserRouter(
 
         { path: "ModelViewer_Sample_Car", element: <ModelViewer_Car/> },
         { path: "ModelViewer_Sample_Lamp", element: <ModelViewer_Lamp/> },
+        { path: "ModelViewer_Sample_Chair01", element: <ModelViewer_Chair01/> },
+        { path: "ModelViewer_Sample_Deco01", element: <ModelViewer_Deco01/> },
 
         { path: "AR_Template", element: <AR_Template/> },
         { path: "AR_Template_Location", element: <AR_Template_Location/> },
