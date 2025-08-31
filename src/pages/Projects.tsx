@@ -30,6 +30,9 @@ const Projects: React.FC = () => {
             <a className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} onClick={() => document.getElementById('section2')?.scrollIntoView({ behavior: 'smooth' })}>
               Model Viewer
             </a>
+            <Link className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} to="/Mindar_sample01">
+              Augmented Reality
+            </Link>
             {/* <Link className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} to="/AR_Template">
               Augmented Reality
             </Link> */}
