@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-// Local JSX typings for A-Frame tags (keeps this file self-contained)
+// Local JSX typings for A-Frame tags (self-contained)
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -10,17 +10,31 @@ declare global {
       "a-entity": any;
       "a-camera": any;
       "a-gltf-model": any;
-      "a-box": any;
     }
   }
 }
 
-const MindarSample01: React.FC = () => {
+type MindarViewerProps = {
+  modelSrc: string; // public path to glb
+  modelPosition?: string; // e.g. "0 0 0"
+  modelRotation?: string; // e.g. "0 0 0"
+  modelScale?: string; // e.g. "1 1 1"
+  imageTargetSrc?: string; // defaults to /mindar/targets.mind
+  targetIndex?: number; // defaults to 0
+};
+
+const MindarViewer: React.FC<MindarViewerProps> = ({
+  modelSrc,
+  modelPosition,
+  modelRotation,
+  modelScale,
+  imageTargetSrc = "/mindar/targets.mind",
+  targetIndex = 0,
+}) => {
   const sceneRef = useRef<HTMLElement | null>(null);
   const anchorRef = useRef<HTMLElement | null>(null);
   const modelRef = useRef<HTMLElement | null>(null);
   const assetRef = useRef<HTMLElement | null>(null);
-  const boxRef = useRef<HTMLElement | null>(null);
 
   // Scene lifecycle + MindAR events
   useEffect(() => {
@@ -28,12 +42,15 @@ const MindarSample01: React.FC = () => {
     if (!sceneEl) return;
     const logCanvasSize = (where: string) => {
       try {
-        const canvas: HTMLCanvasElement | undefined = sceneEl.renderer?.domElement || sceneEl.canvas;
+        const canvas: HTMLCanvasElement | undefined =
+          sceneEl.renderer?.domElement || sceneEl.canvas;
         if (canvas) {
-          console.log(
-            `[MindAR] ${where} canvas size`,
-            { width: canvas.width, height: canvas.height, clientW: canvas.clientWidth, clientH: canvas.clientHeight }
-          );
+          console.log(`[MindAR] ${where} canvas size`, {
+            width: canvas.width,
+            height: canvas.height,
+            clientW: canvas.clientWidth,
+            clientH: canvas.clientHeight,
+          });
         } else {
           console.log(`[MindAR] ${where} canvas missing`);
         }
@@ -43,12 +60,16 @@ const MindarSample01: React.FC = () => {
     };
     const logVideoSize = (where: string) => {
       try {
-        const video = document.querySelector("video") as HTMLVideoElement | null;
+        const video = document.querySelector(
+          "video"
+        ) as HTMLVideoElement | null;
         if (video) {
-          console.log(
-            `[MindAR] ${where} video size`,
-            { videoW: video.videoWidth, videoH: video.videoHeight, clientW: video.clientWidth, clientH: video.clientHeight }
-          );
+          console.log(`[MindAR] ${where} video size`, {
+            videoW: video.videoWidth,
+            videoH: video.videoHeight,
+            clientW: video.clientWidth,
+            clientH: video.clientHeight,
+          });
         } else {
           console.log(`[MindAR] ${where} video not found`);
         }
@@ -64,7 +85,6 @@ const MindarSample01: React.FC = () => {
     const onARReady = () => {
       console.log("[MindAR] arReady (camera started)");
       logCanvasSize("arReady");
-      // Delay a bit to let the video attach and size
       setTimeout(() => logVideoSize("arReady+100ms"), 100);
     };
     const onARError = (e: any) =>
@@ -87,20 +107,16 @@ const MindarSample01: React.FC = () => {
     const onLost = () => console.log("[MindAR] targetLost");
     anchorEl.addEventListener("targetFound", onFound);
     anchorEl.addEventListener("targetLost", onLost);
-    // Force-visibility toggles as a safety net
+    // Force-visibility toggles for model
     const onFoundShow = () => {
       const m = modelRef.current as any;
-      const b = boxRef.current as any;
       if (m) m.setAttribute("visible", true);
-      if (b) b.setAttribute("visible", true);
-      console.log("[MindAR] forced visible on children");
+      console.log("[MindAR] forced visible on model");
     };
     const onLostHide = () => {
       const m = modelRef.current as any;
-      const b = boxRef.current as any;
       if (m) m.setAttribute("visible", false);
-      if (b) b.setAttribute("visible", false);
-      console.log("[MindAR] forced hidden on children");
+      console.log("[MindAR] forced hidden on model");
     };
     anchorEl.addEventListener("targetFound", onFoundShow);
     anchorEl.addEventListener("targetLost", onLostHide);
@@ -117,11 +133,11 @@ const MindarSample01: React.FC = () => {
     const assetEl = assetRef.current as any;
     if (assetEl) {
       const onAssetLoaded = () =>
-        console.log("[MindAR] asset loaded /3dmodels/arabian_lamp.glb");
+        console.log("[MindAR] asset loaded", modelSrc);
       assetEl.addEventListener("loaded", onAssetLoaded);
       return () => assetEl.removeEventListener("loaded", onAssetLoaded);
     }
-  }, []);
+  }, [modelSrc]);
 
   useEffect(() => {
     const modelEl = modelRef.current as any;
@@ -130,14 +146,19 @@ const MindarSample01: React.FC = () => {
       console.log("[MindAR] model-loaded");
       try {
         const obj: any = modelEl.getObject3D("mesh");
-        console.log("[MindAR] mesh present:", !!obj, "children:", obj?.children?.length ?? "n/a");
+        console.log(
+          "[MindAR] mesh present:",
+          !!obj,
+          "children:",
+          obj?.children?.length ?? "n/a"
+        );
       } catch {}
     };
     const onModelError = (e: any) =>
       console.log("[MindAR] model-error", e?.detail || e);
     modelEl.addEventListener("model-loaded", onModelLoaded);
     modelEl.addEventListener("model-error", onModelError);
-    // Quick bbox metrics for visibility debugging
+    // Quick bbox metrics
     modelEl.addEventListener("model-loaded", () => {
       try {
         const THREE = (window as any).THREE || (window as any).AFRAME?.THREE;
@@ -164,26 +185,68 @@ const MindarSample01: React.FC = () => {
     };
   }, []);
 
+  // Minimal cleanup on unmount: stop AR, pause scene, stop camera, remove MindAR overlays
+  useEffect(() => {
+    return () => {
+      const sceneEl = sceneRef.current as any;
+      console.log("[MindAR] cleanup: stopping AR and removing overlays");
+      try {
+        const arSystem = sceneEl?.systems?.["mindar-image-system"] || sceneEl?.systems?.["mindar-image"];
+        arSystem?.stop?.();
+        console.log("[MindAR] arSystem.stop() called");
+      } catch (e) {
+        console.log("[MindAR] cleanup arSystem error", e);
+      }
+      try {
+        sceneEl?.pause?.();
+      } catch (e) {
+        console.log("[MindAR] cleanup scene pause error", e);
+      }
+      try {
+        const videos = Array.from(document.querySelectorAll("video")) as HTMLVideoElement[];
+        videos.forEach((v) => {
+          const stream = v.srcObject as MediaStream | null;
+          stream?.getTracks?.().forEach((t) => t.stop());
+          v.srcObject = null as any;
+          v.removeAttribute("src");
+          v.load?.();
+        });
+        if (videos.length) console.log("[MindAR] camera tracks stopped");
+      } catch (e) {
+        console.log("[MindAR] cleanup camera error", e);
+      }
+      try {
+        const overlays = Array.from(
+          document.querySelectorAll('[class*="mindar"], [id*="mindar"]')
+        ) as HTMLElement[];
+        overlays.forEach((el) => (el.style.display = "none"));
+        overlays.forEach((el) => el.parentElement?.removeChild(el));
+        if (overlays.length) console.log("[MindAR] overlays removed:", overlays.length);
+      } catch (e) {
+        console.log("[MindAR] cleanup overlays error", e);
+      }
+    };
+  }, []);
+
   return (
     <a-scene
       ref={sceneRef as any}
       embedded
-  style={{ width: "100%", height: "100vh", display: "block" }}
+      style={{ width: "100%", height: "100dvh", display: "block" }}
       color-space="sRGB"
       renderer="colorManagement: true, physicallyCorrectLights: true"
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
-      mindar-image="imageTargetSrc: /mindar/targets.mind; autoStart: true;"
+      mindar-image={`imageTargetSrc: ${imageTargetSrc}; autoStart: true;`}
     >
       <a-assets>
         <a-asset-item
           id="mv-model"
-          src="/3dmodels/arabian_lamp.glb"
+          src={modelSrc}
           ref={assetRef as any}
         ></a-asset-item>
       </a-assets>
 
-      {/* Luces mínimas para asegurar visibilidad del GLTF */}
       <a-entity light="type: ambient; intensity: 0.8"></a-entity>
       <a-entity
         light="type: directional; intensity: 0.6"
@@ -192,18 +255,20 @@ const MindarSample01: React.FC = () => {
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <a-entity mindar-image-target="targetIndex: 0" ref={anchorRef as any}>
+      <a-entity
+        mindar-image-target={`targetIndex: ${targetIndex}`}
+        ref={anchorRef as any}
+      >
         <a-gltf-model
           src="#mv-model"
           ref={modelRef as any}
+          {...(modelPosition ? { position: modelPosition } : {})}
+          {...(modelRotation ? { rotation: modelRotation } : {})}
+          {...(modelScale ? { scale: modelScale } : {})}
         ></a-gltf-model>
-        <a-box
-          ref={boxRef as any}
-          color="red"
-        ></a-box>
       </a-entity>
     </a-scene>
   );
 };
 
-export default MindarSample01;
+export default MindarViewer;

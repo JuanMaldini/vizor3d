@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 const Projects: React.FC = () => {
   return (
     <main className="projects2-main">
+
         <section className="projects2-hero">
           <h1 className="projects2-title">Our Projects</h1>
           <p className="projects2-desc">Discover our 3D interactive web experiences. Each project is crafted with passion and technical excellence.</p>
@@ -30,13 +31,9 @@ const Projects: React.FC = () => {
             <a className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} onClick={() => document.getElementById('section2')?.scrollIntoView({ behavior: 'smooth' })}>
               Model Viewer
             </a>
-            <Link className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} to="/Mindar_sample01">
+            <a className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} onClick={() => document.getElementById('section3')?.scrollIntoView({ behavior: 'smooth' })}>
               Augmented Reality
-            </Link>
-            {/* <Link className="btn btn-secondary" style={{ display: 'flex', justifyContent: 'center' }} to="/AR_Template">
-              Augmented Reality
-            </Link> */}
-            
+            </a>
           </div>
         </section>
 
@@ -70,7 +67,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/ModelViewer_Sample_Chair01'}
+                onClick={() => window.location.href = '/MV-Chair01'}
               >
                 <ModelViewer
                   src="/3dmodels/chair.glb"
@@ -87,7 +84,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/ModelViewer_Sample_Deco01'}
+                onClick={() => window.location.href = '/MV-Deco01'}
               >
                 <ModelViewer
                   src="/3dmodels/plant_interior_decoration.glb"
@@ -104,7 +101,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/ModelViewer_Sample_Car'}
+                onClick={() => window.location.href = '/MV-Car'}
               >
                 <ModelViewer
                   src="/3dmodels/car.glb"
@@ -121,7 +118,7 @@ const Projects: React.FC = () => {
 
               <article
                 className="model-viewer-card project-card-link"
-                onClick={() => window.location.href = '/ModelViewer_Sample_Lamp'}
+                onClick={() => window.location.href = '/MV-Lamp'}
               >
                 <ModelViewer
                   src="/3dmodels/arabian_lamp.glb"
@@ -131,6 +128,33 @@ const Projects: React.FC = () => {
                   environmentImage="/enviroment/straight_afternoon_2k.hdr"
                   min-camera-orbit="auto auto 20m"
                   max-camera-orbit="auto auto 30m"
+                  shadow-intensity="2"
+                  disable-zoom="true"
+                />
+              </article>
+
+            </div>
+          </div>
+        </section>
+
+        <section id="section3" className="projects2-section">
+          <h3 className="projects2-section-title">Augmented Reality</h3>
+          <p className="projects2-section-desc">Place your model in the provided area</p>
+          <div className="projects2-cards-row">
+            <div className="models-viewer-container">
+
+              <article
+                className="model-viewer-card project-card-link"
+                onClick={() => window.location.href = '/ar-template'}
+              >
+                <ModelViewer
+                  src="/3dmodels/dry_flower.glb"
+                  cameraControls
+                  touch-action="pan-y"
+                  skybox-height="6" 
+                  environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                  min-camera-orbit="auto auto .7m"
+                  max-camera-orbit="auto auto .7m"
                   shadow-intensity="2"
                   disable-zoom="true"
                 />
