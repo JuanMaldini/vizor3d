@@ -1,8 +1,10 @@
 import qr from "../../../../public/Icons/qr-code.svg";
 import "../../../styles/Projects.css";
+import { useNavigate } from "react-router-dom";
 type Props = {};
 
 function AR_Template_Location({}: Props) {
+  const navigate = useNavigate();
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
@@ -19,7 +21,7 @@ function AR_Template_Location({}: Props) {
         <a
           style={{ display: "flex", justifyContent: "center" }}
           className="btn btn-secondary"
-          onClick={() => (window.location.href = "/ar-template")}
+          onClick={() => navigate("/ar-template")}
         >
           Back
         </a>

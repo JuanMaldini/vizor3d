@@ -1,9 +1,11 @@
 import "../../../styles/Projects.css";
 import MindarViewer from "./mindar-viewer";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
 function AR_Template({}: Props) {
+  const navigate = useNavigate();
   return (
     <div className="projects2-main">
       <section className="projects2-hero">
@@ -13,7 +15,7 @@ function AR_Template({}: Props) {
         </p>
         <a
           className="btn btn-secondary"
-          onClick={() => (window.location.href = "/ar-template-location")}
+          onClick={() => navigate("/ar-template-location")}
         >
           Place here
         </a>
