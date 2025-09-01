@@ -1,6 +1,6 @@
 import ModelViewer from '../../../components/ModelViewer';
 
-function ModelViewer_Car() {
+function MV_Car() {
   return (  
     <ModelViewer
       src="/3dmodels/car.glb"
@@ -24,4 +24,4 @@ function ModelViewer_Car() {
     />
   );
 }
-export default ModelViewer_Car;
+export default MV_Car;
