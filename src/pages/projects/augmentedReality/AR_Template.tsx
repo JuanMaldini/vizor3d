@@ -1,40 +1,38 @@
-import React from 'react'
-import { Unity, useUnityContext } from 'react-unity-webgl'
-import '../../../styles/Projects.css'
+import "../../../styles/Projects.css";
+import MindarViewer from "./mindar-viewer";
 
-
-type Props = {}
+type Props = {};
 
 function AR_Template({}: Props) {
-  const { unityProvider, isLoaded, loadingProgression } = useUnityContext({
-    loaderUrl: "/build/Build/build.loader.js",
-    dataUrl: "/build/Build/build.data",
-    frameworkUrl: "/Build/Build/build.framework.js",
-    codeUrl: "/build/Build/build.wasm",
-    companyName: "VIZOR3D",
-    productName: "ARSample",
-    productVersion: "1.0.0",
-  });
-
   return (
     <div className="projects2-main">
-        <section className="projects2-hero">
-          <h1 className="projects2-title">Image base tracking</h1>
-          <p className="projects2-desc">Use your mobile device, point your camera at the image provided.</p>
-          <a className="btn btn-secondary" onClick={() => window.location.href = '/AR_Template_Location'}>Place here</a>
-          <p>"Currently under development"</p>
-        </section>
-      {!isLoaded && (
-        <p style={{ textAlign: 'center', margin: '12px 0' }}>
-          Loading… {Math.round((loadingProgression ?? 0) * 100)}%
+      <section className="projects2-hero">
+        <h1 className="projects2-title">Image base tracking</h1>
+        <p className="projects2-desc">
+          Use your mobile device, point your camera at the image provided.
         </p>
-      )}
-      <Unity
-        unityProvider={unityProvider}
-        style={{ width: '100%', aspectRatio: '16 / 9', background: '#000',visibility: isLoaded ? "visible" : "hidden" }}
-      />
+        <a
+          className="btn btn-secondary"
+          onClick={() => (window.location.href = "/ar-template-location")}
+        >
+          Place here
+        </a>
+      </section>
+
+      <section className="projects2-section">
+        <div className="ar-viewer-container">
+          <MindarViewer
+            modelSrc="/3dmodels/dry_flower.glb"
+            modelPosition="0 -1.2 0"
+            modelRotation="0 0 0"
+            modelScale="10 10 10"
+            imageTargetSrc="/mindar/targets.mind"
+            targetIndex={0}
+          />
+        </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default AR_Template
+export default AR_Template;

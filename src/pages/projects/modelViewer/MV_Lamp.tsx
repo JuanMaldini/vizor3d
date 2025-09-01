@@ -1,6 +1,6 @@
 import ModelViewer from '../../../components/ModelViewer';
 
-function ModelViewer_Lamp() {
+function MV_Lamp() {
   return (
     <ModelViewer
       src="/3dmodels/arabian_lamp.glb"
@@ -24,4 +24,4 @@ function ModelViewer_Lamp() {
   );
 }
 
-export default ModelViewer_Lamp;
+export default MV_Lamp;

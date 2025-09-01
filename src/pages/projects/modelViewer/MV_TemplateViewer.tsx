@@ -1,6 +1,6 @@
 import ModelViewer from '../../../components/ModelViewer';
 
-function TemplateViewer() {
+function MV_TemplateViewer() {
   return (
         <ModelViewer
           src={''} // string: '/models/model.glb'
@@ -58,4 +58,4 @@ function TemplateViewer() {
   );
 }
 
-export default TemplateViewer;
+export default MV_TemplateViewer;

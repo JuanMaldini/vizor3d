@@ -3,15 +3,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Index from "./pages/index";
 import "./styles/App.css";
 import "./styles/components.css";
-import "./styles/pannellum-overrides.css";  
+import "./styles/pannellum-overrides.css";
 
 const Home = React.lazy(() => import("./pages/home"));
 const Projects = React.lazy(() => import("./pages/Projects"));
 
-const ModelViewer_Car = React.lazy(() => import("./pages/projects/modelViewer/MV_Car"));
-const ModelViewer_Lamp = React.lazy(() => import("./pages/projects/modelViewer/MV_Lamp"));
-const ModelViewer_Chair01 = React.lazy(() => import("./pages/projects/modelViewer/MV_Chair01"));
-const ModelViewer_Deco01 = React.lazy(() => import("./pages/projects/modelViewer/MV_Deco01"));
+const MV_Car = React.lazy(() => import("./pages/projects/modelViewer/MV_Car"));
+const MV_Lamp = React.lazy(() => import("./pages/projects/modelViewer/MV_Lamp"));
+const MV_Chair01 = React.lazy(() => import("./pages/projects/modelViewer/MV_Chair01"));
+const MV_Deco01 = React.lazy(() => import("./pages/projects/modelViewer/MV_Deco01"));
 
 const Noiseless_Sample01 = React.lazy(() => import("./pages/projects/panoramas/P_Noiseless_Sample01"));
 
@@ -23,25 +23,25 @@ const AR_Template_Location = React.lazy(() => import("./pages/projects/augmented
 const ErrorPage = React.lazy(() => import("./error"));
 const router = createBrowserRouter(
   [
-    { 
+    {
       path: "/",
       element: <Index />,
       errorElement: <ErrorPage />,
       children: [
         { index: true, element: <Home /> },
 
-        { path: "projects", element: <Projects/> },
+        { path: "projects", element: <Projects /> },
 
-        { path: "Noiseless_Sample01", element: <Noiseless_Sample01/> },
-        { path: "Sampleai", element: <Sampleai/> },
+        { path: "noiseless_sample01", element: <Noiseless_Sample01 /> },
+        { path: "sampleai", element: <Sampleai /> },
 
-        { path: "ModelViewer_Sample_Car", element: <ModelViewer_Car/> },
-        { path: "ModelViewer_Sample_Lamp", element: <ModelViewer_Lamp/> },
-        { path: "ModelViewer_Sample_Chair01", element: <ModelViewer_Chair01/> },
-        { path: "ModelViewer_Sample_Deco01", element: <ModelViewer_Deco01/> },
+        { path: "mv-car", element: <MV_Car /> },
+        { path: "mv-lamp", element: <MV_Lamp /> },
+        { path: "mv-chair01", element: <MV_Chair01 />,},
+        { path: "mv-deco01", element: <MV_Deco01 /> },
 
-        { path: "AR_Template", element: <AR_Template/> },
-        { path: "AR_Template_Location", element: <AR_Template_Location/> },
+        { path: "ar-template", element: <AR_Template /> },
+        { path: "ar-template-location", element: <AR_Template_Location /> },
       ],
     },
   ],
@@ -49,7 +49,6 @@ const router = createBrowserRouter(
     basename: import.meta.env.BASE_URL,
   }
 );
-
 
 const App = () => {
   return (
