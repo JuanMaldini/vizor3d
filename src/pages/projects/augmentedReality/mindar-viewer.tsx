@@ -92,10 +92,95 @@ const MindarViewer: React.FC<MindarViewerProps> = ({
     sceneEl.addEventListener("loaded", onSceneLoaded);
     sceneEl.addEventListener("arReady", onARReady);
     sceneEl.addEventListener("arError", onARError);
+
+    // Constrain MindAR UI/Video/Canvas to container instead of full page
+    const containerEl =
+      (sceneRef.current as HTMLElement | null)?.parentElement || undefined;
+    const fitToContainer = (el: HTMLElement, z = 1) => {
+      el.style.position = "absolute";
+      (el.style as any).inset = "0"; // TS: not all browsers; fine here
+      el.style.top = "0";
+      el.style.left = "0";
+      el.style.width = "100%";
+      el.style.height = "100%";
+      (el as any).style.objectFit =
+        (el as any).tagName === "VIDEO" ? "cover" : "contain";
+      el.style.zIndex = String(z);
+    };
+    const anchorIntoContainer = (el: HTMLElement, zIndex = 1) => {
+      if (!containerEl || !el) return;
+      try {
+        if ((el as any).dataset?.vzAnchored === "1") return;
+        fitToContainer(el, zIndex);
+        containerEl.appendChild(el);
+        (el as any).dataset.vzAnchored = "1";
+      } catch {}
+    };
+    const moveMindarNodesIntoContainer = () => {
+      if (!containerEl) return false;
+      let moved = 0;
+      const selectors = [
+        // MindAR overlay UI
+        ".mindar-ui-overlay",
+        "#mindar-ui",
+        "[class*='mindar-ui']",
+        // MindAR video/canvas/backdrop
+        "video[id*='mindar']",
+        "video[class*='mindar']",
+        "canvas[id*='mindar']",
+        "canvas[class*='mindar']",
+        "div[id*='mindar']",
+        "div[class*='mindar']",
+      ];
+      const nodes = document.querySelectorAll<HTMLElement>(selectors.join(","));
+      nodes.forEach((node) => {
+        // UI overlay on top
+        if (node.id === "mindar-ui" || node.className.includes("mindar-ui")) {
+          node.style.pointerEvents = "auto";
+          anchorIntoContainer(node, 3);
+          moved++;
+          return;
+        }
+        // Canvas above video, below UI
+        if (node.tagName === "CANVAS") {
+          anchorIntoContainer(node, 2);
+          moved++;
+          return;
+        }
+        // Video at the bottom layer
+        if (node.tagName === "VIDEO") {
+          anchorIntoContainer(node, 1);
+          moved++;
+          return;
+        }
+        // Any other mindar wrappers
+        anchorIntoContainer(node, 1);
+        moved++;
+      });
+      return moved > 0;
+    };
+
+    // If overlay already exists, move it; else observe for it
+    // Attempt immediate reparenting of MindAR nodes
+    moveMindarNodesIntoContainer();
+    const observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        for (const node of Array.from(m.addedNodes)) {
+          if (!(node instanceof HTMLElement)) continue;
+          const hasMindar =
+            node.matches?.("[id*='mindar'], [class*='mindar']") ||
+            !!node.querySelector?.("[id*='mindar'], [class*='mindar']");
+          if (hasMindar) moveMindarNodesIntoContainer();
+        }
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+
     return () => {
       sceneEl.removeEventListener("loaded", onSceneLoaded);
       sceneEl.removeEventListener("arReady", onARReady);
       sceneEl.removeEventListener("arError", onARError);
+      observer.disconnect();
     };
   }, []);
 
@@ -191,7 +276,9 @@ const MindarViewer: React.FC<MindarViewerProps> = ({
       const sceneEl = sceneRef.current as any;
       console.log("[MindAR] cleanup: stopping AR and removing overlays");
       try {
-        const arSystem = sceneEl?.systems?.["mindar-image-system"] || sceneEl?.systems?.["mindar-image"];
+        const arSystem =
+          sceneEl?.systems?.["mindar-image-system"] ||
+          sceneEl?.systems?.["mindar-image"];
         arSystem?.stop?.();
         console.log("[MindAR] arSystem.stop() called");
       } catch (e) {
@@ -203,7 +290,9 @@ const MindarViewer: React.FC<MindarViewerProps> = ({
         console.log("[MindAR] cleanup scene pause error", e);
       }
       try {
-        const videos = Array.from(document.querySelectorAll("video")) as HTMLVideoElement[];
+        const videos = Array.from(
+          document.querySelectorAll("video")
+        ) as HTMLVideoElement[];
         videos.forEach((v) => {
           const stream = v.srcObject as MediaStream | null;
           stream?.getTracks?.().forEach((t) => t.stop());
@@ -221,7 +310,8 @@ const MindarViewer: React.FC<MindarViewerProps> = ({
         ) as HTMLElement[];
         overlays.forEach((el) => (el.style.display = "none"));
         overlays.forEach((el) => el.parentElement?.removeChild(el));
-        if (overlays.length) console.log("[MindAR] overlays removed:", overlays.length);
+        if (overlays.length)
+          console.log("[MindAR] overlays removed:", overlays.length);
       } catch (e) {
         console.log("[MindAR] cleanup overlays error", e);
       }
@@ -232,7 +322,7 @@ const MindarViewer: React.FC<MindarViewerProps> = ({
     <a-scene
       ref={sceneRef as any}
       embedded
-      style={{ width: "100%", height: "100dvh", display: "block" }}
+      style={{ width: "100%", height: "100%", display: "block" }}
       color-space="sRGB"
       renderer="colorManagement: true, physicallyCorrectLights: true"
       vr-mode-ui="enabled: false"
