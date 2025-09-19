@@ -23,7 +23,7 @@ if (typeof navigator !== "undefined" && "serviceWorker" in navigator) {
           } catch (error) {
             console.warn("Failed to unregister service worker", error);
           }
-        }),
+        })
       );
     } catch (error) {
       console.warn("Failed to retrieve service worker registrations", error);
@@ -32,18 +32,26 @@ if (typeof navigator !== "undefined" && "serviceWorker" in navigator) {
     if (typeof caches !== "undefined") {
       try {
         const cacheNames = await caches.keys();
-        await Promise.all(cacheNames.map((cacheName) => caches.delete(cacheName)));
+        await Promise.all(
+          cacheNames.map((cacheName) => caches.delete(cacheName))
+        );
       } catch (error) {
         console.warn("Failed to clear caches", error);
       }
     }
+
+    // Ensure the first load after cleaning SW/caches fetches fresh assets
+    try {
+      const key = "__reloaded_after_sw_cleanup__";
+      if (!sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, "1");
+        window.location.reload();
+      } else {
+        sessionStorage.removeItem(key);
+      }
+    } catch {}
   })();
 }
 const root = ReactDOM.createRoot(document.getElementById("root")!);
-const AppTree = (
-  <>
-    <App />
-  </>
-);
-ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
+root.render(<App />);
 reportWebVitals();
