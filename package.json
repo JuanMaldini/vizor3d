@@ -5,13 +5,12 @@
     "start": "vite",
     "build": "tsc && vite build",
     "test": "vitest run",
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@google/model-viewer": "^4.1.0",
-    "@rollup/rollup-linux-x64-gnu": "^4.50.2",
     "aframe": "^1.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -37,5 +36,6 @@
     "typescript": "^5.5.2",
     "vite": "^5.3.1",
     "vitest": "^1.6.0"
-  }
+  },
+  "packageManager": "npm@10.8.2"
 }

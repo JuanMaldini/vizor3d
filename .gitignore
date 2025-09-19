@@ -12,4 +12,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-*.lock
+# Allow committing npm lockfile for reproducible installs
+# If you want to ignore other lockfiles explicitly, list them:
+# yarn.lock
+# pnpm-lock.yaml
