@@ -45,11 +45,5 @@ const AppTree = (
     <App />
   </>
 );
-// Disable StrictMode in development to avoid double mount/unmount
-// that breaks some third-party libs (e.g., react-pannellum viewers).
-if (import.meta.env.DEV) {
-  root.render(AppTree);
-} else {
-  root.render(<React.StrictMode>{AppTree}</React.StrictMode>);
-}
+ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
 reportWebVitals();

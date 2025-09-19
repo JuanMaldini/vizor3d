@@ -5,14 +5,12 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-  // Removed composite to avoid declaration build requirements in Vercel type-check step
-
+    // Removed composite to avoid declaration build requirements in Vercel type-check step
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

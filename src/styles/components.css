@@ -67,13 +67,6 @@
   color: white;
 }
 
-/* Ensure the full variant stretches completely */
-.hero-section > .project-card.project-card--full {
-  flex: 1 1 auto;
-  width: 100%;
-  height: 100%;
-}
-
 .features-container {
   /* max-width: 1200px; */
   padding: 0 2rem;
@@ -161,9 +154,6 @@
 .project-card.project-card--full .project-card-overlay {
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background: none;
-  padding: 2rem;
 }
 .project-card.project-card--full .project-card-title { font-size: 3rem; line-height: 1.1; }
 .project-card.project-card--full .project-card-description { max-width: 760px; font-size: 1.25rem; }
