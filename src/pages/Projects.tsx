@@ -3,10 +3,6 @@ import ProjectCard from "../components/ProjectCard";
 import "../styles/Projects.css";
 import "../styles/App.css";
 
-// Configs de panoramas reutilizados para las cards (solo usan la primera imagen)
-import { panellumConfig_Noiseless_Sample01 } from "../types/PanoramasConfig/panellumConfig_Noiseless_Sample01";
-import { panellumConfig_SampleAI } from "../types/PanoramasConfig/panellumConfig_SampleAI";
-
 import ModelViewer from "../components/ModelViewer";
 
 import Faq from "../components/Faq";
@@ -15,6 +11,28 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Projects: React.FC = () => {
   const navigate = useNavigate();
+
+  // Configuraciones de panoramas para preview en cards
+  const panellumConfig_Noiseless_Sample01 = {
+    id: "preview-noiseless",
+    firstSceneId: "Noiseless_01",
+    defaults: { autoLoad: true, showZoomCtrl: false, hfov: 100 },
+    first: {
+      imageSource: "/images/projects/Noiseless/1.jpg",
+      config: { type: "equirectangular" as const, pitch: -1.12, yaw: 43.57 },
+    },
+  };
+
+  const panellumConfig_SampleAI = {
+    id: "preview-sampleai",
+    firstSceneId: "Sampleai_01",
+    defaults: { autoLoad: true, showZoomCtrl: false, hfov: 110 },
+    first: {
+      imageSource: "/images/projects/Sampleai/Sample_AI09_01.jpg",
+      config: { type: "equirectangular" as const, pitch: -3, yaw: 117 },
+    },
+  };
+
   return (
     <main className="projects2-main">
       <section className="projects2-hero">
