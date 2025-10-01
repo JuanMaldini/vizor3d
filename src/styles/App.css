@@ -1,3 +1,9 @@
+.grid-body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100dvh;
+}
+
 .pnlm-zoom-out, .pnlm-zoom-in, .pnlm-zoom-controls, .pitch-yaw { /* hide pannellum UI */
   display: none; /* no !important needed */
 }
