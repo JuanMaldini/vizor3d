@@ -5,7 +5,7 @@ import ReactSidebar from '../../../components/PanelLateral/ReactSidebar';
 export default function P_Sampleai() {
     return (
         <>
-            <ReactSidebar
+        <ReactSidebar
                 mainText="Simple panel with project info: architects and the house, 3D artist collaboration, areas to explore, and focused aspects of the architecture."
                 projectLines={[
                     "Project",

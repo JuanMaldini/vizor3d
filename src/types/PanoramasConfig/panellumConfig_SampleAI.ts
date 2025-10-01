@@ -26,7 +26,7 @@ export const panellumConfig_SampleAI: PannellumSetup = {
     sceneFadeDuration: 1000,
   },
   first: {
-    imageSource: '/images/projects/Sampleai09/Sample_AI09_01.jpg',
+    imageSource: '/images/projects/Sampleai/Sample_AI09_01.jpg',
     config: {
       title: '',
       type: 'equirectangular',
@@ -46,7 +46,7 @@ export const panellumConfig_SampleAI: PannellumSetup = {
   },
   scenes: {
     Sampleai_02: {
-      imageSource: '/images/projects/Sampleai09/Sample_AI09_02.jpg',
+      imageSource: '/images/projects/Sampleai/Sample_AI09_02.jpg',
       config: {
         title: '',
         type: 'equirectangular',
@@ -63,7 +63,7 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       },
     },
     Sampleai_03: {
-      imageSource: '/images/projects/Sampleai09/Sample_AI09_03.jpg',
+      imageSource: '/images/projects/Sampleai/Sample_AI09_03.jpg',
       config: {
         title: '',
         type: 'equirectangular',
@@ -80,7 +80,7 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       },
     },
     Sampleai_04: {
-      imageSource: '/images/projects/Sampleai09/Sample_AI09_04.jpg',
+      imageSource: '/images/projects/Sampleai/Sample_AI09_04.jpg',
       config: {
         title: '',
         type: 'equirectangular',
@@ -97,7 +97,7 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       },
     },
     Sampleai_05: {
-      imageSource: '/images/projects/Sampleai09/Sample_AI09_05.jpg',
+      imageSource: '/images/projects/Sampleai/Sample_AI09_05.jpg',
       config: {
         title: '',
         type: 'equirectangular',
@@ -114,7 +114,7 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       },
     },
     Sampleai_06: {
-      imageSource: '/images/projects/Sampleai09/Sample_AI09_06.jpg',
+      imageSource: '/images/projects/Sampleai/Sample_AI09_06.jpg',
       config: {
         title: '',
         type: 'equirectangular',
@@ -131,7 +131,7 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       },
     },
     Sampleai_07: {
-      imageSource: '/images/projects/Sampleai09/Sample_AI09_07.jpg',
+      imageSource: '/images/projects/Sampleai/Sample_AI09_07.jpg',
       config: {
         title: '',
         type: 'equirectangular',
@@ -148,7 +148,7 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       },
     },
     Sampleai_08: {
-      imageSource: '/images/projects/Sampleai09/Sample_AI09_08.jpg',
+      imageSource: '/images/projects/Sampleai/Sample_AI09_08.jpg',
       config: {
         title: '',
         type: 'equirectangular',
@@ -165,7 +165,7 @@ export const panellumConfig_SampleAI: PannellumSetup = {
       },
     },
     Sampleai_09: {
-      imageSource: '/images/projects/Sampleai09/Sample_AI09_09.jpg',
+      imageSource: '/images/projects/Sampleai/Sample_AI09_09.jpg',
       config: {
         title: '',
         type: 'equirectangular',

@@ -5,7 +5,7 @@ import ReactSidebar from '../../../components/PanelLateral/ReactSidebar';
 export default function Noiseless_Sample01() {
     return (
         <>
-            <ReactSidebar
+        <ReactSidebar
                 mainText="Simple panel with project info: architects and the house, 3D artist collaboration, areas to explore, and focused aspects of the architecture."
                 projectLines={[
                     "Project",
@@ -44,7 +44,6 @@ export default function Noiseless_Sample01() {
             <div id="panorama" />
         </ReactSidebar>
         <PanellumSample setup={panellumConfig_Noiseless_Sample01} />
-
       </>
     );
 }

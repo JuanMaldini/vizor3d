@@ -8,8 +8,6 @@
 .project-card-author-link:hover {
   color: var(--accent);
 }
-/* (Removed unused .project-card-see-more) */
-/* Navbar Styles */
 .navbar {
   background-color: #1a1a1a;
   padding: 1rem 0;
