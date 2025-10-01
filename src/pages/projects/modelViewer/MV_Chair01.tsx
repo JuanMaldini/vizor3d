@@ -19,7 +19,7 @@ function MV_Chair01() {
       // environmentImage="/enviroment/straight_afternoon_2k.hdr"
       // skybox-image="/enviroment/straight_afternoon_2k.hdr"
       field-of-view="50deg"
-      shadow-intensity="2"
+      shadow-intensity={2}
       style={{ width: '100%', height: '600px', margin: '0 auto' }}
     />
   );

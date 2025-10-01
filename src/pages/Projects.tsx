@@ -125,8 +125,8 @@ const Projects: React.FC = () => {
                 environmentImage="/enviroment/straight_afternoon_2k.hdr"
                 min-camera-orbit="auto auto 15m"
                 max-camera-orbit="auto auto 20m"
-                shadow-intensity="2"
-                disable-zoom="true"
+                shadow-intensity={2}
+                disable-zoom={true}
               />
             </article>
 
@@ -142,8 +142,8 @@ const Projects: React.FC = () => {
                 environmentImage="/enviroment/straight_afternoon_2k.hdr"
                 min-camera-orbit="auto auto 1.5m"
                 max-camera-orbit="auto auto 1.5m"
-                shadow-intensity="2"
-                disable-zoom="true"
+                shadow-intensity={2}
+                disable-zoom={true}
               />
             </article>
 
@@ -159,8 +159,8 @@ const Projects: React.FC = () => {
                 environmentImage="/enviroment/straight_afternoon_2k.hdr"
                 min-camera-orbit="auto auto 32m"
                 max-camera-orbit="auto auto 40m"
-                shadow-intensity="2"
-                disable-zoom="true"
+                shadow-intensity={2}
+                disable-zoom={true}
               />
             </article>
 
@@ -176,8 +176,8 @@ const Projects: React.FC = () => {
                 environmentImage="/enviroment/straight_afternoon_2k.hdr"
                 min-camera-orbit="auto auto 20m"
                 max-camera-orbit="auto auto 30m"
-                shadow-intensity="2"
-                disable-zoom="true"
+                shadow-intensity={2}
+                disable-zoom={true}
               />
             </article>
           </div>
@@ -203,8 +203,8 @@ const Projects: React.FC = () => {
                 environmentImage="/enviroment/straight_afternoon_2k.hdr"
                 min-camera-orbit="auto auto .7m"
                 max-camera-orbit="auto auto .7m"
-                shadow-intensity="2"
-                disable-zoom="true"
+                shadow-intensity={2}
+                disable-zoom={true}
               />
             </article>
           </div>

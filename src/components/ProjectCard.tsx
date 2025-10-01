@@ -1,16 +1,7 @@
-import { useNavigate } from 'react-router-dom';
-import React, { useMemo, useEffect } from 'react';
-import ReactPannellum from 'react-pannellum';
-
-interface PannellumSetup {
-  id: string;
-  firstSceneId: string;
-  first: {
-    imageSource: string;
-    config?: any;
-  };
-  scenes?: Record<string, any>;
-}
+import { useNavigate } from "react-router-dom";
+import React, { useMemo, useEffect } from "react";
+import ReactPannellum from "react-pannellum";
+import type { PannellumSetup } from "../types/types";
 
 interface ProjectCardProps {
   title: string;
@@ -37,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   blackIntensity = 0,
   blurIntensity = 0,
   hideInfo = false,
-  className = '',
+  className = "",
 }) => {
   const navigate = useNavigate();
   const hasRedirect = Boolean(redirectPath && redirectPath.trim());
@@ -60,13 +51,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   }, [setup]);
 
   const imageSource = setup.first.imageSource;
-  const viewerId = useMemo(() => `card-${title.replace(/\s+/g, '-').toLowerCase()}`, [title]);
+  const viewerId = useMemo(
+    () => `card-${title.replace(/\s+/g, "-").toLowerCase()}`,
+    [title]
+  );
 
   // Force pannellum to recalc size when using fullSection (after initial layout change)
   useEffect(() => {
     if (fullSection) {
       const timeout = setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
+        window.dispatchEvent(new Event("resize"));
       }, 60);
       return () => clearTimeout(timeout);
     }
@@ -75,19 +69,33 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       className={[
-        'project-card',
-        fullSection && 'project-card--full',
-        hasRedirect && 'project-card--clickable',
-        className
-      ].filter(Boolean).join(' ')}
+        "project-card",
+        fullSection && "project-card--full",
+        hasRedirect && "project-card--clickable",
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
       onClick={hasRedirect ? handleClick : undefined}
-      style={hasRedirect ? { cursor: 'pointer' } : undefined}
+      style={hasRedirect ? { cursor: "pointer" } : undefined}
       aria-label={hasRedirect ? `Open ${title}` : undefined}
-      role={hasRedirect ? 'a' : 'group'}
+      role={hasRedirect ? "a" : "group"}
       tabIndex={hasRedirect ? 0 : -1}
-      onKeyDown={hasRedirect ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(); } } : undefined}
+      onKeyDown={
+        hasRedirect
+          ? (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                handleClick();
+              }
+            }
+          : undefined
+      }
     >
-      <div className="project-card-viewer-wrapper" style={{ position: 'absolute', inset: 0 }}>
+      <div
+        className="project-card-viewer-wrapper"
+        style={{ position: "absolute", inset: 0 }}
+      >
         <ReactPannellum
           id={viewerId}
           sceneId={setup.firstSceneId}
@@ -99,7 +107,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {blackIntensity > 0 && (
         <div
           className="project-card-mask"
-          style={{ backgroundColor: `rgba(0,0,0,${Math.min(Math.max(blackIntensity, 0), 1)})` }}
+          style={{
+            backgroundColor: `rgba(0,0,0,${Math.min(
+              Math.max(blackIntensity, 0),
+              1
+            )})`,
+          }}
         />
       )}
       {/* Blur overlay (uses backdrop-filter above pano + black layer) */}
@@ -110,34 +123,46 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
       )}
       {!hideInfo && (title || description || author) && (
-        <div className="project-card-overlay" style={fullSection ? { inset: 0 } : undefined}>
+        <div
+          className="project-card-overlay"
+          style={fullSection ? { inset: 0 } : undefined}
+        >
           {title && <h3 className="project-card-title">{title}</h3>}
-          {description && <p className="project-card-description">{description}</p>}
-          {author && (
-            seeMoreLink ? (
+          {description && (
+            <p className="project-card-description">{description}</p>
+          )}
+          {author &&
+            (seeMoreLink ? (
               <a
                 href={seeMoreLink}
                 className="project-card-author-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={e => e.stopPropagation()}
+                onClick={(e) => e.stopPropagation()}
               >
                 {author}
               </a>
             ) : hasRedirect ? (
               <span
                 className="project-card-author"
-                style={{ cursor: 'pointer', color: '#ccc', textDecoration: 'none', transition: 'color 0.3s ease' }}
-                onClick={e => { e.stopPropagation(); handleClick(); }}
+                style={{
+                  cursor: "pointer",
+                  color: "#ccc",
+                  textDecoration: "none",
+                  transition: "color 0.3s ease",
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleClick();
+                }}
               >
                 {author}
               </span>
             ) : (
-              <span className="project-card-author" style={{ color: '#ccc' }}>
+              <span className="project-card-author" style={{ color: "#ccc" }}>
                 {author}
               </span>
-            )
-          )}
+            ))}
         </div>
       )}
     </div>
@@ -145,4 +170,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 };
 
 export default ProjectCard;
-

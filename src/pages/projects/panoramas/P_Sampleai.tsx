@@ -1,12 +1,6 @@
 ﻿import React, { useEffect, useRef } from "react";
 import ReactSidebar from "../../../components/PanelLateral/ReactSidebar";
 
-declare global {
-  interface Window {
-    pannellum: any;
-  }
-}
-
 export default function P_Sampleai() {
   const viewerRef = useRef<any>(null);
 
