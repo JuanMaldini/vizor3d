@@ -1,7 +1,16 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useMemo, useEffect } from 'react';
 import ReactPannellum from 'react-pannellum';
-import type { PannellumSetup } from '../types/PanoramasConfig/panellumConfig_SampleAI';
+
+interface PannellumSetup {
+  id: string;
+  firstSceneId: string;
+  first: {
+    imageSource: string;
+    config?: any;
+  };
+  scenes?: Record<string, any>;
+}
 
 interface ProjectCardProps {
   title: string;

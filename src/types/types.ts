@@ -6,8 +6,6 @@ interface PannellumViewer {
 }
 declare global {
   interface Window {
-    pannellum: {
-      viewer: (container: HTMLElement | string, config: any) => PannellumViewer;
-    };
+    pannellum: any;
   }
 }
