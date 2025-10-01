@@ -1,7 +1,7 @@
-import ModelViewer from '../../../components/ModelViewer';
+import ModelViewer from "../../../components/ModelViewer";
 
 function MV_Deco01() {
-  return (  
+  return (
     <ModelViewer
       src="/3dmodels/plant_interior_decoration.glb"
       alt="A 3D model of a car"
@@ -12,15 +12,15 @@ function MV_Deco01() {
       ar-scale="fixed"
       ar-modes="webxr scene-viewer quick-look"
       xr-environment
-      skybox-height="6" 
+      skybox-height="6"
       camera-orbit="auto auto 50m"
       min-camera-orbit="auto 20deg 0.5m"
-      max-camera-orbit="auto 160deg 2m" 
+      max-camera-orbit="auto 160deg 2m"
       // environmentImage="/enviroment/straight_afternoon_2k.hdr"
       // skybox-image="/enviroment/straight_afternoon_2k.hdr"
       field-of-view="50deg"
       shadow-intensity={1}
-      style={{ width: '100%', height: '600px', margin: '0 auto' }}
+      style={{ width: "100%", height: "600px", margin: "0 auto" }}
     />
   );
 }
