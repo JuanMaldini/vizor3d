@@ -93,14 +93,14 @@ const Projects: React.FC = () => {
             description="Explore interiors in 360°"
             author="Noiselss Studio"
             seeMoreLink="https://www.noiseless-studio.com/"
-            redirectPath="/Noiseless_Sample01"
+            redirectPath="/noiseless_sample01"
             setup={panellumConfig_Noiseless_Sample01}
           />
           <ProjectCard
             title="360 Virtual Tour"
             description="Explore the world in 360°"
             author=""
-            redirectPath="/Sampleai"
+            redirectPath="/sampleai"
             setup={panellumConfig_SampleAI}
           />
         </div>

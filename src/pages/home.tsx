@@ -20,7 +20,7 @@ const Home: React.FC = () => {
     <main className="main-content">
       <section className="hero-section">
         <ProjectCard
-          title="Explore the World in 360°"
+          title="Explore t-he World in 360°"
           description="Immerse yourself in unique experiences. Discover incredible places from the comfort of your home with our virtual tour technology."
           author=""
           setup={panellumConfig_Noiseless_Sample01}
