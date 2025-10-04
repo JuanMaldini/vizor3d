@@ -1,4 +1,4 @@
-import qr from "../../../../public/Icons/qr-code.svg";
+const qr = "/Icons/qr-code.svg";
 import "../../../styles/Projects.css";
 import { useNavigate } from "react-router-dom";
 type Props = {};
