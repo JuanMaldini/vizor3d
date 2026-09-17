@@ -1,4 +1,5 @@
-const qr = "/Icons/qr-code.svg";
+import { asset } from "../../../components/functions";
+const qr = asset("Icons/qr-code.svg");
 import "../../../styles/Projects.css";
 import { useNavigate } from "react-router-dom";
 type Props = {};

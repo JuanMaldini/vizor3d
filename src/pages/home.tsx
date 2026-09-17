@@ -1,3 +1,4 @@
+import { asset } from "../components/functions";
 import React from "react";
 import Faq from "../components/Faq";
 import Footer1 from "../components/Footer1";
@@ -11,7 +12,7 @@ const Home: React.FC = () => {
     firstSceneId: "Noiseless_01",
     defaults: { autoLoad: true, showZoomCtrl: false, hfov: 100 },
     first: {
-      imageSource: "/images/projects/Noiseless/1.jpg",
+      imageSource: asset("images/projects/Noiseless/1.jpg"),
       config: { type: "equirectangular" as const, pitch: -1.12, yaw: 43.57 },
     },
   };

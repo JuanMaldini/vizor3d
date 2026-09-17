@@ -1,3 +1,4 @@
+import { asset } from "../../../components/functions";
 import React from "react";
 import ReactPannellum from "react-pannellum";
 import ReactSidebar from "../../../components/PanelLateral/ReactSidebar";
@@ -60,7 +61,7 @@ export default function Noiseless_Sample01() {
       <ReactPannellum
         id="viewer-1"
         sceneId="Noiseless_01"
-        imageSource="/images/projects/Noiseless/1.jpg"
+        imageSource={asset("images/projects/Noiseless/1.jpg")}
         config={config}
         style={{
           width: "100%",

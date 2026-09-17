@@ -1,3 +1,4 @@
+import { asset } from "../components/functions";
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import "../styles/Projects.css";
@@ -18,7 +19,7 @@ const Projects: React.FC = () => {
     firstSceneId: "Noiseless_01",
     defaults: { autoLoad: true, showZoomCtrl: false, hfov: 100 },
     first: {
-      imageSource: "/images/projects/Noiseless/1.jpg",
+      imageSource: asset("images/projects/Noiseless/1.jpg"),
       config: { type: "equirectangular" as const, pitch: -1.12, yaw: 43.57 },
     },
   };
@@ -28,7 +29,7 @@ const Projects: React.FC = () => {
     firstSceneId: "Sampleai_01",
     defaults: { autoLoad: true, showZoomCtrl: false, hfov: 110 },
     first: {
-      imageSource: "/images/projects/Sampleai/Sample_AI09_01.jpg",
+      imageSource: asset("images/projects/Sampleai/Sample_AI09_01.jpg"),
       config: { type: "equirectangular" as const, pitch: -3, yaw: 117 },
     },
   };
@@ -118,11 +119,11 @@ const Projects: React.FC = () => {
               onClick={() => navigate("/mv-chair01")}
             >
               <ModelViewer
-                src="/3dmodels/chair.glb"
+                src={asset("3dmodels/chair.glb")}
                 cameraControls
                 touch-action="pan-y"
                 skybox-height="6"
-                environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                environmentImage={asset("enviroment/straight_afternoon_2k.hdr")}
                 min-camera-orbit="auto auto 15m"
                 max-camera-orbit="auto auto 20m"
                 shadow-intensity={2}
@@ -135,11 +136,11 @@ const Projects: React.FC = () => {
               onClick={() => navigate("/mv-deco01")}
             >
               <ModelViewer
-                src="/3dmodels/plant_interior_decoration.glb"
+                src={asset("3dmodels/plant_interior_decoration.glb")}
                 cameraControls
                 touch-action="pan-y"
                 skybox-height="6"
-                environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                environmentImage={asset("enviroment/straight_afternoon_2k.hdr")}
                 min-camera-orbit="auto auto 1.5m"
                 max-camera-orbit="auto auto 1.5m"
                 shadow-intensity={2}
@@ -152,11 +153,11 @@ const Projects: React.FC = () => {
               onClick={() => navigate("/mv-car")}
             >
               <ModelViewer
-                src="/3dmodels/car.glb"
+                src={asset("3dmodels/car.glb")}
                 cameraControls
                 touch-action="pan-y"
                 skybox-height="6"
-                environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                environmentImage={asset("enviroment/straight_afternoon_2k.hdr")}
                 min-camera-orbit="auto auto 32m"
                 max-camera-orbit="auto auto 40m"
                 shadow-intensity={2}
@@ -169,11 +170,11 @@ const Projects: React.FC = () => {
               onClick={() => navigate("/mv-lamp")}
             >
               <ModelViewer
-                src="/3dmodels/arabian_lamp.glb"
+                src={asset("3dmodels/arabian_lamp.glb")}
                 cameraControls
                 touch-action="pan-y"
                 skybox-height="6"
-                environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                environmentImage={asset("enviroment/straight_afternoon_2k.hdr")}
                 min-camera-orbit="auto auto 20m"
                 max-camera-orbit="auto auto 30m"
                 shadow-intensity={2}
@@ -196,11 +197,11 @@ const Projects: React.FC = () => {
               onClick={() => navigate("/ar-template")}
             >
               <ModelViewer
-                src="/3dmodels/dry_flower.glb"
+                src={asset("3dmodels/dry_flower.glb")}
                 cameraControls
                 touch-action="pan-y"
                 skybox-height="6"
-                environmentImage="/enviroment/straight_afternoon_2k.hdr"
+                environmentImage={asset("enviroment/straight_afternoon_2k.hdr")}
                 min-camera-orbit="auto auto .7m"
                 max-camera-orbit="auto auto .7m"
                 shadow-intensity={2}

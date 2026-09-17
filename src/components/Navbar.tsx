@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CustomLink } from './functions';
-// Assets in Vite's public/ must be referenced by absolute path at runtime
-const logo = '/Icons/Logo.svg';
+import { CustomLink, asset } from './functions';
+// Assets in public/ are resolved against Vite's base path via asset()
+const logo = asset("Icons/Logo.svg");
 
 const Navbar: React.FC = React.memo(() => {
   return (

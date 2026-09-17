@@ -1,3 +1,4 @@
+import { asset } from "../../../components/functions";
 import React, { useEffect, useRef } from "react";
 
 // Local JSX typings for A-Frame tags (self-contained)
@@ -28,7 +29,7 @@ const MindarViewer: React.FC<MindarViewerProps> = ({
   modelPosition,
   modelRotation,
   modelScale,
-  imageTargetSrc = "/mindar/targets.mind",
+  imageTargetSrc = asset("mindar/targets.mind"),
   targetIndex = 0,
 }) => {
   const sceneRef = useRef<HTMLElement | null>(null);

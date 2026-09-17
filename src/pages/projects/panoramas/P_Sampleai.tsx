@@ -1,4 +1,5 @@
-﻿import React, { useEffect, useRef } from "react";
+﻿import { asset } from "../../../components/functions";
+import React, { useEffect, useRef } from "react";
 import ReactSidebar from "../../../components/PanelLateral/ReactSidebar";
 
 export default function P_Sampleai() {
@@ -26,7 +27,7 @@ export default function P_Sampleai() {
         scenes: {
           scene1: {
             type: "equirectangular",
-            panorama: "/images/projects/Sampleai/Sample_AI09_01.jpg",
+            panorama: asset("images/projects/Sampleai/Sample_AI09_01.jpg"),
             pitch: -3,
             yaw: 117,
             hfov: 110,
@@ -99,7 +100,7 @@ export default function P_Sampleai() {
           },
           scene2: {
             type: "equirectangular",
-            panorama: "/images/projects/Sampleai/Sample_AI09_02.jpg",
+            panorama: asset("images/projects/Sampleai/Sample_AI09_02.jpg"),
             hfov: 110,
             hotSpots: [
               {
@@ -170,7 +171,7 @@ export default function P_Sampleai() {
           },
           scene3: {
             type: "equirectangular",
-            panorama: "/images/projects/Sampleai/Sample_AI09_03.jpg",
+            panorama: asset("images/projects/Sampleai/Sample_AI09_03.jpg"),
             hfov: 110,
             hotSpots: [
               {
@@ -241,7 +242,7 @@ export default function P_Sampleai() {
           },
           scene4: {
             type: "equirectangular",
-            panorama: "/images/projects/Sampleai/Sample_AI09_04.jpg",
+            panorama: asset("images/projects/Sampleai/Sample_AI09_04.jpg"),
             hfov: 110,
             hotSpots: [
               {
@@ -312,7 +313,7 @@ export default function P_Sampleai() {
           },
           scene5: {
             type: "equirectangular",
-            panorama: "/images/projects/Sampleai/Sample_AI09_05.jpg",
+            panorama: asset("images/projects/Sampleai/Sample_AI09_05.jpg"),
             hfov: 110,
             hotSpots: [
               {
@@ -383,7 +384,7 @@ export default function P_Sampleai() {
           },
           scene6: {
             type: "equirectangular",
-            panorama: "/images/projects/Sampleai/Sample_AI09_06.jpg",
+            panorama: asset("images/projects/Sampleai/Sample_AI09_06.jpg"),
             hfov: 110,
             hotSpots: [
               {
@@ -454,7 +455,7 @@ export default function P_Sampleai() {
           },
           scene7: {
             type: "equirectangular",
-            panorama: "/images/projects/Sampleai/Sample_AI09_07.jpg",
+            panorama: asset("images/projects/Sampleai/Sample_AI09_07.jpg"),
             hfov: 110,
             hotSpots: [
               {
@@ -525,7 +526,7 @@ export default function P_Sampleai() {
           },
           scene8: {
             type: "equirectangular",
-            panorama: "/images/projects/Sampleai/Sample_AI09_08.jpg",
+            panorama: asset("images/projects/Sampleai/Sample_AI09_08.jpg"),
             hfov: 110,
             hotSpots: [
               {
@@ -596,7 +597,7 @@ export default function P_Sampleai() {
           },
           scene9: {
             type: "equirectangular",
-            panorama: "/images/projects/Sampleai/Sample_AI09_09.jpg",
+            panorama: asset("images/projects/Sampleai/Sample_AI09_09.jpg"),
             hfov: 110,
             hotSpots: [
               {

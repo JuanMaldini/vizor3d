@@ -1,3 +1,4 @@
+import { asset } from "../../../components/functions";
 import "../../../styles/Projects.css";
 import MindarViewer from "./mindar-viewer";
 import { useNavigate } from "react-router-dom";
@@ -24,11 +25,11 @@ function AR_Template({}: Props) {
       <section className="projects2-section">
         <div className="ar-viewer-container">
           <MindarViewer
-            modelSrc="/3dmodels/dry_flower.glb"
+            modelSrc={asset("3dmodels/dry_flower.glb")}
             modelPosition="0 -1.2 0"
             modelRotation="0 0 0"
             modelScale="10 10 10"
-            imageTargetSrc="/mindar/targets.mind"
+            imageTargetSrc={asset("mindar/targets.mind")}
             targetIndex={0}
           />
         </div>
